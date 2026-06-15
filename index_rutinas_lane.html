@@ -235,25 +235,60 @@ body { font-family: 'Nunito', sans-serif; background: var(--bg); color: var(--te
 }
 .fab:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(57,217,138,0.4); }
 .fab:active { transform: scale(0.97); }
+  
+/* BOTÓN REGRESAR ADAPTADO (Estilo Oscuro) */
+.btn-back {
+display: inline-flex;
+align-items: center;
+gap: 6px;
+color: var(--text2);
+text-decoration: none;
+font-size: 12.5px;
+font-weight: 700;
+padding: 6px 12px;
+border-radius: 8px;
+background: var(--card);
+border: 1px solid var(--border);
+transition: all 0.2s ease;
+}
+.btn-back:hover {
+color: var(--text);
+border-color: #3E4560;
+background: var(--card2);
+transform: translateX(-2px);
+}
+@media print {
+.btn-back { display: none !important; }
+}
 </style>
 </head>
 <body>
 
 <header class="header">
-  <div class="header-top">
-    <div class="header-icon">💪</div>
-    <div>
-      <h1>Rutina de Entrenamiento</h1>
-      <p>Darly Yessenia Vargas Moreno · Camilo Roa</p>
-    </div>
-  </div>
-  <div class="week-pills">
-    <div class="week-pill active" onclick="showDay(0)" title="Día 1"></div>
-    <div class="week-pill" onclick="showDay(1)" title="Día 2"></div>
-    <div class="week-pill" onclick="showDay(2)" title="Día 3"></div>
-    <div class="week-pill" onclick="showDay(3)" title="Día 4"></div>
-    <div class="week-pill" onclick="showDay(4)" title="Día 5"></div>
-  </div>
+<!-- BOTÓN DE VOLVER APLICADO -->
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1px;">
+<a href="index.html" class="btn-back">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<line x1="19" y1="12" x2="5" y2="12"></line>
+<polyline points="12 19 5 12 12 5"></polyline>
+</svg>
+Volver
+</a>
+</div>
+
+<div class="header-top">
+<div class="header-icon">💪</div>
+<div>
+<h1>Rutina de Entrenamiento</h1>
+<p>Darly Yessenia Vargas Moreno · Plan Camilo Roa</p>
+</div>
+</div>
+<div class="week-pills">
+<div class="week-pill active"></div>
+<div class="week-pill"></div>
+<div class="week-pill"></div>
+<div class="week-pill"></div>
+</div>
 </header>
 
 <nav class="day-nav">
