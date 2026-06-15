@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plan de Comidas — Darly Vargas</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #F5F7F2;
+  --card: #FFFFFF;
+  --green: #2D6A4F;
+  --green-mid: #52B788;
+  --green-light: #D8F3DC;
+  --green-pale: #F0FAF4;
+  --coral: #E07A5F;
+  --coral-light: #FDECEA;
+  --amber: #F2CC8F;
+  --amber-dark: #7C5A1E;
+  --amber-light: #FEF9EE;
+  --violet: #6B48C8;
+  --violet-light: #EDE9FF;
+  --sky: #3A86C8;
+  --sky-light: #E8F4FD;
+  --rose: #D45C8A;
+  --rose-light: #FCEEF5;
+  --gray-900: #1A1F16;
+  --gray-700: #3D4535;
+  --gray-500: #7A8470;
+  --gray-300: #CDD4C5;
+  --gray-100: #EFF2EB;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Nunito', sans-serif; background: var(--bg); color: var(--gray-900); min-height: 100vh; }
+
+/* HEADER */
+.header {
+  background: linear-gradient(135deg, var(--green) 0%, #1B4332 100%);
+  padding: 28px 20px 24px;
+  color: white;
+  position: sticky; top: 0; z-index: 100;
+  box-shadow: 0 3px 16px rgba(27,67,50,0.3);
+}
+.header h1 { font-size: 20px; font-weight: 800; letter-spacing: -0.3px; }
+.header p { font-size: 12.5px; opacity: 0.7; margin-top: 3px; }
+
+/* DAY NAV */
+.day-nav {
+  display: flex; gap: 0; overflow-x: auto; scrollbar-width: none;
+  background: white; border-bottom: 1.5px solid var(--gray-100);
+  position: sticky; top: 80px; z-index: 99;
+}
+.day-nav::-webkit-scrollbar { display: none; }
+.day-btn {
+  flex: 0 0 auto; padding: 0; border: none; background: none;
+  cursor: pointer; position: relative;
+  display: flex; flex-direction: column; align-items: center;
+  padding: 10px 14px 9px; gap: 3px;
+  color: var(--gray-500); border-bottom: 2.5px solid transparent;
+  margin-bottom: -1.5px; transition: all 0.2s;
+}
+.day-btn .day-short { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+.day-btn .day-num { font-size: 18px; font-weight: 800; line-height: 1; }
+.day-btn.active { color: var(--green); border-bottom-color: var(--green); }
+.day-btn:hover:not(.active) { color: var(--gray-700); }
+
+/* MAIN */
+.main { padding: 16px 14px 100px; max-width: 560px; margin: 0 auto; }
+
+/* MEAL CARD */
+.meal-card {
+  background: var(--card); border-radius: 16px;
+  margin-bottom: 12px; overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  border: 1.5px solid var(--gray-100);
+  transition: box-shadow 0.2s;
+}
+.meal-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+
+.meal-header {
+  display: flex; align-items: center; gap: 10px;
+  padding: 12px 14px 11px;
+  cursor: pointer; user-select: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+.meal-card.open .meal-header { border-bottom-color: var(--gray-100); }
+
+.meal-icon {
+  width: 38px; height: 38px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; flex-shrink: 0;
+}
+.meal-meta { flex: 1; min-width: 0; }
+.meal-name { font-size: 14px; font-weight: 700; color: var(--gray-900); }
+.meal-tag { font-size: 11px; color: var(--gray-500); margin-top: 1px; }
+
+.meal-arrow {
+  width: 24px; height: 24px; border-radius: 99px;
+  background: var(--gray-100); display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; transition: transform 0.25s;
+}
+.meal-card.open .meal-arrow { transform: rotate(180deg); }
+
+/* MEAL BODY */
+.meal-body { padding: 0; max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.2s; }
+.meal-card.open .meal-body { padding: 12px 14px 14px; max-height: 600px; }
+
+.food-item {
+  display: flex; align-items: flex-start; gap: 8px;
+  padding: 5px 0; border-bottom: 1px dashed var(--gray-100);
+  font-size: 13.5px;
+}
+.food-item:last-child { border-bottom: none; }
+.food-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; margin-top: 6px; }
+.food-text { flex: 1; color: var(--gray-700); line-height: 1.4; }
+.food-qty { font-size: 12px; font-weight: 700; color: var(--gray-500); white-space: nowrap; flex-shrink: 0; padding: 2px 8px; background: var(--gray-100); border-radius: 99px; }
+
+/* TAG PILLS */
+.tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.tag { font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 99px; }
+
+/* DAY PANEL */
+.day-panel { display: none; }
+.day-panel.active { display: block; animation: fadeUp 0.25s ease; }
+@keyframes fadeUp { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:translateY(0); } }
+
+/* COLORS per meal */
+.icon-desayuno { background: #FEF3C7; }
+.icon-manana   { background: #D1FAE5; }
+.icon-almuerzo { background: #DBEAFE; }
+.icon-algo     { background: #FCE7F3; }
+.icon-comida   { background: #EDE9FE; }
+.icon-merienda { background: #FEF3C7; }
+
+.dot-carb   { background: #E07A5F; }
+.dot-prot   { background: #2D6A4F; }
+.dot-grasa  { background: #F2CC8F; }
+.dot-veg    { background: #52B788; }
+.dot-beb    { background: #3A86C8; }
+
+/* TIP BOX */
+.tip-box {
+  background: linear-gradient(135deg, #E8F5E9, #F0FAF4);
+  border: 1.5px solid #B7DFC5; border-radius: 14px;
+  padding: 13px 14px; margin-bottom: 14px;
+  font-size: 13px; color: var(--green); display: flex; gap: 8px;
+}
+.tip-box span:first-child { font-size: 18px; flex-shrink: 0; }
+
+/* FAB */
+.fab {
+  position: fixed; bottom: 24px; right: 18px;
+  background: var(--green); color: white; border: none;
+  border-radius: 99px; padding: 13px 20px;
+  font-family: 'Nunito', sans-serif; font-size: 13px; font-weight: 700;
+  cursor: pointer; box-shadow: 0 4px 18px rgba(45,106,79,0.35);
+  display: flex; align-items: center; gap: 7px;
+  transition: transform 0.15s, box-shadow 0.15s; z-index: 200;
+}
+.fab:hover { transform: translateY(-2px); box-shadow: 0 6px 22px rgba(45,106,79,0.4); }
+
+/* NOTE */
+.day-note { font-size: 12px; color: var(--gray-500); text-align: center; padding: 8px 0 4px; }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <h1>🥗 Plan de Alimentación Semanal</h1>
+  <p>Darly Yessenia Vargas Moreno · Nutricionista Camilo Roa</p>
+</header>
+
+<nav class="day-nav">
+  <button class="day-btn active" onclick="showDay(0)" id="btn-0"><span class="day-short">Lun</span><span class="day-num">L</span></button>
+  <button class="day-btn" onclick="showDay(1)" id="btn-1"><span class="day-short">Mar</span><span class="day-num">M</span></button>
+  <button class="day-btn" onclick="showDay(2)" id="btn-2"><span class="day-short">Mié</span><span class="day-num">X</span></button>
+  <button class="day-btn" onclick="showDay(3)" id="btn-3"><span class="day-short">Jue</span><span class="day-num">J</span></button>
+  <button class="day-btn" onclick="showDay(4)" id="btn-4"><span class="day-short">Vie</span><span class="day-num">V</span></button>
+  <button class="day-btn" onclick="showDay(5)" id="btn-5"><span class="day-short">Sáb</span><span class="day-num">S</span></button>
+  <button class="day-btn" onclick="showDay(6)" id="btn-6"><span class="day-short">Dom</span><span class="day-num">D</span></button>
+</nav>
+
+<main class="main">
+
+<!-- ======== LUNES ======== -->
+<div class="day-panel active" id="day-0">
+  <div class="tip-box"><span>💡</span><span>Día 1 — Comienza con energía. Recuerda: primera comida desde la primera hora de despertar.</span></div>
+
+  <div class="meal-card open">
+    <div class="meal-header" onclick="toggleMeal(this)">
+      <div class="meal-icon icon-desayuno">🍳</div>
+      <div class="meal-meta"><div class="meal-name">Desayuno</div><div class="meal-tag">1 Azúcar · Proteína · Grasa</div></div>
+      <div class="meal-arrow">▾</div>
+    </div>
+    <div class="meal-body">
+      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Arepa extradelgada Sary <em>o</em> Avena</div><div class="food-qty">1 und / 40 g</div></div>
+      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Quesito + Huevo entero</div><div class="food-qty">50 g + 1</div></div>
+      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Aceite en spray</div><div class="food-qty">mínimo</div></div>
+      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Café en leche de almendras</div><div class="food-qty">30 cal</div></div>
+      <div class="tag-row"><span class="tag" style="background:#FEF3C7;color:#92400E">🌾 Carbohidrato</span><span class="tag" style="background:#D1FAE5;color:#065F46">🥚 Proteína</span></div>
+    </div>
+  </div>
+
+  <div class="meal-card">
+    <div class="meal-header" onclick="toggleMeal(this)">
+      <div class="meal-icon icon-manana">🍉</div>
+      <div class="meal-meta"><div class="meal-name">Media Mañana</div><div class="meal-tag">Fruta · Grasa</div></div>
+      <div class="meal-arrow">▾</div>
+    </div>
+    <div class="meal-body">
+      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Sandía</div><div class="food-qty">100 g</div></div>
+      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Mantequilla de maní</div><div class="food-qty">20 g</div></div>
+      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Gelatina light <em>(libre y opcional)</em></div><div class="food-qty">libre</div></div>
+    </div>
+  </div>
+
+  <div class="meal-card">
+    <div class="meal-header" onclick="toggleMeal(this)">
+      <div class="meal-icon icon-almuerzo">🍗</div>
+      <div class="meal-meta"><div class="meal-name">Almuerzo</div><div class="meal-tag">1 Azúcar · Proteína · Grasa · Vegetales</div></div>
+      <div class="meal-arrow">▾</div>
+    </div>
+    <div class="meal-body">
+      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Papa al vapor</div><div class="food-qty">40 g</div></div>
+      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Pechuga de pollo</div><div class="food-qty">100 g</div></div>
+      <div class="food-item"><div class="food-dot dot-veg"></div><div class="food-text">Ensalada de vegetales</div><div class="food-qty">libre</div></div>
+      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Aguacate</div><div class="food-qty">40 g</div></div>
+      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Clight</div><div class="food-qty">libre</div></div>
+    </div>
+  </div>
+
+  <div class="meal-card">
+    <div class="meal-header" onclick="toggleMeal(this)">
+      <div class="meal-icon icon-algo">🫙</div>
+      <div class="meal-meta"><div class="meal-name">Algo — Media Tarde</div><div class="meal-tag">Proteína · Grasa · DÍA DE PIERNA Y COLA</div></div>
+      <div class="meal-arrow">▾</div>
+    </div>
+    <div class="meal-body">
+      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Yogurt griego Zorba o Taeq (máx 4 g azúcar natural)</div><div class="food-qty">130 g</div></div>
+      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Almendras</div><div class="food-qty">20 g</div></div>
+      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Gelatina light</div><div class="food-qty">libre</div></div>
+      <div class="day-note">— ó en día sin entreno / tren superior —</div>
+      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Pollo desmechado o camarones</div><div class="food-qty">80 g</div></div>
+      <div class="food-item"><div class="food-dot dot-veg"></div><div class="food-text">Vegetales</div><div class="food-qty">1 taza</div></div>
+      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Clight</div><div class="food-qty">libre</div></div>
+    </div>
+  </div>
+
+  <div class="meal-card">
+    <div class="meal-header" onclick="toggleMeal(this)">
+      <div class="meal-icon icon-comida">🥗</div>
+      <div class="meal-meta"><div class="meal-name">Comida / Cena</div><div class="meal-tag">1 Azúcar (día por medio) · Proteína · Vegetales</div></div>
+      <div class="meal-arrow">▾</div>
+    </div>
+    <div class="meal-body">
+      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Arepa extradelgada La Típica</div><div class="food-qty">1 und</div></div>
+      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Plancha de pollo</div><div class="food-qty">100 g</div></div>
+      <div class="food-item"><div class="food-dot dot-veg"></div><div class="food-text">Ensalada / sopa de vegetales</div><div class="food-qty">libre</div></div>
+      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Clight</div><div class="food-qty">libre</div></div>
+    </div>
+  </div>
+
+  <div class="meal-card">
+    <div class="meal-header" onclick="toggleMeal(this)">
+      <div class="meal-icon icon-merienda">🌙</div>
+      <div class="meal-meta"><div class="meal-name">Merienda</div><div class="meal-tag">Solo si no duermes antes de 2–3 h de cenar</div></div>
+      <div class="meal-arrow">▾</div>
+    </div>
+    <div class="meal-body">
+      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Proteína en polvo disuelta en agua</div><div class="food-qty">¾ copa</div></div>
+      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Almendras <em>ó</em> 40 g queso</div><div class="food-qty">15 g</div></div>
+      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Aromática</div><div class="food-qty">libre</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ======== MARTES ======== -->
+<div class="day-panel" id="day-1">
+  <div class="tip-box"><span>🥞</span><span>Día 2 — Pancakes en el desayuno. ¡Una buena forma de empezar el martes!</span></div>
+
+  <div class="meal-card open">
+    <div class="meal-header" onclick="toggleMeal(this)">
+      <div class="meal-icon icon-desayuno">🥞</div>
+      <div class="meal-meta"><div class="meal-name">Desayuno</div><div class="meal-tag">1 Azúcar · Proteína · Grasa</div></div>
+      <div class="meal-arrow">▾</div>
+    </div>
+    <div class="meal-body">
+      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Pancake — 4 copas de Why Not</div><div class="food-qty">4 copas</div></div>
+      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">1 Huevo <em>ó</em> Queso blanco / quesito / cuajada</div><div class="food-qty">1 / 40 g</div></div>
+      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Mantequilla Alma o Taeq en spray</div><div class="food-qty">mínimo</div></div>
+      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Miel Diety o mermelada Konfyt</div><div class="food-qty">al gusto</div></div>
+      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Cocoa en leche de almendras</div><div class="food-qty">30 cal</div></div>
+    </div>
+  </div>
+
+  <div class="meal-card">
+    <div class="meal-header" onclick="toggleMeal(this)">
+      <div class="meal-icon icon-manana">🍎</div>
+      <div class="meal-meta"><div class="meal-name">Media Mañana</div><div class="meal-tag">Fruta · Grasa</div></div>
+      <div class="meal-arrow">▾</div>
+    </div>
+    <div class="meal-body">
+      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Manzana</div><div class="food-qty">100 g</div></div>
+      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Maní</div><div class="food-qty">20 g</div></div>
+      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Gelatina light</div><div class="food-qty">libre</div></div>
+    </div>
+  </div>
+
+  <div class="meal-card">
+    <div class="meal-header" onclick="toggleMeal(this)">
+      <div class="meal-icon icon-almuerzo">🥩</div>
+      <div class="meal-meta"><div class="meal-name">Almuerzo</div><div class="meal-tag">1 Azúcar · Proteína · Grasa · Vegetales</div></div>
+      <div class="meal-arrow">▾</div>
+    </div>
+    <div class="meal-body">
+      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Arroz</div><div class="food-qty">40 g</div></div>
+      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Carne de cerdo magra</div><div class="food-qty">100 g</div></div>
+      <div class="food-item"><div class="food-dot dot-veg"></div><div class="food-text">Ensalada de vegetales</div><div class="food-qty">libre</div></div>
+      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Aguacate <em>ó</em> aceite de oliva</div><div class="food-qty">40 g / 10 g</div></div>
+      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Clight</div><div class="food-qty">libre</div></div>
+    </div>
+  </div>
+
+  <div class="meal-card">
+    <div class="meal-header" onclick="toggleMeal(this)">
+      <div class="meal-icon icon-algo">🐟</div>
+      <div class="meal-meta"><div class="meal-name">Algo — Media Tarde</div><div class="meal-tag">Proteína · Grasa · DÍA DE PIERNA Y COLA</div></div>
+      <div class="meal-arrow">▾</div>
+    </div>
+    <div class="meal-body">
+      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">1 Copa Proteína ISO100</div><div class="food-qty">1 copa</div></div>
+      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Almendras</div><div class="food-qty">20 g</div></div>
+      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Gelatina light</div><div class="food-qty">libre</div></div>
+      <div class="day-note">— ó —</div>
+      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Atún en agua + aguacate</div><div class="food-qty">1 lata + 30 g</div></div>
+      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Clight</div><div class="food-qty">libre</div></div>
+      <div class="day-note">— ó en día sin entreno / tren superior —</div>
+      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Plancha de pollo</div><div class="food-qty">80 g</div></div>
+      <div class="food-item"><div class="food-dot dot-veg"></div><div class="food-text">Vegetales</div><div class="food-qty">1 taza</div></div>
+    </div>
+  </div>
+
+  <div class="meal-card">
+    <div class="meal-header" onclick="toggleMeal(this)">
+      <div class="meal-icon icon-comida">🍳</div>
+      <div class="meal-meta"><div class="meal-name">Comida / Cena</div><div class="meal-tag">Proteína · Vegetales · Sin grasa</div></div>
+      <div class="meal-arrow">▾</div>
+    </div>
+    <div class="meal-body">
+      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Omelette — 3 huevos revueltos con cebolla y tomate</div><div class="food-qty">3 huevos</div></div>
+      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Aromática</div><div class="food-qty">libre</div></div>
+    </div>
+  </div>
+
+  <div class="meal-card">
+    <div class="meal-header" onclick="toggleMeal(this)">
+      <div class="meal-icon icon-merienda">🌙</div>
+      <div class="meal-meta"><div class="meal-name">Merienda</div><div class="meal-tag">Solo si no duermes antes de 2–3 h de cenar</div></div>
+      <div class="meal-arrow">▾</div>
+    </div>
+    <div class="meal-body">
+      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Proteína en polvo disuelta en agua</div><div class="food-qty">¾ copa</div></div>
+      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Maní <em>ó</em> 40 g queso</div><div class="food-qty">15 g</div></div>
+      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Aromática</div><div class="food-qty">libre</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ======== MIÉRCOLES ======== -->
+<div class="day-panel" id="day-2">
+  <div class="tip-box"><span>🥩</span><span>Día 3 — Carne asada en el almuerzo. Aprovecha los vegetales al máximo.</span></div>
+
+  <div class="meal-card open">
+    <div class="meal-header" onclick="toggleMeal(this)">
+      <div class="meal-icon icon-desayuno">🍳</div>
+      <div class="meal-meta"><div class="meal-name">Desayuno</div><div class="meal-tag">1 Azúcar · Proteína · Grasa</div></div>
+      <div class="meal-arrow">▾</div>
+    </div>
+    <div class="meal-body">
+      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Arepa extradelgada La Típica o Sary <em>ó</em> Avena</div><div class="food-qty">1 und / 30 g</div></div>
+      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">2 claras + 1 yema + 1 tajada jamón pavo/cerdo/pollo</div><div class="food-qty">2+1 / 1 taj</div></div>
+      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Aceite en spray</div><div class="food-qty">mínimo</div></div>
+      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Clight o limonada natural</div><div class="food-qty">libre</div></div>
+    </div>
+  </div>
+
+  <div class="meal-card">
+    <div class="meal-header" onclick="toggleMeal(this)">
+      <div class="meal-icon icon-manana">🍍</div>
+      <div class="meal-meta"><div class="meal-name">Media Mañana</div><div class="meal-tag">Fruta · Grasa</div></div>
+      <div class="meal-arrow">▾</div>
+    </div>
+    <div class="meal-body">
+      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Piña <em>ó</em> Banano</div><div class="food-qty">100 g</div></div>
+      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Almendras</div><div class="food-qty">20 g</div></div>
+      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Gelatina light</div><div class="food-qty">libre</div></div>
+    </div>
+  </div>
+
+  <div class="meal-card">
+    <div class="meal-header" onclick="toggleMeal(this)">
+      <div class="meal-icon icon-almuerzo">🥩</div>
+      <div class="meal-meta"><div class="meal-name">Almuerzo</div><div class="meal-tag">1 Azúcar · Proteína · Grasa · Vegetales</div></div>
+      <div class="meal-arrow">▾</div>
+    </div>
+    <div class="meal-body">
+      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Maduro <em>ó</em> Yuca</div><div class="food-qty">40 g</div></div>
+      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Carne asada</div><div class="food-qty">100 g</div></div>
+      <div class="food-item"><div class="food-dot dot-veg"></div><div class="food-text">2 tazas de vegetales</div><div class="food-qty">libre</div></div>
+      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">1 Tostada de arroz + mantequilla de maní</div><div class="food-qty">1 + 20 g</div></div>
+      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Clight</div><div class="food-qty">libre</div></div>
+    </div>
+  </div>
+
+  <div class="meal-card">
+    <div class="meal-header" onclick="toggleMeal(this)">
+      <div class="meal-icon icon-algo">🧀</div>
+      <div class="meal-meta"><div class="meal-name">Algo — Media Tarde</div><div class="meal-tag">Proteína · Grasa · DÍA DE PIERNA Y COLA</div></div>
+      <div class="meal-arrow">▾</div>
+    </div>
+    <div class="meal-body">
+      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Queso pera <em>ó</em> queso blanco</div><div class="food-qty">40 g</div></div>
+      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Maní</div><div class="food-qty">30 g</div></div>
+      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Gelatina light</div><div class="food-qty">libre</div></div>
+      <div class="day-note">— ó —</div>
+      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">1 Barra ONE <em>(máx 2 veces/semana)</em></div><div class="food-qty">1 barra</div></div>
+      <div class="day-note">— ó en día sin entreno / tren superior —</div>
+      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">2 Claras cocinadas</div><div class="food-qty">2 und</div></div>
+      <div class="food-item"><div class="food-dot dot-veg"></div><div class="food-text">Vegetales</div><div class="food-qty">1 taza</div></div>
+    </div>
+  </div>
+
+  <div class="meal-card">
+    <div class="meal-header" onclick="toggleMeal(this)">
+      <div class="meal-icon icon-comida">🫙</div>
+      <div class="meal-meta"><div class="meal-name">Comida / Cena</div><div class="meal-tag">1 Azúcar · Proteína · Vegetales · Sin grasa</div></div>
+      <div class="meal-arrow">▾</div>
+    </div>
+    <div class="meal-body">
+      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Arepa extradelgada La Típica</div><div class="food-qty">1 und</div></div>
+      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Cuajada <em>ó</em> Quesito</div><div class="food-qty">80 / 70 g</div></div>
+      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Jugo verde sin fruta + Clight</div><div class="food-qty">libre</div></div>
+    </div>
+  </div>
+
+  <div class="meal-card">
+    <div class="meal-header" onclick="toggleMeal(this)">
+      <div class="meal-icon icon-merienda">🌙</div>
+      <div class="meal-meta"><div class="meal-name">Merienda</div><div class="meal-tag">Solo si no duermes antes de 2–3 h de cenar</div></div>
+      <div class="meal-arrow">▾</div>
+    </div>
+    <div class="meal-body">
+      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Proteína en polvo disuelta en agua</div><div class="food-qty">¾ copa</div></div>
+      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Almendras <em>ó</em> 40 g queso</div><div class="food-qty">15 g</div></div>
+      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Aromática</div><div class="food-qty">libre</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ======== JUEVES ======== -->
+<div class="day-panel" id="day-3">
+  <div class="tip-box"><span>🥣</span><span>Día 4 — Desayuno con cereal o quinua pops. Almuerzo con pastas.</span></div>
+
+  <div class="meal-card open">
+    <div class="meal-header" onclick="toggleMeal(this)">
+      <div class="meal-icon icon-desayuno">🥣</div>
+      <div class="meal-meta"><div class="meal-name">Desayuno</div><div class="meal-tag">1 Azúcar · Proteína · Grasa</div></div>
+      <div class="meal-arrow">▾</div>
+    </div>
+    <div class="meal-body">
+      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Cereal sin azúcar <em>ó</em> quinua pops</div><div class="food-qty">40 g</div></div>
+      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Leche de almendras + Yogurt griego + Proteína en polvo</div><div class="food-qty">1 taza + 60 g + 10 g</div></div>
+    </div>
+  </div>
+
+  <div class="meal-card">
+    <div class="meal-header" onclick="toggleMeal(this)">
+      <div class="meal-icon icon-manana">🍈</div>
+      <div class="meal-meta"><div class="meal-name">Media Mañana</div><div class="meal-tag">Fruta · Grasa</div></div>
+      <div class="meal-arrow">▾</div>
+    </div>
+    <div class="meal-body">
+      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Melón</div><div class="food-qty">100 g</div></div>
+      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Mantequilla de maní</div><div class="food-qty">20 g</div></div>
+      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Gelatina light</div><div class="food-qty">libre</div></div>
+    </div>
+  </div>
+
+  <div class="meal-card">
+    <div class="meal-header" onclick="toggleMeal(this)">
+      <div class="meal-icon icon-almuerzo">🍝</div>
+      <div class="meal-meta"><div class="meal-name">Almuerzo</div><div class="meal-tag">1 Azúcar · Proteína · Grasa · Vegetales</div></div>
+      <div class="meal-arrow">▾</div>
+    </div>
+    <div class="meal-body">
+      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Pastas</div><div class="food-qty">40 g</div></div>
+      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Plancha de pollo</div><div class="food-qty">100 g</div></div>
+      <div class="food-item"><div class="food-dot dot-veg"></div><div class="food-text">Ensalada de vegetales</div><div class="food-qty">libre</div></div>
+      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Aceite de oliva</div><div class="food-qty">1 cdta / 10 g</div></div>
+      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">H2oh</div><div class="food-qty">libre</div></div>
+    </div>
+  </div>
+
+  <div class="meal-card">
+    <div class="meal-header" onclick="toggleMeal(this)">
+      <div class="meal-icon icon-algo">🥓</div>
+      <div class="meal-meta"><div class="meal-name">Algo — Media Tarde</div><div class="meal-tag">Proteína · Grasa · DÍA DE PIERNA Y COLA</div></div>
+      <div class="meal-arrow">▾</div>
+    </div>
+    <div class="meal-body">
+      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Jamón personal</div><div class="food-qty">30 g</div></div>
+      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Maní</div><div class="food-qty">20 g</div></div>
+      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Gelatina light</div><div class="food-qty">libre</div></div>
+      <div class="day-note">— ó —</div>
+      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">½ Barra ONE</div><div class="food-qty">½ barra</div></div>
+      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Almendras</div><div class="food-qty">20 g</div></div>
+      <div class="day-note">— ó en día sin entreno / tren superior —</div>
+      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Cañón</div><div class="food-qty">80 g</div></div>
+      <div class="food-item"><div class="food-dot dot-veg"></div><div class="food-text">Ensalada vegetales</div><div class="food-qty">1 taza</div></div>
+    </div>
+  </div>
+
+  <div class="meal-card">
+    <div class="meal-header" onclick="toggleMeal(this)">
+      <div class="meal-icon icon-comida">🥗</div>
+      <div class="meal-meta"><div class="meal-name">Comida / Cena</div><div class="meal-tag">Proteína · Vegetales · Sin grasa</div></div>
+      <div class="meal-arrow">▾</div>
+    </div>
+    <div class="meal-body">
+      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Plancha de pollo</div><div class="food-qty">100 g</div></div>
+      <div class="food-item"><div class="food-dot dot-veg"></div><div class="food-text">Ensalada / sopa de vegetales</div><div class="food-qty">libre</div></div>
+      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Clight</div><div class="food-qty">libre</div></div>
+    </div>
+  </div>
+
+  <div class="meal-card">
+    <div class="meal-header" onclick="toggleMeal(this)">
+      <div class="meal-icon icon-merienda">🌙</div>
+      <div class="meal-meta"><div class="meal-name">Merienda</div><div class="meal-tag">Solo si no duermes antes de 2–3 h de cenar</div></div>
+      <div class="meal-arrow">▾</div>
+    </div>
+    <div class="meal-body">
+      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Proteína en polvo disuelta en agua</div><div class="food-qty">¾ copa</div></div>
+      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Maní <em>ó</em> 40 g queso</div><div class="food-qty">15 g</div></div>
+      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Aromática</div><div class="food-qty">libre</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ======== VIERNES ======== -->
+<div class="day-panel" id="day-4">
+  <div class="tip-box"><span>🌾</span><span>Día 5 — Avena trasnochada. ¡Prepárala desde la noche anterior!</span></div>
+
+  <div class="meal-card open">
+    <div class="meal-header" onclick="toggleMeal(this)">
+      <div class="meal-icon icon-desayuno">🌾</div>
+      <div class="meal-meta"><div class="meal-name">Desayuno — Avena Trasnochada</div><div class="meal-tag">1 Azúcar · Proteína · Grasa</div></div>
+      <div class="meal-arrow">▾</div>
+    </div>
+    <div class="meal-body">
+      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Avena en hojuelas</div><div class="food-qty">40 g</div></div>
+      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Chía</div><div class="food-qty">10 g</div></div>
+      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Yogurt griego</div><div class="food-qty">60 g</div></div>
+      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Banano</div><div class="food-qty">30 g</div></div>
+      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Leche de almendras</div><div class="food-qty">100 ml</div></div>
+    </div>
+  </div>
+
+  <div class="meal-card">
+    <div class="meal-header" onclick="toggleMeal(this)">
+      <div class="meal-icon icon-manana">🍐</div>
+      <div class="meal-meta"><div class="meal-name">Media Mañana</div><div class="meal-tag">Fruta · Grasa</div></div>
+      <div class="meal-arrow">▾</div>
+    </div>
+    <div class="meal-body">
+      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Pera</div><div class="food-qty">100 g</div></div>
+      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Mantequilla de maní</div><div class="food-qty">20 g</div></div>
+      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Gelatina light</div><div class="food-qty">libre</div></div>
+    </div>
+  </div>
+
+  <div class="meal-card">
+    <div class="meal-header" onclick="toggleMeal(this)">
+      <div class="meal-icon icon-almuerzo">🍝</div>
+      <div class="meal-meta"><div class="meal-name">Almuerzo</div><div class="meal-tag">1 Azúcar · Proteína · Grasa · Vegetales</div></div>
+      <div class="meal-arrow">▾</div>
+    </div>
+    <div class="meal-body">
+      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Pastas</div><div class="food-qty">40 g</div></div>
+      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Pechuga de pollo</div><div class="food-qty">100 g</div></div>
+      <div class="food-item"><div class="food-dot dot-veg"></div><div class="food-text">Ensalada de vegetales</div><div class="food-qty">libre</div></div>
+      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Aguacate</div><div class="food-qty">40 g</div></div>
+      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Mr Tea cero</div><div class="food-qty">libre</div></div>
+    </div>
+  </div>
+
+  <div class="meal-card">
+    <div class="meal-header" onclick="toggleMeal(this)">
+      <div class="meal-icon icon-algo">🫙</div>
+      <div class="meal-meta"><div class="meal-name">Algo — Media Tarde</div><div class="meal-tag">Proteína · Grasa · DÍA DE PIERNA Y COLA</div></div>
+      <div class="meal-arrow">▾</div>
+    </div>
+    <div class="meal-body">
+      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Yogurt griego Zorba o Taeq (máx 4 g azúcar natural)</div><div class="food-qty">130 g</div></div>
+      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Almendras</div><div class="food-qty">20 g</div></div>
+      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Gelatina light</div><div class="food-qty">libre</div></div>
+      <div class="day-note">— ó en día sin entreno / tren superior —</div>
+      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">1 lata de atún pequeña</div><div class="food-qty">1 lata</div></div>
+      <div class="food-item"><div class="food-dot dot-veg"></div><div class="food-text">Vegetales</div><div class="food-qty">1 taza</div></div>
+    </div>
+  </div>
+
+  <div class="meal-card">
+    <div class="meal-header" onclick="toggleMeal(this)">
+      <div class="meal-icon icon-comida">🥗</div>
+      <div class="meal-meta"><div class="meal-name">Comida / Cena</div><div class="meal-tag">1 Azúcar · Proteína · Vegetales · Sin grasa</div></div>
+      <div class="meal-arrow">▾</div>
+    </div>
+    <div class="meal-body">
+      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Arepa extradelgada La Típica</div><div class="food-qty">1 und</div></div>
+      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Cuajada <em>ó</em> Quesito</div><div class="food-qty">80 / 70 g</div></div>
+      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Jugo verde sin fruta + Clight</div><div class="food-qty">libre</div></div>
+    </div>
+  </div>
+
+  <div class="meal-card">
+    <div class="meal-header" onclick="toggleMeal(this)">
+      <div class="meal-icon icon-merienda">🌙</div>
+      <div class="meal-meta"><div class="meal-name">Merienda</div><div class="meal-tag">Solo si no duermes antes de 2–3 h de cenar</div></div>
+      <div class="meal-arrow">▾</div>
+    </div>
+    <div class="meal-body">
+      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Proteína en polvo disuelta en agua</div><div class="food-qty">¾ copa</div></div>
+      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Almendras <em>ó</em> 40 g queso</div><div class="food-qty">15 g</div></div>
+      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Aromática</div><div class="food-qty">libre</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ======== SÁBADO ======== -->
+<div class="day-panel" id="day-5">
+  <div class="tip-box"><span>🥞</span><span>Día 6 — Pancakes de nuevo. ¡Disfruta el fin de semana dentro del plan!</span></div>
+
+  <div class="meal-card open">
+    <div class="meal-header" onclick="toggleMeal(this)">
+      <div class="meal-icon icon-desayuno">🥞</div>
+      <div class="meal-meta"><div class="meal-name">Desayuno</div><div class="meal-tag">1 Azúcar · Proteína · Grasa</div></div>
+      <div class="meal-arrow">▾</div>
+    </div>
+    <div class="meal-body">
+      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Pancake — 4 copas de Why Not</div><div class="food-qty">4 copas</div></div>
+      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">1 Huevo <em>ó</em> Queso blanco / quesito / cuajada</div><div class="food-qty">1 / 40 g</div></div>
+      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Mantequilla Alma en spray</div><div class="food-qty">mínimo</div></div>
+      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Miel Diety o mermelada Konfyt</div><div class="food-qty">al gusto</div></div>
+      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Cocoa en agua con endulzante</div><div class="food-qty">libre</div></div>
+    </div>
+  </div>
+
+  <div class="meal-card">
+    <div class="meal-header" onclick="toggleMeal(this)">
+      <div class="meal-icon icon-manana">🍈</div>
+      <div class="meal-meta"><div class="meal-name">Media Mañana</div><div class="meal-tag">Fruta · Grasa</div></div>
+      <div class="meal-arrow">▾</div>
+    </div>
+    <div class="meal-body">
+      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Papaya <em>ó</em> Granadilla</div><div class="food-qty">100 g</div></div>
+      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Mantequilla de maní</div><div class="food-qty">20 g</div></div>
+      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Gelatina light</div><div class="food-qty">libre</div></div>
+    </div>
+  </div>
+
+  <div class="meal-card">
+    <div class="meal-header" onclick="toggleMeal(this)">
+      <div class="meal-icon icon-almuerzo">🥩</div>
+      <div class="meal-meta"><div class="meal-name">Almuerzo</div><div class="meal-tag">1 Azúcar · Proteína · Grasa · Vegetales</div></div>
+      <div class="meal-arrow">▾</div>
+    </div>
+    <div class="meal-body">
+      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Arroz</div><div class="food-qty">40 g</div></div>
+      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Carne de cerdo magra</div><div class="food-qty">100 g</div></div>
+      <div class="food-item"><div class="food-dot dot-veg"></div><div class="food-text">Ensalada de vegetales</div><div class="food-qty">libre</div></div>
+      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Aceite de oliva</div><div class="food-qty">1 cdta / 10 g</div></div>
+      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Agua</div><div class="food-qty">libre</div></div>
+    </div>
+  </div>
+
+  <div class="meal-card">
+    <div class="meal-header" onclick="toggleMeal(this)">
+      <div class="meal-icon icon-algo">💪</div>
+      <div class="meal-meta"><div class="meal-name">Algo — Media Tarde</div><div class="meal-tag">Proteína · Grasa · DÍA DE PIERNA Y COLA</div></div>
+      <div class="meal-arrow">▾</div>
+    </div>
+    <div class="meal-body">
+      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">½ Barra Proteína</div><div class="food-qty">½ barra</div></div>
+      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Almendras</div><div class="food-qty">20 g</div></div>
+      <div class="day-note">— ó en día sin entreno / tren superior —</div>
+      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Pollo desmechado o camarones</div><div class="food-qty">80 g</div></div>
+      <div class="food-item"><div class="food-dot dot-veg"></div><div class="food-text">Vegetales</div><div class="food-qty">1 taza</div></div>
+    </div>
+  </div>
+
+  <div class="meal-card">
+    <div class="meal-header" onclick="toggleMeal(this)">
+      <div class="meal-icon icon-comida">🥩</div>
+      <div class="meal-meta"><div class="meal-name">Comida / Cena</div><div class="meal-tag">Proteína · Vegetales · Sin grasa</div></div>
+      <div class="meal-arrow">▾</div>
+    </div>
+    <div class="meal-body">
+      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Solomo</div><div class="food-qty">100 g</div></div>
+      <div class="food-item"><div class="food-dot dot-veg"></div><div class="food-text">Ensalada de vegetales</div><div class="food-qty">libre</div></div>
+      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Limonada sin azúcar</div><div class="food-qty">libre</div></div>
+    </div>
+  </div>
+
+  <div class="meal-card">
+    <div class="meal-header" onclick="toggleMeal(this)">
+      <div class="meal-icon icon-merienda">🌙</div>
+      <div class="meal-meta"><div class="meal-name">Merienda</div><div class="meal-tag">Solo si no duermes antes de 2–3 h de cenar</div></div>
+      <div class="meal-arrow">▾</div>
+    </div>
+    <div class="meal-body">
+      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Proteína en polvo disuelta en agua</div><div class="food-qty">¾ copa</div></div>
+      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Maní <em>ó</em> 40 g queso</div><div class="food-qty">15 g</div></div>
+      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Aromática</div><div class="food-qty">libre</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ======== DOMINGO ======== -->
+<div class="day-panel" id="day-6">
+  <div class="tip-box"><span>🫘</span><span>Día 7 — Lentejas en el almuerzo. Cierra la semana fuerte. ¡Lo lograste!</span></div>
+
+  <div class="meal-card open">
+    <div class="meal-header" onclick="toggleMeal(this)">
+      <div class="meal-icon icon-desayuno">🍳</div>
+      <div class="meal-meta"><div class="meal-name">Desayuno</div><div class="meal-tag">1 Azúcar · Proteína · Grasa</div></div>
+      <div class="meal-arrow">▾</div>
+    </div>
+    <div class="meal-body">
+      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Arepa extradelgada Sary <em>ó</em> Avena</div><div class="food-qty">1 und / 40 g</div></div>
+      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Quesito + 2 Claras + 1 Yema</div><div class="food-qty">30 g + 2 + 1</div></div>
+      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Aceite en spray</div><div class="food-qty">mínimo</div></div>
+      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Aromática o té verde</div><div class="food-qty">libre</div></div>
+    </div>
+  </div>
+
+  <div class="meal-card">
+    <div class="meal-header" onclick="toggleMeal(this)">
+      <div class="meal-icon icon-manana">🍍</div>
+      <div class="meal-meta"><div class="meal-name">Media Mañana</div><div class="meal-tag">Fruta · Grasa</div></div>
+      <div class="meal-arrow">▾</div>
+    </div>
+    <div class="meal-body">
+      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Piña</div><div class="food-qty">100 g</div></div>
+      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Almendras</div><div class="food-qty">20 g</div></div>
+      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Gelatina light</div><div class="food-qty">libre</div></div>
+    </div>
+  </div>
+
+  <div class="meal-card">
+    <div class="meal-header" onclick="toggleMeal(this)">
+      <div class="meal-icon icon-almuerzo">🫘</div>
+      <div class="meal-meta"><div class="meal-name">Almuerzo</div><div class="meal-tag">1 Azúcar · Proteína · Grasa · Vegetales</div></div>
+      <div class="meal-arrow">▾</div>
+    </div>
+    <div class="meal-body">
+      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Lentejas</div><div class="food-qty">40 g</div></div>
+      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Carne de res magra</div><div class="food-qty">100 g</div></div>
+      <div class="food-item"><div class="food-dot dot-veg"></div><div class="food-text">Ensalada de vegetales</div><div class="food-qty">libre</div></div>
+      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Aguacate</div><div class="food-qty">40 g</div></div>
+      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Agua</div><div class="food-qty">libre</div></div>
+    </div>
+  </div>
+
+  <div class="meal-card">
+    <div class="meal-header" onclick="toggleMeal(this)">
+      <div class="meal-icon icon-algo">🧀</div>
+      <div class="meal-meta"><div class="meal-name">Algo — Media Tarde</div><div class="meal-tag">Proteína · Grasa · DÍA DE PIERNA Y COLA</div></div>
+      <div class="meal-arrow">▾</div>
+    </div>
+    <div class="meal-body">
+      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Barra de queso Finesse <em>ó</em> queso blanco bajo en grasa</div><div class="food-qty">40 g</div></div>
+      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Maní</div><div class="food-qty">20 g</div></div>
+      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Gelatina light</div><div class="food-qty">libre</div></div>
+      <div class="day-note">— ó en día sin entreno / tren superior —</div>
+      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Plancha de pollo</div><div class="food-qty">80 g</div></div>
+      <div class="food-item"><div class="food-dot dot-veg"></div><div class="food-text">Vegetales</div><div class="food-qty">1 taza</div></div>
+    </div>
+  </div>
+
+  <div class="meal-card">
+    <div class="meal-header" onclick="toggleMeal(this)">
+      <div class="meal-icon icon-comida">🥗</div>
+      <div class="meal-meta"><div class="meal-name">Comida / Cena</div><div class="meal-tag">1 Azúcar · Proteína · Vegetales · Sin grasa</div></div>
+      <div class="meal-arrow">▾</div>
+    </div>
+    <div class="meal-body">
+      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Papa al vapor</div><div class="food-qty">60 g</div></div>
+      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Plancha de pollo</div><div class="food-qty">100 g</div></div>
+      <div class="food-item"><div class="food-dot dot-veg"></div><div class="food-text">Ensalada de vegetales / crema o jugo verde</div><div class="food-qty">libre</div></div>
+      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Limonada sin azúcar</div><div class="food-qty">libre</div></div>
+    </div>
+  </div>
+
+  <div class="meal-card">
+    <div class="meal-header" onclick="toggleMeal(this)">
+      <div class="meal-icon icon-merienda">🌙</div>
+      <div class="meal-meta"><div class="meal-name">Merienda</div><div class="meal-tag">Solo si no duermes antes de 2–3 h de cenar</div></div>
+      <div class="meal-arrow">▾</div>
+    </div>
+    <div class="meal-body">
+      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Proteína en polvo disuelta en agua</div><div class="food-qty">¾ copa</div></div>
+      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Almendras <em>ó</em> 40 g queso</div><div class="food-qty">15 g</div></div>
+      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Aromática</div><div class="food-qty">libre</div></div>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<button class="fab" onclick="expandAll()">📋 Ver todo el día</button>
+
+<script>
+function showDay(idx) {
+  document.querySelectorAll('.day-panel').forEach(function(p) { p.classList.remove('active'); });
+  document.querySelectorAll('.day-btn').forEach(function(b) { b.classList.remove('active'); });
+  document.getElementById('day-' + idx).classList.add('active');
+  document.getElementById('btn-' + idx).classList.add('active');
+  // auto open first card, close rest
+  var cards = document.getElementById('day-' + idx).querySelectorAll('.meal-card');
+  cards.forEach(function(c, i) { i === 0 ? c.classList.add('open') : c.classList.remove('open'); });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function toggleMeal(header) {
+  var card = header.parentElement;
+  card.classList.toggle('open');
+}
+
+function expandAll() {
+  var active = document.querySelector('.day-panel.active');
+  var cards = active.querySelectorAll('.meal-card');
+  var allOpen = Array.from(cards).every(function(c) { return c.classList.contains('open'); });
+  cards.forEach(function(c) { allOpen ? c.classList.remove('open') : c.classList.add('open'); });
+  document.querySelector('.fab').textContent = allOpen ? '📋 Ver todo el día' : '🔼 Colapsar todo';
+}
+
+// Reset FAB text on day change
+document.querySelectorAll('.day-btn').forEach(function(b) {
+  b.addEventListener('click', function() {
+    document.querySelector('.fab').textContent = '📋 Ver todo el día';
+  });
+});
+</script>
+</body>
+</html>

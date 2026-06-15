@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi Plan — Darly Vargas</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0F1117;
+  --card: #1A1D27;
+  --card2: #21253A;
+  --border: #2E3350;
+  --green: #39D98A;
+  --green-dark: #1A7A4A;
+  --green-glow: rgba(57,217,138,0.15);
+  --amber: #FFB830;
+  --violet: #A78BFA;
+  --coral: #FF6B6B;
+  --sky: #38BDF8;
+  --text: #F1F5F9;
+  --text2: #94A3B8;
+  --text3: #64748B;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Nunito', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ── BACKGROUND BLOBS ── */
+.blob {
+  position: fixed; border-radius: 50%; filter: blur(80px);
+  opacity: 0.18; pointer-events: none; z-index: 0;
+}
+.blob-1 { width: 420px; height: 420px; background: var(--green); top: -120px; left: -100px; }
+.blob-2 { width: 320px; height: 320px; background: var(--violet); bottom: 60px; right: -80px; }
+.blob-3 { width: 220px; height: 220px; background: var(--amber); top: 50%; left: 60%; }
+
+/* ── WRAP ── */
+.wrap {
+  position: relative; z-index: 1;
+  max-width: 480px; margin: 0 auto;
+  padding: 0 18px 60px;
+  min-height: 100vh;
+  display: flex; flex-direction: column;
+}
+
+/* ── HEADER ── */
+.top-bar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 24px 0 0;
+}
+.logo-pill {
+  display: flex; align-items: center; gap: 8px;
+  background: var(--green-glow); border: 1px solid rgba(57,217,138,0.35);
+  border-radius: 99px; padding: 6px 14px 6px 8px;
+}
+.logo-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--green); box-shadow: 0 0 8px var(--green); }
+.logo-text { font-size: 12px; font-weight: 800; color: var(--green); letter-spacing: 0.04em; }
+.top-date { font-size: 12px; color: var(--text3); font-weight: 600; }
+
+/* ── HERO ── */
+.hero { padding: 36px 0 28px; text-align: center; }
+.hero-emoji { font-size: 54px; display: block; margin-bottom: 16px; filter: drop-shadow(0 0 18px rgba(57,217,138,0.3)); animation: pulse 3s ease-in-out infinite; }
+@keyframes pulse { 0%,100%{transform:scale(1);} 50%{transform:scale(1.07);} }
+.hero-greeting { font-size: 13px; font-weight: 700; color: var(--green); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
+.hero-name {
+  font-family: 'DM Serif Display', serif;
+  font-size: 32px; font-weight: 400; line-height: 1.1;
+  background: linear-gradient(135deg, #F1F5F9 30%, #39D98A 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text; margin-bottom: 14px;
+}
+.hero-sub { font-size: 14px; color: var(--text2); line-height: 1.6; max-width: 300px; margin: 0 auto; }
+
+/* ── MOTIVATIONAL STRIP ── */
+.quote-strip {
+  background: linear-gradient(135deg, rgba(57,217,138,0.08), rgba(57,217,138,0.03));
+  border: 1px solid rgba(57,217,138,0.2);
+  border-radius: 14px; padding: 14px 16px; margin-bottom: 28px;
+  display: flex; align-items: flex-start; gap: 10px;
+}
+.quote-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+.quote-text { font-size: 13.5px; color: var(--green); font-weight: 700; line-height: 1.5; font-style: italic; }
+.quote-author { font-size: 11px; color: var(--text3); margin-top: 4px; font-style: normal; font-weight: 600; }
+
+/* ── SECTION LABEL ── */
+.sec-label {
+  font-size: 10px; font-weight: 800; text-transform: uppercase;
+  letter-spacing: 0.1em; color: var(--text3);
+  display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+}
+.sec-label::before, .sec-label::after { content:''; flex:1; height:1px; background: var(--border); }
+
+/* ── CARDS ── */
+.cards { display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px; }
+
+.nav-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px; overflow: hidden;
+  text-decoration: none; color: inherit;
+  display: block;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  position: relative;
+}
+.nav-card:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,0,0,0.4); }
+.nav-card:active { transform: scale(0.98); }
+
+.card-glow {
+  position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  border-radius: 20px 20px 0 0;
+}
+
+.card-inner { display: flex; align-items: center; gap: 14px; padding: 18px 16px; }
+
+.card-icon-wrap {
+  width: 56px; height: 56px; border-radius: 16px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 26px; flex-shrink: 0;
+}
+
+.card-body { flex: 1; min-width: 0; }
+.card-num { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 3px; }
+.card-title { font-size: 16px; font-weight: 900; letter-spacing: -0.2px; margin-bottom: 4px; }
+.card-desc { font-size: 12px; color: var(--text2); line-height: 1.5; }
+
+.card-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.tag { font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 99px; }
+
+.card-arrow {
+  width: 34px; height: 34px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px; flex-shrink: 0;
+  transition: transform 0.2s;
+}
+.nav-card:hover .card-arrow { transform: translateX(3px); }
+
+/* ── MINI STATS ── */
+.stats-row {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 32px;
+}
+.stat-box {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 14px; padding: 14px 10px; text-align: center;
+}
+.stat-val { font-size: 22px; font-weight: 900; line-height: 1; }
+.stat-lbl { font-size: 10px; color: var(--text3); font-weight: 700; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.05em; }
+
+/* ── QUOTES CAROUSEL ── */
+.quotes-section { margin-bottom: 24px; }
+.quotes-list { display: flex; flex-direction: column; gap: 8px; }
+.q-card {
+  background: var(--card2); border: 1px solid var(--border);
+  border-radius: 14px; padding: 13px 15px;
+  display: flex; align-items: flex-start; gap: 10px;
+}
+.q-emoji { font-size: 18px; flex-shrink: 0; }
+.q-text { font-size: 13px; color: var(--text2); line-height: 1.5; font-style: italic; }
+
+/* ── FOOTER ── */
+.footer {
+  text-align: center; padding: 12px 0;
+  font-size: 11px; color: var(--text3); line-height: 1.6;
+}
+.footer strong { color: var(--green); }
+
+/* ── RIPPLE ── */
+@keyframes ripple {
+  0% { transform: scale(0); opacity: 0.5; }
+  100% { transform: scale(4); opacity: 0; }
+}
+.nav-card .ripple-el {
+  position: absolute; border-radius: 50%;
+  width: 60px; height: 60px; margin-left: -30px; margin-top: -30px;
+  pointer-events: none; animation: ripple 0.6s ease-out forwards;
+}
+</style>
+</head>
+<body>
+
+<!-- Background blobs -->
+<div class="blob blob-1"></div>
+<div class="blob blob-2"></div>
+<div class="blob blob-3"></div>
+
+<div class="wrap">
+
+  <!-- Top bar -->
+  <div class="top-bar">
+    <div class="logo-pill">
+      <div class="logo-dot"></div>
+      <span class="logo-text">Camilo Roa · Health & Nutrition</span>
+    </div>
+    <div class="top-date" id="topDate"></div>
+  </div>
+
+  <!-- Hero -->
+  <div class="hero">
+    <span class="hero-emoji">💪</span>
+    <div class="hero-greeting">Bienvenida de vuelta</div>
+    <div class="hero-name">Hola, Darly 👋</div>
+    <div class="hero-sub">Tu plan personalizado está listo. Todo en un solo lugar, sin excusas.</div>
+  </div>
+
+  <!-- Quote strip -->
+  <div class="quote-strip" id="dynamicQuote">
+    <span class="quote-icon">✨</span>
+    <div>
+      <div class="quote-text" id="quoteText">"El único mal entrenamiento es el que no hiciste."</div>
+      <div class="quote-author" id="quoteAuthor">— Recuerda: 80% alimentación · 15% entrenamiento · 5% suplementación</div>
+    </div>
+  </div>
+
+  <!-- Mini stats -->
+  <div class="stats-row">
+    <div class="stat-box">
+      <div class="stat-val" style="color:#39D98A">5</div>
+      <div class="stat-lbl">Días de entreno</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-val" style="color:#FFB830">6</div>
+      <div class="stat-lbl">Comidas al día</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-val" style="color:#A78BFA">2.5L</div>
+      <div class="stat-lbl">Agua diaria</div>
+    </div>
+  </div>
+
+  <!-- Nav cards -->
+  <div class="sec-label">Tu plan completo</div>
+
+  <div class="cards">
+
+    <!-- 1. Lista de mercado -->
+    <a href="index_lista_mercado_lane.html" class="nav-card" onclick="addRipple(event,this)">
+      <div class="card-glow" style="background:linear-gradient(90deg,#39D98A,#52E3A3)"></div>
+      <div class="card-inner">
+        <div class="card-icon-wrap" style="background:rgba(57,217,138,0.12);border:1px solid rgba(57,217,138,0.25)">🛒</div>
+        <div class="card-body">
+          <div class="card-num" style="color:#39D98A">Módulo 01</div>
+          <div class="card-title">Lista de Mercado</div>
+          <div class="card-desc">Todo lo que necesitas comprar organizado por categorías. ¡Lleva el celular al súper!</div>
+          <div class="card-tags">
+            <span class="tag" style="background:rgba(57,217,138,0.12);color:#39D98A">🥦 Verduras</span>
+            <span class="tag" style="background:rgba(57,217,138,0.12);color:#39D98A">🥩 Carnes</span>
+            <span class="tag" style="background:rgba(57,217,138,0.12);color:#39D98A">🛒 Despensa</span>
+            <span class="tag" style="background:rgba(57,217,138,0.12);color:#39D98A">💊 Suplementos</span>
+          </div>
+        </div>
+        <div class="card-arrow" style="background:rgba(57,217,138,0.1);color:#39D98A">→</div>
+      </div>
+    </a>
+
+    <!-- 2. Plan de alimentación -->
+    <a href="index_plan_alimentacion.html" class="nav-card" onclick="addRipple(event,this)">
+      <div class="card-glow" style="background:linear-gradient(90deg,#FFB830,#FFDA6A)"></div>
+      <div class="card-inner">
+        <div class="card-icon-wrap" style="background:rgba(255,184,48,0.12);border:1px solid rgba(255,184,48,0.25)">🥗</div>
+        <div class="card-body">
+          <div class="card-num" style="color:#FFB830">Módulo 02</div>
+          <div class="card-title">Plan de Alimentación</div>
+          <div class="card-desc">Menú día a día con porciones exactas. Desayuno, medias y comidas para toda la semana.</div>
+          <div class="card-tags">
+            <span class="tag" style="background:rgba(255,184,48,0.12);color:#FFB830">📅 7 días</span>
+            <span class="tag" style="background:rgba(255,184,48,0.12);color:#FFB830">🍽️ 6 comidas</span>
+            <span class="tag" style="background:rgba(255,184,48,0.12);color:#FFB830">⚖️ Porciones</span>
+          </div>
+        </div>
+        <div class="card-arrow" style="background:rgba(255,184,48,0.1);color:#FFB830">→</div>
+      </div>
+    </a>
+
+    <!-- 3. Rutinas -->
+    <a href="index_rutinas_lane.html" class="nav-card" onclick="addRipple(event,this)">
+      <div class="card-glow" style="background:linear-gradient(90deg,#FF6B6B,#FF9A9A)"></div>
+      <div class="card-inner">
+        <div class="card-icon-wrap" style="background:rgba(255,107,107,0.12);border:1px solid rgba(255,107,107,0.25)">🔥</div>
+        <div class="card-body">
+          <div class="card-num" style="color:#FF6B6B">Módulo 03</div>
+          <div class="card-title">Rutina de Entrenamiento</div>
+          <div class="card-desc">5 días de ejercicios con series, repeticiones y progreso en tiempo real. ¡A sudar!</div>
+          <div class="card-tags">
+            <span class="tag" style="background:rgba(255,107,107,0.12);color:#FF6B6B">🍑 Glúteo</span>
+            <span class="tag" style="background:rgba(255,107,107,0.12);color:#FF6B6B">💪 Superior</span>
+            <span class="tag" style="background:rgba(255,107,107,0.12);color:#FF6B6B">🦵 Pierna</span>
+            <span class="tag" style="background:rgba(255,107,107,0.12);color:#FF6B6B">🏃 Cardio</span>
+          </div>
+        </div>
+        <div class="card-arrow" style="background:rgba(255,107,107,0.1);color:#FF6B6B">→</div>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- More motivational quotes -->
+  <div class="quotes-section">
+    <div class="sec-label">Frases para hoy</div>
+    <div class="quotes-list">
+      <div class="q-card">
+        <span class="q-emoji">🌅</span>
+        <div class="q-text">"Tu cuerpo puede hacerlo. Es tu mente a la que tienes que convencer."</div>
+      </div>
+      <div class="q-card">
+        <span class="q-emoji">🥦</span>
+        <div class="q-text">"Eliminar el azúcar no es castigo — es el regalo más grande que le puedes dar a tu cuerpo."</div>
+      </div>
+      <div class="q-card">
+        <span class="q-emoji">📈</span>
+        <div class="q-text">"Un mes de disciplina puede cambiar lo que años de dudas no pudieron."</div>
+      </div>
+      <div class="q-card">
+        <span class="q-emoji">💧</span>
+        <div class="q-text">"Recuerda: 2.5 litros de agua al día. La hidratación también es parte del proceso."</div>
+      </div>
+      <div class="q-card">
+        <span class="q-emoji">🎯</span>
+        <div class="q-text">"El 90% del resultado viene de los menús que cumples, no de los que te saltas."</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    Diseñado por <strong>C. Camilo Roa B.</strong> · Nutricionista Dietista<br>
+    Esp. Nutrición Deportiva · Sobrepeso & Obesidad<br>
+    📱 <strong>+57 304 471 3952</strong> · Medellín, Colombia
+  </div>
+
+</div>
+
+<script>
+// Date
+var days = ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
+var months = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+var now = new Date();
+document.getElementById('topDate').textContent = days[now.getDay()] + ' ' + now.getDate() + ' ' + months[now.getMonth()];
+
+// Rotating quotes
+var quotes = [
+  { text: '"El único mal entrenamiento es el que no hiciste."', author: '— Recuerda: 80% alimentación · 15% entrenamiento · 5% suplementación' },
+  { text: '"Cada comida que haces bien es un paso más cerca de tu objetivo."', author: '— Cumple el 90% de los menús y los resultados llegarán' },
+  { text: '"La constancia hace lo que el talento no puede."', author: '— 4 a 5 días de entrenamiento cada semana, sin excusas' },
+  { text: '"Tu cuerpo es el reflejo de lo que le das. Dale lo mejor."', author: '— Comer cada 3-4 horas activa tu metabolismo' },
+  { text: '"No se trata de ser perfecta, se trata de ser constante."', author: '— Una trampa por semana está permitida, ¡sin dulce!' },
+];
+var qi = Math.floor(Math.random() * quotes.length);
+document.getElementById('quoteText').textContent = quotes[qi].text;
+document.getElementById('quoteAuthor').textContent = quotes[qi].author;
+
+// Ripple effect
+function addRipple(e, card) {
+  var rect = card.getBoundingClientRect();
+  var x = e.clientX - rect.left;
+  var y = e.clientY - rect.top;
+  var el = document.createElement('div');
+  el.className = 'ripple-el';
+  el.style.left = x + 'px';
+  el.style.top = y + 'px';
+  var color = card.querySelector('.card-glow').style.background.includes('39D98A')
+    ? 'rgba(57,217,138,0.15)'
+    : card.querySelector('.card-glow').style.background.includes('FFB830')
+    ? 'rgba(255,184,48,0.15)'
+    : 'rgba(255,107,107,0.15)';
+  el.style.background = color;
+  card.appendChild(el);
+  setTimeout(function(){ el.remove(); }, 700);
+}
+</script>
+</body>
+</html>
