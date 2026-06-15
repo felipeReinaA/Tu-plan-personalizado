@@ -167,9 +167,46 @@ body { font-family: 'Nunito', sans-serif; background: var(--bg); color: var(--gr
 </head>
 <body>
 
+/* BOTÓN REGRESAR INTEGRADO */
+.btn-back {
+display: inline-flex;
+align-items: center;
+gap: 6px;
+color: rgba(255, 255, 255, 0.9);
+text-decoration: none;
+font-size: 13px;
+font-weight: 600;
+padding: 6px 12px;
+border-radius: 8px;
+background: rgba(255, 255, 255, 0.15);
+transition: all 0.2s ease;
+}
+.btn-back:hover {
+color: #FFFFFF;
+background: rgba(255, 255, 255, 0.25);
+transform: translateX(-2px);
+}
+@media print {
+.btn-back { display: none !important; }
+}
+</style>
+</head>
+<body>
+
 <header class="header">
-  <h1>🥗 Plan de Alimentación Semanal</h1>
-  <p>Darly Yessenia Vargas Moreno · Nutricionista Camilo Roa</p>
+<!-- NUEVO: Contenedor con botón e iconografía de retorno -->
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+<a href="index.html" class="btn-back">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<line x1="19" y1="12" x2="5" y2="12"></line>
+<polyline points="12 19 5 12 12 5"></polyline>
+</svg>
+Volver
+</a>
+</div>
+
+<h1>🥗 Plan de Alimentación Semanal</h1>
+<p>Darly Yessenia Vargas Moreno · Nutricionista Camilo Roa</p>
 </header>
 
 <nav class="day-nav">
