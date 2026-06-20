@@ -1032,7 +1032,12 @@ function showDay(idx) {
   var cards = document.getElementById('day-' + idx).querySelectorAll('.meal-card');
   cards.forEach(function(c, i) { i === 0 ? c.classList.add('open') : c.classList.remove('open'); });
   document.querySelector('.fab').textContent = '📋 Ver todo el día';
-  document.querySelector('.main').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+  // Scroll descontando header + day-nav para que el desayuno no quede tapado
+  var headerH = document.querySelector('.header').offsetHeight;
+  var navH = document.querySelector('.day-nav').offsetHeight;
+  var mainTop = document.querySelector('.main').getBoundingClientRect().top + window.scrollY;
+  window.scrollTo({ top: mainTop - headerH - navH - 8, behavior: 'smooth' });
 }
 
 function toggleMeal(header) {
