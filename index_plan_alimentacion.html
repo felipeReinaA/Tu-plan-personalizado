@@ -76,7 +76,7 @@ body { font-family: 'Nunito', sans-serif; background: var(--bg); color: var(--gr
   background: white;
   border-bottom: 1.5px solid var(--gray-100);
   position: sticky;
-  top: 92px;
+  top: 80px;
   z-index: 99;
   padding: 10px 12px 0;
 }
@@ -1032,7 +1032,7 @@ function showDay(idx) {
   var cards = document.getElementById('day-' + idx).querySelectorAll('.meal-card');
   cards.forEach(function(c, i) { i === 0 ? c.classList.add('open') : c.classList.remove('open'); });
   document.querySelector('.fab').textContent = '📋 Ver todo el día';
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  document.querySelector('.main').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 function toggleMeal(header) {
@@ -1046,6 +1046,14 @@ function expandAll() {
   cards.forEach(function(c) { allOpen ? c.classList.remove('open') : c.classList.add('open'); });
   document.querySelector('.fab').textContent = allOpen ? '📋 Ver todo el día' : '🔼 Colapsar todo';
 }
+  // Ajuste dinámico del top del day-nav según altura real del header
+function adjustNavTop() {
+  var headerH = document.querySelector('.header').offsetHeight;
+  document.querySelector('.day-nav').style.top = headerH + 'px';
+}
+adjustNavTop();
+window.addEventListener('resize', adjustNavTop);
+  
 </script>
 </body>
 </html>
