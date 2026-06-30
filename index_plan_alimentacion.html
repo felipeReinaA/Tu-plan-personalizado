@@ -7,29 +7,29 @@
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg: #F5F7F2;
-  --card: #FFFFFF;
-  --green: #2D6A4F;
-  --green-mid: #52B788;
-  --green-light: #D8F3DC;
-  --green-pale: #F0FAF4;
-  --coral: #E07A5F;
-  --coral-light: #FDECEA;
-  --amber: #F2CC8F;
-  --amber-dark: #7C5A1E;
-  --amber-light: #FEF9EE;
-  --violet: #6B48C8;
-  --violet-light: #EDE9FF;
-  --sky: #3A86C8;
-  --sky-light: #E8F4FD;
-  --rose: #D45C8A;
-  --rose-light: #FCEEF5;
-  --gray-900: #1A1F16;
-  --gray-700: #3D4535;
-  --gray-500: #7A8470;
-  --gray-300: #CDD4C5;
-  --gray-200: #DDE3D6;
-  --gray-100: #EFF2EB;
+--bg: #F5F7F2;
+--card: #FFFFFF;
+--green: #2D6A4F;
+--green-mid: #52B788;
+--green-light: #D8F3DC;
+--green-pale: #F0FAF4;
+--coral: #E07A5F;
+--coral-light: #FDECEA;
+--amber: #F2CC8F;
+--amber-dark: #7C5A1E;
+--amber-light: #FEF9EE;
+--violet: #6B48C8;
+--violet-light: #EDE9FF;
+--sky: #3A86C8;
+--sky-light: #E8F4FD;
+--rose: #D45C8A;
+--rose-light: #FCEEF5;
+--gray-900: #1A1F16;
+--gray-700: #3D4535;
+--gray-500: #7A8470;
+--gray-300: #CDD4C5;
+--gray-200: #DDE3D6;
+--gray-100: #EFF2EB;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -37,95 +37,95 @@ body { font-family: 'Nunito', sans-serif; background: var(--bg); color: var(--gr
 
 /* ── HEADER ── */
 .header {
-  background: linear-gradient(135deg, var(--green) 0%, #1B4332 100%);
-  padding: 20px 20px 18px;
-  color: white;
-  position: sticky; top: 0; z-index: 100;
-  box-shadow: 0 3px 16px rgba(27,67,50,0.3);
+background: linear-gradient(135deg, var(--green) 0%, #1B4332 100%);
+padding: 20px 20px 18px;
+color: white;
+position: sticky; top: 0; z-index: 100;
+box-shadow: 0 3px 16px rgba(27,67,50,0.3);
 }
 .header-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-  gap: 8px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 10px;
+gap: 8px;
 }
 .header h1 { font-size: 19px; font-weight: 800; letter-spacing: -0.3px; line-height: 1.2; }
 .header p { font-size: 12px; opacity: 0.7; margin-top: 3px; }
 
 /* ── BACK BUTTON ── */
 .btn-back {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  color: rgba(255,255,255,0.9);
-  text-decoration: none;
-  font-size: 12px;
-  font-weight: 600;
-  padding: 5px 10px;
-  border-radius: 8px;
-  background: rgba(255,255,255,0.15);
-  transition: background 0.2s;
-  white-space: nowrap;
-  flex-shrink: 0;
+display: inline-flex;
+align-items: center;
+gap: 6px;
+color: rgba(255,255,255,0.9);
+text-decoration: none;
+font-size: 12px;
+font-weight: 600;
+padding: 5px 10px;
+border-radius: 8px;
+background: rgba(255,255,255,0.15);
+transition: background 0.2s;
+white-space: nowrap;
+flex-shrink: 0;
 }
 .btn-back:hover { background: rgba(255,255,255,0.25); }
 
 /* ── DAY NAV — GRID (7 equal columns, all visible, centered) ── */
 .day-nav {
-  background: white;
-  border-bottom: 1.5px solid var(--gray-100);
-  position: sticky;
-  top: 80px;
-  z-index: 99;
-  padding: 10px 12px 0;
+background: white;
+border-bottom: 1.5px solid var(--gray-100);
+position: sticky;
+top: 80px;
+z-index: 99;
+padding: 10px 12px 0;
 }
 
 .day-grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 4px;
-  max-width: 560px;
-  margin: 0 auto;
+display: grid;
+grid-template-columns: repeat(7, 1fr);
+gap: 4px;
+max-width: 560px;
+margin: 0 auto;
 }
 
 .day-btn {
-  border: none;
-  background: none;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 8px 4px 10px;
-  gap: 3px;
-  color: var(--gray-500);
-  border-bottom: 2.5px solid transparent;
-  margin-bottom: -1.5px;
-  transition: all 0.2s;
-  font-family: 'Nunito', sans-serif;
-  -webkit-tap-highlight-color: transparent;
-  border-radius: 10px 10px 0 0;
-  min-width: 0;
+border: none;
+background: none;
+cursor: pointer;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding: 8px 4px 10px;
+gap: 3px;
+color: var(--gray-500);
+border-bottom: 2.5px solid transparent;
+margin-bottom: -1.5px;
+transition: all 0.2s;
+font-family: 'Nunito', sans-serif;
+-webkit-tap-highlight-color: transparent;
+border-radius: 10px 10px 0 0;
+min-width: 0;
 }
 .day-btn:hover:not(.active) { color: var(--gray-700); background: var(--gray-100); }
 .day-btn.active {
-  color: var(--green);
-  border-bottom-color: var(--green);
-  background: var(--green-pale);
+color: var(--green);
+border-bottom-color: var(--green);
+background: var(--green-pale);
 }
 
 .day-short {
-  font-size: 10px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  line-height: 1;
+font-size: 10px;
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: 0.04em;
+line-height: 1;
 }
 .day-letter {
-  font-size: 20px;
-  font-weight: 800;
-  line-height: 1;
+font-size: 20px;
+font-weight: 800;
+line-height: 1;
 }
 
 /* ── MAIN ── */
@@ -133,84 +133,84 @@ body { font-family: 'Nunito', sans-serif; background: var(--bg); color: var(--gr
 
 /* ── MEAL CARD ── */
 .meal-card {
-  background: var(--card);
-  border-radius: 16px;
-  margin-bottom: 10px;
-  overflow: hidden;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-  border: 1.5px solid var(--gray-100);
-  transition: box-shadow 0.2s;
+background: var(--card);
+border-radius: 16px;
+margin-bottom: 10px;
+overflow: hidden;
+box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+border: 1.5px solid var(--gray-100);
+transition: box-shadow 0.2s;
 }
 .meal-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
 
 .meal-header {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px 14px 11px;
-  cursor: pointer;
-  user-select: none;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.2s;
-  -webkit-tap-highlight-color: transparent;
+display: flex;
+align-items: center;
+gap: 10px;
+padding: 12px 14px 11px;
+cursor: pointer;
+user-select: none;
+border-bottom: 1px solid transparent;
+transition: border-color 0.2s;
+-webkit-tap-highlight-color: transparent;
 }
 .meal-card.open .meal-header { border-bottom-color: var(--gray-100); }
 
 .meal-icon {
-  width: 38px; height: 38px;
-  border-radius: 12px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 18px; flex-shrink: 0;
+width: 38px; height: 38px;
+border-radius: 12px;
+display: flex; align-items: center; justify-content: center;
+font-size: 18px; flex-shrink: 0;
 }
 .meal-meta { flex: 1; min-width: 0; }
 .meal-name { font-size: 14px; font-weight: 700; color: var(--gray-900); }
 .meal-tag { font-size: 11px; color: var(--gray-500); margin-top: 1px; line-height: 1.3; }
 
 .meal-arrow {
-  width: 24px; height: 24px;
-  border-radius: 99px;
-  background: var(--gray-100);
-  display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0;
-  transition: transform 0.25s;
-  font-size: 13px;
+width: 24px; height: 24px;
+border-radius: 99px;
+background: var(--gray-100);
+display: flex; align-items: center; justify-content: center;
+flex-shrink: 0;
+transition: transform 0.25s;
+font-size: 13px;
 }
 .meal-card.open .meal-arrow { transform: rotate(180deg); }
 
 /* ── MEAL BODY ── */
 .meal-body {
-  padding: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.35s ease, padding 0.2s;
+padding: 0;
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.35s ease, padding 0.2s;
 }
 .meal-card.open .meal-body { padding: 12px 14px 14px; max-height: 700px; }
 
 .food-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  padding: 5px 0;
-  border-bottom: 1px dashed var(--gray-100);
-  font-size: 13px;
+display: flex;
+align-items: flex-start;
+gap: 8px;
+padding: 5px 0;
+border-bottom: 1px dashed var(--gray-100);
+font-size: 13px;
 }
 .food-item:last-child { border-bottom: none; }
 .food-dot {
-  width: 6px; height: 6px;
-  border-radius: 50%;
-  flex-shrink: 0;
-  margin-top: 6px;
+width: 6px; height: 6px;
+border-radius: 50%;
+flex-shrink: 0;
+margin-top: 6px;
 }
 .food-text { flex: 1; color: var(--gray-700); line-height: 1.4; }
 .food-qty {
-  font-size: 11.5px;
-  font-weight: 700;
-  color: var(--gray-500);
-  white-space: nowrap;
-  flex-shrink: 0;
-  padding: 2px 7px;
-  background: var(--gray-100);
-  border-radius: 99px;
+font-size: 11.5px;
+font-weight: 700;
+color: var(--gray-500);
+white-space: nowrap;
+flex-shrink: 0;
+padding: 2px 7px;
+background: var(--gray-100);
+border-radius: 99px;
 }
 
 /* ── TAG PILLS ── */
@@ -224,841 +224,1286 @@ body { font-family: 'Nunito', sans-serif; background: var(--bg); color: var(--gr
 
 /* ── ICON COLORS ── */
 .icon-desayuno { background: #FEF3C7; }
-.icon-manana   { background: #D1FAE5; }
+.icon-manana { background: #D1FAE5; }
 .icon-almuerzo { background: #DBEAFE; }
-.icon-algo     { background: #FCE7F3; }
-.icon-comida   { background: #EDE9FE; }
+.icon-algo { background: #FCE7F3; }
+.icon-comida { background: #EDE9FE; }
 .icon-merienda { background: #FEF3C7; }
 
 /* ── DOT COLORS ── */
-.dot-carb  { background: #E07A5F; }
-.dot-prot  { background: #2D6A4F; }
+.dot-carb { background: #E07A5F; }
+.dot-prot { background: #2D6A4F; }
 .dot-grasa { background: #F2CC8F; }
-.dot-veg   { background: #52B788; }
-.dot-beb   { background: #3A86C8; }
+.dot-veg { background: #52B788; }
+.dot-beb { background: #3A86C8; }
 
 /* ── TIP BOX ── */
 .tip-box {
-  background: linear-gradient(135deg, #E8F5E9, #F0FAF4);
-  border: 1.5px solid #B7DFC5;
-  border-radius: 14px;
-  padding: 12px 14px;
-  margin-bottom: 12px;
-  font-size: 13px;
-  color: var(--green);
-  display: flex;
-  gap: 8px;
-  align-items: flex-start;
+background: linear-gradient(135deg, #E8F5E9, #F0FAF4);
+border: 1.5px solid #B7DFC5;
+border-radius: 14px;
+padding: 12px 14px;
+margin-bottom: 12px;
+font-size: 13px;
+color: var(--green);
+display: flex;
+gap: 8px;
+align-items: flex-start;
 }
 .tip-box span:first-child { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
 
 /* ── DAY NOTE ── */
 .day-note {
-  font-size: 11.5px;
-  color: var(--gray-500);
-  text-align: center;
-  padding: 6px 0 2px;
-  font-style: italic;
+font-size: 11.5px;
+color: var(--gray-500);
+text-align: center;
+padding: 6px 0 2px;
+font-style: italic;
 }
 
 /* ── FAB ── */
 .fab {
-  position: fixed; bottom: 24px; right: 18px;
-  background: var(--green); color: white; border: none;
-  border-radius: 99px; padding: 12px 18px;
-  font-family: 'Nunito', sans-serif; font-size: 13px; font-weight: 700;
-  cursor: pointer; box-shadow: 0 4px 18px rgba(45,106,79,0.35);
-  display: flex; align-items: center; gap: 7px;
-  transition: transform 0.15s, box-shadow 0.15s; z-index: 200;
-  -webkit-tap-highlight-color: transparent;
+position: fixed; bottom: 24px; right: 18px;
+background: var(--green); color: white; border: none;
+border-radius: 99px; padding: 12px 18px;
+font-family: 'Nunito', sans-serif; font-size: 13px; font-weight: 700;
+cursor: pointer; box-shadow: 0 4px 18px rgba(45,106,79,0.35);
+display: flex; align-items: center; gap: 7px;
+transition: transform 0.15s, box-shadow 0.15s; z-index: 200;
+-webkit-tap-highlight-color: transparent;
 }
 .fab:hover { transform: translateY(-2px); box-shadow: 0 6px 22px rgba(45,106,79,0.4); }
 .fab:active { transform: scale(0.97); }
 
 /* ── RESPONSIVE: TABLET (≥540px) ── */
 @media (min-width: 540px) {
-  .header { padding: 22px 24px 18px; }
-  .header h1 { font-size: 21px; }
-  .day-nav { padding: 12px 20px 0; top: 96px; }
-  .day-grid { gap: 6px; }
-  .day-btn { padding: 9px 6px 11px; }
-  .day-short { font-size: 11px; }
-  .day-letter { font-size: 22px; }
-  .main { padding: 16px 20px 100px; }
-  .meal-name { font-size: 15px; }
-  .food-item { font-size: 13.5px; }
+.header { padding: 22px 24px 18px; }
+.header h1 { font-size: 21px; }
+.day-nav { padding: 12px 20px 0; top: 96px; }
+.day-grid { gap: 6px; }
+.day-btn { padding: 9px 6px 11px; }
+.day-short { font-size: 11px; }
+.day-letter { font-size: 22px; }
+.main { padding: 16px 20px 100px; }
+.meal-name { font-size: 15px; }
+.food-item { font-size: 13.5px; }
 }
 
 /* ── RESPONSIVE: DESKTOP (≥768px) ── */
 @media (min-width: 768px) {
-  .header { padding: 24px 32px 20px; }
-  .header h1 { font-size: 22px; }
-  .day-nav { padding: 14px 32px 0; top: 100px; }
-  .day-grid { max-width: 640px; gap: 8px; }
-  .day-btn { padding: 10px 8px 12px; border-radius: 12px 12px 0 0; }
-  .day-short { font-size: 12px; }
-  .day-letter { font-size: 24px; }
-  .main { padding: 20px 32px 100px; max-width: 640px; }
-  .meal-header { padding: 14px 16px 13px; }
-  .meal-card.open .meal-body { padding: 14px 16px 16px; }
-  .meal-icon { width: 42px; height: 42px; font-size: 20px; }
-  .meal-name { font-size: 15px; }
-  .food-item { font-size: 14px; }
+.header { padding: 24px 32px 20px; }
+.header h1 { font-size: 22px; }
+.day-nav { padding: 14px 32px 0; top: 100px; }
+.day-grid { max-width: 640px; gap: 8px; }
+.day-btn { padding: 10px 8px 12px; border-radius: 12px 12px 0 0; }
+.day-short { font-size: 12px; }
+.day-letter { font-size: 24px; }
+.main { padding: 20px 32px 100px; max-width: 640px; }
+.meal-header { padding: 14px 16px 13px; }
+.meal-card.open .meal-body { padding: 14px 16px 16px; }
+.meal-icon { width: 42px; height: 42px; font-size: 20px; }
+.meal-name { font-size: 15px; }
+.food-item { font-size: 14px; }
 }
+
+/* ── SWAP BUTTON ── */
+.food-item { position: relative; }
+.swap-btn {
+display: flex; align-items: center; gap: 3px;
+height: 24px; padding: 0 9px;
+border-radius: 99px;
+border: 1.5px solid var(--gray-200);
+background: white;
+font-size: 10.5px; font-weight: 700;
+cursor: pointer; flex-shrink: 0;
+color: var(--gray-500);
+transition: all 0.15s;
+-webkit-tap-highlight-color: transparent;
+white-space: nowrap;
+font-family: 'Nunito', sans-serif;
+}
+.swap-btn .swap-icon { font-size: 12px; line-height: 1; }
+.swap-btn:hover { background: var(--green-pale); border-color: var(--green-mid); color: var(--green); transform: scale(1.04); }
+.swap-btn:active { transform: scale(0.92); }
+.food-item.swapped .food-text { color: var(--green); font-weight: 700; }
+.food-item.swapped .food-qty { background: var(--green-light); color: var(--green); }
+.swap-undo {
+display: none;
+font-size: 10.5px;
+color: var(--gray-500);
+text-decoration: underline;
+cursor: pointer;
+margin-left: 4px;
+white-space: nowrap;
+}
+.food-item.swapped .swap-undo { display: inline; }
+
+/* swap label text hides on very small screens to save space, icon remains */
+@media (max-width: 380px) {
+.swap-btn { padding: 0 7px; }
+.swap-btn .swap-label { display: none; }
+}
+
+/* ── SWAP COACHMARK (one-time hint) ── */
+.swap-coachmark {
+max-width: 560px; margin: 0 auto 10px; padding: 0 14px;
+}
+.coachmark-box {
+background: var(--green-pale);
+border: 1.5px solid var(--green-light);
+border-radius: 14px;
+padding: 11px 14px;
+display: flex; align-items: center; gap: 10px;
+font-size: 12.5px; color: var(--green);
+animation: fadeUp 0.3s ease;
+}
+.coachmark-box .ck-icon { font-size: 18px; flex-shrink: 0; }
+.coachmark-box .ck-text { flex: 1; line-height: 1.4; }
+.coachmark-close {
+width: 22px; height: 22px; border-radius: 99px;
+background: rgba(255,255,255,0.6); border: none;
+display: flex; align-items: center; justify-content: center;
+font-size: 12px; color: var(--green); cursor: pointer; flex-shrink: 0;
+}
+
+/* ── MODAL OVERLAY ── */
+.modal-overlay {
+position: fixed; inset: 0;
+background: rgba(20,24,16,0.55);
+backdrop-filter: blur(2px);
+z-index: 500;
+display: none;
+align-items: flex-end;
+justify-content: center;
+}
+.modal-overlay.open { display: flex; animation: fadeIn 0.2s ease; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.modal-sheet {
+background: white;
+width: 100%;
+max-width: 560px;
+border-radius: 20px 20px 0 0;
+max-height: 80vh;
+display: flex;
+flex-direction: column;
+animation: slideUp 0.25s ease;
+}
+@keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
+
+.modal-handle { width: 36px; height: 4px; background: var(--gray-200); border-radius: 99px; margin: 10px auto 4px; flex-shrink: 0; }
+
+.modal-header { padding: 10px 18px 14px; border-bottom: 1px solid var(--gray-100); flex-shrink: 0; }
+.modal-title { font-size: 15px; font-weight: 800; color: var(--gray-900); }
+.modal-sub { font-size: 12px; color: var(--gray-500); margin-top: 3px; }
+.modal-close {
+position: absolute; top: 12px; right: 14px;
+width: 28px; height: 28px; border-radius: 99px;
+background: var(--gray-100); border: none;
+display: flex; align-items: center; justify-content: center;
+font-size: 14px; color: var(--gray-700); cursor: pointer;
+}
+
+.modal-body { padding: 10px 14px 14px; overflow-y: auto; flex: 1; }
+
+.swap-group-label {
+font-size: 10.5px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em;
+color: var(--gray-500); padding: 10px 6px 6px;
+}
+.swap-option {
+display: flex; align-items: center; gap: 10px;
+padding: 11px 12px; border-radius: 12px;
+border: 1.5px solid var(--gray-100);
+margin-bottom: 6px; cursor: pointer;
+transition: all 0.15s;
+-webkit-tap-highlight-color: transparent;
+}
+.swap-option:hover { border-color: var(--green-mid); background: var(--green-pale); }
+.swap-option.current { background: var(--gray-100); border-color: var(--gray-200); opacity: 0.7; cursor: default; }
+.swap-radio {
+width: 18px; height: 18px; border-radius: 50%;
+border: 2px solid var(--gray-300); flex-shrink: 0;
+}
+.swap-option.current .swap-radio { background: var(--gray-500); border-color: var(--gray-500); position: relative; }
+.swap-option.current .swap-radio::after { content:'✓'; position:absolute; inset:0; color:white; font-size:10px; display:flex; align-items:center; justify-content:center; }
+.swap-opt-text { flex: 1; font-size: 13.5px; font-weight: 600; color: var(--gray-900); }
+.swap-opt-qty { font-size: 11.5px; font-weight: 700; color: var(--gray-500); background: var(--gray-100); padding: 2px 8px; border-radius: 99px; white-space: nowrap; }
+
+.modal-warning {
+margin: 8px 4px 4px;
+background: var(--amber-light);
+border: 1px solid #F0DCA8;
+border-radius: 10px;
+padding: 9px 11px;
+font-size: 11px;
+color: var(--amber-dark);
+display: flex; gap: 6px; align-items: flex-start;
+}
+.modal-warning span:first-child { font-size: 13px; flex-shrink: 0; }
+
+/* ── EXCHANGE LIST SECTION ── */
+.exchange-section {
+max-width: 560px; margin: 18px auto 0; padding: 0 14px 90px;
+}
+.exchange-toggle {
+background: white; border: 1.5px solid var(--gray-100);
+border-radius: 16px; padding: 14px 90px 14px 16px;
+display: flex; align-items: center; gap: 10px;
+cursor: pointer; box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+-webkit-tap-highlight-color: transparent;
+position: relative;
+}
+.exchange-toggle-icon { font-size: 20px; }
+.exchange-toggle-text { flex: 1; }
+.exchange-toggle-title { font-size: 14px; font-weight: 800; color: var(--gray-900); }
+.exchange-toggle-sub { font-size: 11.5px; color: var(--gray-500); margin-top: 2px; }
+.exchange-toggle-arrow { font-size: 14px; color: var(--gray-500); transition: transform 0.25s; flex-shrink: 0; }
+.exchange-toggle.open .exchange-toggle-arrow { transform: rotate(180deg); }
+
+.exchange-body {
+max-height: 0; overflow: hidden;
+transition: max-height 0.4s ease;
+}
+.exchange-toggle.open + .exchange-body { max-height: 4000px; margin-top: 10px; }
+
+.exchange-grid { display: grid; grid-template-columns: 1fr; gap: 10px; }
+@media (min-width: 700px) {
+  .exchange-grid { grid-template-columns: 1fr 1fr; }
+  .exchange-toggle { padding-right: 16px; }
+}
+
+.exchange-card {
+background: white; border-radius: 14px; border: 1.5px solid var(--gray-100);
+padding: 14px 15px; box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.exchange-card-title {
+font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.03em;
+padding-bottom: 8px; margin-bottom: 8px; border-bottom: 2px solid;
+display: flex; align-items: center; gap: 6px;
+}
+.exchange-sub-label { font-size: 10.5px; font-weight: 800; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.05em; margin: 8px 0 4px; }
+.exchange-items { display: flex; flex-wrap: wrap; gap: 5px; }
+.exchange-pill { font-size: 11.5px; padding: 4px 9px; border-radius: 99px; background: var(--gray-100); color: var(--gray-700); }
+.exchange-note { font-size: 10.5px; color: var(--coral); margin-top: 8px; line-height: 1.4; font-style: italic; }
 
 /* ── VERY SMALL (≤360px) ── */
 @media (max-width: 360px) {
-  .header h1 { font-size: 16px; }
-  .day-nav { padding: 8px 8px 0; top: 88px; }
-  .day-grid { gap: 2px; }
-  .day-btn { padding: 6px 2px 8px; }
-  .day-short { font-size: 9px; letter-spacing: 0; }
-  .day-letter { font-size: 17px; }
-  .main { padding: 12px 10px 100px; }
-  .meal-name { font-size: 13px; }
-  .meal-tag { font-size: 10px; }
-  .food-item { font-size: 12px; }
-  .food-qty { font-size: 10.5px; padding: 2px 5px; }
-  .meal-icon { width: 34px; height: 34px; font-size: 16px; }
+.header h1 { font-size: 16px; }
+.day-nav { padding: 8px 8px 0; top: 88px; }
+.day-grid { gap: 2px; }
+.day-btn { padding: 6px 2px 8px; }
+.day-short { font-size: 9px; letter-spacing: 0; }
+.day-letter { font-size: 17px; }
+.main { padding: 12px 10px 100px; }
+.meal-name { font-size: 13px; }
+.meal-tag { font-size: 10px; }
+.food-item { font-size: 12px; }
+.food-qty { font-size: 10.5px; padding: 2px 5px; }
+.meal-icon { width: 34px; height: 34px; font-size: 16px; }
 }
 
 /* ── PRINT ── */
 @media print {
-  .header, .day-nav, .fab { display: none; }
-  .day-panel { display: block !important; }
-  .meal-body { max-height: none !important; padding: 12px 14px 14px !important; }
-  .main { padding: 16px; }
-  .meal-card { break-inside: avoid; }
+.header, .day-nav, .fab { display: none; }
+.day-panel { display: block !important; }
+.meal-body { max-height: none !important; padding: 12px 14px 14px !important; }
+.main { padding: 16px; }
+.meal-card { break-inside: avoid; }
 }
 
 /* ── REDUCED MOTION ── */
 @media (prefers-reduced-motion: reduce) {
-  .day-panel.active { animation: none; }
-  .meal-body, .meal-arrow, .meal-card { transition: none; }
+.day-panel.active { animation: none; }
+.meal-body, .meal-arrow, .meal-card { transition: none; }
 }
 </style>
 </head>
 <body>
 
 <header class="header">
-  <div class="header-top">
-    <div>
-      <h1>🥗 Plan de Alimentación Semanal</h1>
-      <p>Darly Yessenia Vargas Moreno · Nutricionista Camilo Roa</p>
-    </div>
-    <a href="index.html" class="btn-back">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="19" y1="12" x2="5" y2="12"></line>
-        <polyline points="12 19 5 12 12 5"></polyline>
-      </svg>
-      Volver
-    </a>
-  </div>
+<div class="header-top">
+<div>
+<h1>🥗 Plan de Alimentación Semanal</h1>
+<p>Darly Yessenia Vargas Moreno · Nutricionista Camilo Roa</p>
+</div>
+<a href="index.html" class="btn-back">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<line x1="19" y1="12" x2="5" y2="12"></line>
+<polyline points="12 19 5 12 12 5"></polyline>
+</svg>
+Volver
+</a>
+</div>
 </header>
 
 <!-- DAY NAV — GRID CENTERED -->
 <nav class="day-nav">
-  <div class="day-grid">
-    <button class="day-btn active" onclick="showDay(0)" id="btn-0">
-      <span class="day-short">Lun</span><span class="day-letter">L</span>
-    </button>
-    <button class="day-btn" onclick="showDay(1)" id="btn-1">
-      <span class="day-short">Mar</span><span class="day-letter">M</span>
-    </button>
-    <button class="day-btn" onclick="showDay(2)" id="btn-2">
-      <span class="day-short">Mié</span><span class="day-letter">X</span>
-    </button>
-    <button class="day-btn" onclick="showDay(3)" id="btn-3">
-      <span class="day-short">Jue</span><span class="day-letter">J</span>
-    </button>
-    <button class="day-btn" onclick="showDay(4)" id="btn-4">
-      <span class="day-short">Vie</span><span class="day-letter">V</span>
-    </button>
-    <button class="day-btn" onclick="showDay(5)" id="btn-5">
-      <span class="day-short">Sáb</span><span class="day-letter">S</span>
-    </button>
-    <button class="day-btn" onclick="showDay(6)" id="btn-6">
-      <span class="day-short">Dom</span><span class="day-letter">D</span>
-    </button>
-  </div>
+<div class="day-grid">
+<button class="day-btn active" onclick="showDay(0)" id="btn-0">
+<span class="day-short">Lun</span><span class="day-letter">L</span>
+</button>
+<button class="day-btn" onclick="showDay(1)" id="btn-1">
+<span class="day-short">Mar</span><span class="day-letter">M</span>
+</button>
+<button class="day-btn" onclick="showDay(2)" id="btn-2">
+<span class="day-short">Mié</span><span class="day-letter">X</span>
+</button>
+<button class="day-btn" onclick="showDay(3)" id="btn-3">
+<span class="day-short">Jue</span><span class="day-letter">J</span>
+</button>
+<button class="day-btn" onclick="showDay(4)" id="btn-4">
+<span class="day-short">Vie</span><span class="day-letter">V</span>
+</button>
+<button class="day-btn" onclick="showDay(5)" id="btn-5">
+<span class="day-short">Sáb</span><span class="day-letter">S</span>
+</button>
+<button class="day-btn" onclick="showDay(6)" id="btn-6">
+<span class="day-short">Dom</span><span class="day-letter">D</span>
+</button>
+</div>
 </nav>
+
+<div class="swap-coachmark" id="swapCoachmark">
+  <div class="coachmark-box">
+    <span class="ck-icon">⇄</span>
+    <span class="ck-text"><strong>Tip:</strong> toca el botón <strong>"⇄ Cambiar"</strong> junto a cualquier alimento para sustituirlo por otra opción permitida del mismo grupo.</span>
+    <button class="coachmark-close" onclick="dismissCoachmark()">✕</button>
+  </div>
+</div>
 
 <main class="main">
 
 <!-- ======== LUNES ======== -->
 <div class="day-panel active" id="day-0">
-  <div class="tip-box"><span>💡</span><span>Día 1 — Comienza con energía. Recuerda: primera comida desde la primera hora de despertar.</span></div>
+<div class="tip-box"><span>💡</span><span>Día 1 — Comienza con energía. Recuerda: primera comida desde la primera hora de despertar.</span></div>
 
-  <div class="meal-card open">
-    <div class="meal-header" onclick="toggleMeal(this)">
-      <div class="meal-icon icon-desayuno">🍳</div>
-      <div class="meal-meta"><div class="meal-name">Desayuno</div><div class="meal-tag">1 Azúcar · Proteína · Grasa</div></div>
-      <div class="meal-arrow">▾</div>
-    </div>
-    <div class="meal-body">
-      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Arepa extradelgada Sary <em>o</em> Avena</div><div class="food-qty">1 und / 40 g</div></div>
-      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Quesito + Huevo entero</div><div class="food-qty">50 g + 1</div></div>
-      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Aceite en spray</div><div class="food-qty">mínimo</div></div>
-      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Café en leche de almendras</div><div class="food-qty">30 cal</div></div>
-      <div class="tag-row"><span class="tag" style="background:#FEF3C7;color:#92400E">🌾 Carbohidrato</span><span class="tag" style="background:#D1FAE5;color:#065F46">🥚 Proteína</span></div>
-    </div>
-  </div>
+<div class="meal-card open">
+<div class="meal-header" onclick="toggleMeal(this)">
+<div class="meal-icon icon-desayuno">🍳</div>
+<div class="meal-meta"><div class="meal-name">Desayuno</div><div class="meal-tag">1 Azúcar · Proteína · Grasa</div></div>
+<div class="meal-arrow">▾</div>
+</div>
+<div class="meal-body">
+<div class="food-item" id="fi-1" data-group="dot-carb" data-original="Arepa extradelgada Sary o Avena" data-original-qty="1 und / 40 g"><div class="food-dot dot-carb"></div><div class="food-text">Arepa extradelgada Sary <em>o</em> Avena</div><div class="food-qty">1 und / 40 g</div><button class="swap-btn" onclick="openSwap(event,1)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,1)">deshacer</span></div>
+<div class="food-item" id="fi-2" data-group="dot-prot" data-original="Quesito + Huevo entero" data-original-qty="50 g + 1"><div class="food-dot dot-prot"></div><div class="food-text">Quesito + Huevo entero</div><div class="food-qty">50 g + 1</div><button class="swap-btn" onclick="openSwap(event,2)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,2)">deshacer</span></div>
+<div class="food-item" id="fi-3" data-group="dot-grasa" data-original="Aceite en spray" data-original-qty="mínimo"><div class="food-dot dot-grasa"></div><div class="food-text">Aceite en spray</div><div class="food-qty">mínimo</div><button class="swap-btn" onclick="openSwap(event,3)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,3)">deshacer</span></div>
+<div class="food-item" id="fi-4" data-group="dot-beb" data-original="Café en leche de almendras" data-original-qty="30 cal"><div class="food-dot dot-beb"></div><div class="food-text">Café en leche de almendras</div><div class="food-qty">30 cal</div><button class="swap-btn" onclick="openSwap(event,4)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,4)">deshacer</span></div>
+<div class="tag-row"><span class="tag" style="background:#FEF3C7;color:#92400E">🌾 Carbohidrato</span><span class="tag" style="background:#D1FAE5;color:#065F46">🥚 Proteína</span></div>
+</div>
+</div>
 
-  <div class="meal-card">
-    <div class="meal-header" onclick="toggleMeal(this)">
-      <div class="meal-icon icon-manana">🍉</div>
-      <div class="meal-meta"><div class="meal-name">Media Mañana</div><div class="meal-tag">Fruta · Grasa</div></div>
-      <div class="meal-arrow">▾</div>
-    </div>
-    <div class="meal-body">
-      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Sandía</div><div class="food-qty">100 g</div></div>
-      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Mantequilla de maní</div><div class="food-qty">20 g</div></div>
-      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Gelatina light <em>(libre y opcional)</em></div><div class="food-qty">libre</div></div>
-    </div>
-  </div>
+<div class="meal-card">
+<div class="meal-header" onclick="toggleMeal(this)">
+<div class="meal-icon icon-manana">🍉</div>
+<div class="meal-meta"><div class="meal-name">Media Mañana</div><div class="meal-tag">Fruta · Grasa</div></div>
+<div class="meal-arrow">▾</div>
+</div>
+<div class="meal-body">
+<div class="food-item" id="fi-5" data-group="dot-carb" data-original="Sandía" data-original-qty="100 g"><div class="food-dot dot-carb"></div><div class="food-text">Sandía</div><div class="food-qty">100 g</div><button class="swap-btn" onclick="openSwap(event,5)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,5)">deshacer</span></div>
+<div class="food-item" id="fi-6" data-group="dot-grasa" data-original="Mantequilla de maní" data-original-qty="20 g"><div class="food-dot dot-grasa"></div><div class="food-text">Mantequilla de maní</div><div class="food-qty">20 g</div><button class="swap-btn" onclick="openSwap(event,6)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,6)">deshacer</span></div>
+<div class="food-item" id="fi-7" data-group="dot-beb" data-original="Gelatina light (libre y opcional)" data-original-qty="libre"><div class="food-dot dot-beb"></div><div class="food-text">Gelatina light <em>(libre y opcional)</em></div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,7)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,7)">deshacer</span></div>
+</div>
+</div>
 
-  <div class="meal-card">
-    <div class="meal-header" onclick="toggleMeal(this)">
-      <div class="meal-icon icon-almuerzo">🍗</div>
-      <div class="meal-meta"><div class="meal-name">Almuerzo</div><div class="meal-tag">1 Azúcar · Proteína · Grasa · Vegetales</div></div>
-      <div class="meal-arrow">▾</div>
-    </div>
-    <div class="meal-body">
-      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Papa al vapor</div><div class="food-qty">40 g</div></div>
-      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Pechuga de pollo</div><div class="food-qty">100 g</div></div>
-      <div class="food-item"><div class="food-dot dot-veg"></div><div class="food-text">Ensalada de vegetales</div><div class="food-qty">libre</div></div>
-      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Aguacate</div><div class="food-qty">40 g</div></div>
-      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Clight</div><div class="food-qty">libre</div></div>
-    </div>
-  </div>
+<div class="meal-card">
+<div class="meal-header" onclick="toggleMeal(this)">
+<div class="meal-icon icon-almuerzo">🍗</div>
+<div class="meal-meta"><div class="meal-name">Almuerzo</div><div class="meal-tag">1 Azúcar · Proteína · Grasa · Vegetales</div></div>
+<div class="meal-arrow">▾</div>
+</div>
+<div class="meal-body">
+<div class="food-item" id="fi-8" data-group="dot-carb" data-original="Papa al vapor" data-original-qty="40 g"><div class="food-dot dot-carb"></div><div class="food-text">Papa al vapor</div><div class="food-qty">40 g</div><button class="swap-btn" onclick="openSwap(event,8)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,8)">deshacer</span></div>
+<div class="food-item" id="fi-9" data-group="dot-prot" data-original="Pechuga de pollo" data-original-qty="100 g"><div class="food-dot dot-prot"></div><div class="food-text">Pechuga de pollo</div><div class="food-qty">100 g</div><button class="swap-btn" onclick="openSwap(event,9)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,9)">deshacer</span></div>
+<div class="food-item" id="fi-10" data-group="dot-veg" data-original="Ensalada de vegetales" data-original-qty="libre"><div class="food-dot dot-veg"></div><div class="food-text">Ensalada de vegetales</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,10)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,10)">deshacer</span></div>
+<div class="food-item" id="fi-11" data-group="dot-grasa" data-original="Aguacate" data-original-qty="40 g"><div class="food-dot dot-grasa"></div><div class="food-text">Aguacate</div><div class="food-qty">40 g</div><button class="swap-btn" onclick="openSwap(event,11)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,11)">deshacer</span></div>
+<div class="food-item" id="fi-12" data-group="dot-beb" data-original="Clight" data-original-qty="libre"><div class="food-dot dot-beb"></div><div class="food-text">Clight</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,12)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,12)">deshacer</span></div>
+</div>
+</div>
 
-  <div class="meal-card">
-    <div class="meal-header" onclick="toggleMeal(this)">
-      <div class="meal-icon icon-algo">🫙</div>
-      <div class="meal-meta"><div class="meal-name">Algo — Media Tarde</div><div class="meal-tag">Proteína · Grasa · DÍA DE PIERNA Y COLA</div></div>
-      <div class="meal-arrow">▾</div>
-    </div>
-    <div class="meal-body">
-      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Yogurt griego Zorba o Taeq (máx 4 g azúcar natural)</div><div class="food-qty">130 g</div></div>
-      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Almendras</div><div class="food-qty">20 g</div></div>
-      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Gelatina light</div><div class="food-qty">libre</div></div>
-      <div class="day-note">— ó en día sin entreno / tren superior —</div>
-      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Pollo desmechado o camarones</div><div class="food-qty">80 g</div></div>
-      <div class="food-item"><div class="food-dot dot-veg"></div><div class="food-text">Vegetales</div><div class="food-qty">1 taza</div></div>
-      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Clight</div><div class="food-qty">libre</div></div>
-    </div>
-  </div>
+<div class="meal-card">
+<div class="meal-header" onclick="toggleMeal(this)">
+<div class="meal-icon icon-algo">🫙</div>
+<div class="meal-meta"><div class="meal-name">Algo — Media Tarde</div><div class="meal-tag">Proteína · Grasa · DÍA DE PIERNA Y COLA</div></div>
+<div class="meal-arrow">▾</div>
+</div>
+<div class="meal-body">
+<div class="food-item" id="fi-13" data-group="dot-prot" data-original="Yogurt griego Zorba o Taeq (máx 4 g azúcar natural)" data-original-qty="130 g"><div class="food-dot dot-prot"></div><div class="food-text">Yogurt griego Zorba o Taeq (máx 4 g azúcar natural)</div><div class="food-qty">130 g</div><button class="swap-btn" onclick="openSwap(event,13)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,13)">deshacer</span></div>
+<div class="food-item" id="fi-14" data-group="dot-grasa" data-original="Almendras" data-original-qty="20 g"><div class="food-dot dot-grasa"></div><div class="food-text">Almendras</div><div class="food-qty">20 g</div><button class="swap-btn" onclick="openSwap(event,14)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,14)">deshacer</span></div>
+<div class="food-item" id="fi-15" data-group="dot-beb" data-original="Gelatina light" data-original-qty="libre"><div class="food-dot dot-beb"></div><div class="food-text">Gelatina light</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,15)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,15)">deshacer</span></div>
+<div class="day-note">— ó en día sin entreno / tren superior —</div>
+<div class="food-item" id="fi-16" data-group="dot-prot" data-original="Pollo desmechado o camarones" data-original-qty="80 g"><div class="food-dot dot-prot"></div><div class="food-text">Pollo desmechado o camarones</div><div class="food-qty">80 g</div><button class="swap-btn" onclick="openSwap(event,16)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,16)">deshacer</span></div>
+<div class="food-item" id="fi-17" data-group="dot-veg" data-original="Vegetales" data-original-qty="1 taza"><div class="food-dot dot-veg"></div><div class="food-text">Vegetales</div><div class="food-qty">1 taza</div><button class="swap-btn" onclick="openSwap(event,17)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,17)">deshacer</span></div>
+<div class="food-item" id="fi-18" data-group="dot-beb" data-original="Clight" data-original-qty="libre"><div class="food-dot dot-beb"></div><div class="food-text">Clight</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,18)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,18)">deshacer</span></div>
+</div>
+</div>
 
-  <div class="meal-card">
-    <div class="meal-header" onclick="toggleMeal(this)">
-      <div class="meal-icon icon-comida">🥗</div>
-      <div class="meal-meta"><div class="meal-name">Comida / Cena</div><div class="meal-tag">1 Azúcar (día por medio) · Proteína · Vegetales</div></div>
-      <div class="meal-arrow">▾</div>
-    </div>
-    <div class="meal-body">
-      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Arepa extradelgada La Típica</div><div class="food-qty">1 und</div></div>
-      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Plancha de pollo</div><div class="food-qty">100 g</div></div>
-      <div class="food-item"><div class="food-dot dot-veg"></div><div class="food-text">Ensalada / sopa de vegetales</div><div class="food-qty">libre</div></div>
-      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Clight</div><div class="food-qty">libre</div></div>
-    </div>
-  </div>
+<div class="meal-card">
+<div class="meal-header" onclick="toggleMeal(this)">
+<div class="meal-icon icon-comida">🥗</div>
+<div class="meal-meta"><div class="meal-name">Comida / Cena</div><div class="meal-tag">1 Azúcar (día por medio) · Proteína · Vegetales</div></div>
+<div class="meal-arrow">▾</div>
+</div>
+<div class="meal-body">
+<div class="food-item" id="fi-19" data-group="dot-carb" data-original="Arepa extradelgada La Típica" data-original-qty="1 und"><div class="food-dot dot-carb"></div><div class="food-text">Arepa extradelgada La Típica</div><div class="food-qty">1 und</div><button class="swap-btn" onclick="openSwap(event,19)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,19)">deshacer</span></div>
+<div class="food-item" id="fi-20" data-group="dot-prot" data-original="Plancha de pollo" data-original-qty="100 g"><div class="food-dot dot-prot"></div><div class="food-text">Plancha de pollo</div><div class="food-qty">100 g</div><button class="swap-btn" onclick="openSwap(event,20)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,20)">deshacer</span></div>
+<div class="food-item" id="fi-21" data-group="dot-veg" data-original="Ensalada / sopa de vegetales" data-original-qty="libre"><div class="food-dot dot-veg"></div><div class="food-text">Ensalada / sopa de vegetales</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,21)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,21)">deshacer</span></div>
+<div class="food-item" id="fi-22" data-group="dot-beb" data-original="Clight" data-original-qty="libre"><div class="food-dot dot-beb"></div><div class="food-text">Clight</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,22)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,22)">deshacer</span></div>
+</div>
+</div>
 
-  <div class="meal-card">
-    <div class="meal-header" onclick="toggleMeal(this)">
-      <div class="meal-icon icon-merienda">🌙</div>
-      <div class="meal-meta"><div class="meal-name">Merienda</div><div class="meal-tag">Solo si no duermes antes de 2–3 h de cenar</div></div>
-      <div class="meal-arrow">▾</div>
-    </div>
-    <div class="meal-body">
-      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Proteína en polvo disuelta en agua</div><div class="food-qty">¾ copa</div></div>
-      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Almendras <em>ó</em> 40 g queso</div><div class="food-qty">15 g</div></div>
-      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Aromática</div><div class="food-qty">libre</div></div>
-    </div>
-  </div>
+<div class="meal-card">
+<div class="meal-header" onclick="toggleMeal(this)">
+<div class="meal-icon icon-merienda">🌙</div>
+<div class="meal-meta"><div class="meal-name">Merienda</div><div class="meal-tag">Solo si no duermes antes de 2–3 h de cenar</div></div>
+<div class="meal-arrow">▾</div>
+</div>
+<div class="meal-body">
+<div class="food-item" id="fi-23" data-group="dot-prot" data-original="Proteína en polvo disuelta en agua" data-original-qty="¾ copa"><div class="food-dot dot-prot"></div><div class="food-text">Proteína en polvo disuelta en agua</div><div class="food-qty">¾ copa</div><button class="swap-btn" onclick="openSwap(event,23)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,23)">deshacer</span></div>
+<div class="food-item" id="fi-24" data-group="dot-grasa" data-original="Almendras ó 40 g queso" data-original-qty="15 g"><div class="food-dot dot-grasa"></div><div class="food-text">Almendras <em>ó</em> 40 g queso</div><div class="food-qty">15 g</div><button class="swap-btn" onclick="openSwap(event,24)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,24)">deshacer</span></div>
+<div class="food-item" id="fi-25" data-group="dot-beb" data-original="Aromática" data-original-qty="libre"><div class="food-dot dot-beb"></div><div class="food-text">Aromática</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,25)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,25)">deshacer</span></div>
+</div>
+</div>
 </div>
 
 <!-- ======== MARTES ======== -->
 <div class="day-panel" id="day-1">
-  <div class="tip-box"><span>🥞</span><span>Día 2 — Pancakes en el desayuno. ¡Una buena forma de empezar el martes!</span></div>
+<div class="tip-box"><span>🥞</span><span>Día 2 — Pancakes en el desayuno. ¡Una buena forma de empezar el martes!</span></div>
 
-  <div class="meal-card open">
-    <div class="meal-header" onclick="toggleMeal(this)">
-      <div class="meal-icon icon-desayuno">🥞</div>
-      <div class="meal-meta"><div class="meal-name">Desayuno</div><div class="meal-tag">1 Azúcar · Proteína · Grasa</div></div>
-      <div class="meal-arrow">▾</div>
-    </div>
-    <div class="meal-body">
-      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Pancake — 4 copas de Why Not</div><div class="food-qty">4 copas</div></div>
-      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">1 Huevo <em>ó</em> Queso blanco / quesito / cuajada</div><div class="food-qty">1 / 40 g</div></div>
-      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Mantequilla Alma o Taeq en spray</div><div class="food-qty">mínimo</div></div>
-      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Miel Diety o mermelada Konfyt</div><div class="food-qty">al gusto</div></div>
-      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Cocoa en leche de almendras</div><div class="food-qty">30 cal</div></div>
-    </div>
-  </div>
+<div class="meal-card open">
+<div class="meal-header" onclick="toggleMeal(this)">
+<div class="meal-icon icon-desayuno">🥞</div>
+<div class="meal-meta"><div class="meal-name">Desayuno</div><div class="meal-tag">1 Azúcar · Proteína · Grasa</div></div>
+<div class="meal-arrow">▾</div>
+</div>
+<div class="meal-body">
+<div class="food-item" id="fi-26" data-group="dot-carb" data-original="Pancake — 4 copas de Why Not" data-original-qty="4 copas"><div class="food-dot dot-carb"></div><div class="food-text">Pancake — 4 copas de Why Not</div><div class="food-qty">4 copas</div><button class="swap-btn" onclick="openSwap(event,26)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,26)">deshacer</span></div>
+<div class="food-item" id="fi-27" data-group="dot-prot" data-original="1 Huevo ó Queso blanco / quesito / cuajada" data-original-qty="1 / 40 g"><div class="food-dot dot-prot"></div><div class="food-text">1 Huevo <em>ó</em> Queso blanco / quesito / cuajada</div><div class="food-qty">1 / 40 g</div><button class="swap-btn" onclick="openSwap(event,27)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,27)">deshacer</span></div>
+<div class="food-item" id="fi-28" data-group="dot-grasa" data-original="Mantequilla Alma o Taeq en spray" data-original-qty="mínimo"><div class="food-dot dot-grasa"></div><div class="food-text">Mantequilla Alma o Taeq en spray</div><div class="food-qty">mínimo</div><button class="swap-btn" onclick="openSwap(event,28)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,28)">deshacer</span></div>
+<div class="food-item" id="fi-29" data-group="dot-beb" data-original="Miel Diety o mermelada Konfyt" data-original-qty="al gusto"><div class="food-dot dot-beb"></div><div class="food-text">Miel Diety o mermelada Konfyt</div><div class="food-qty">al gusto</div><button class="swap-btn" onclick="openSwap(event,29)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,29)">deshacer</span></div>
+<div class="food-item" id="fi-30" data-group="dot-beb" data-original="Cocoa en leche de almendras" data-original-qty="30 cal"><div class="food-dot dot-beb"></div><div class="food-text">Cocoa en leche de almendras</div><div class="food-qty">30 cal</div><button class="swap-btn" onclick="openSwap(event,30)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,30)">deshacer</span></div>
+</div>
+</div>
 
-  <div class="meal-card">
-    <div class="meal-header" onclick="toggleMeal(this)">
-      <div class="meal-icon icon-manana">🍎</div>
-      <div class="meal-meta"><div class="meal-name">Media Mañana</div><div class="meal-tag">Fruta · Grasa</div></div>
-      <div class="meal-arrow">▾</div>
-    </div>
-    <div class="meal-body">
-      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Manzana</div><div class="food-qty">100 g</div></div>
-      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Maní</div><div class="food-qty">20 g</div></div>
-      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Gelatina light</div><div class="food-qty">libre</div></div>
-    </div>
-  </div>
+<div class="meal-card">
+<div class="meal-header" onclick="toggleMeal(this)">
+<div class="meal-icon icon-manana">🍎</div>
+<div class="meal-meta"><div class="meal-name">Media Mañana</div><div class="meal-tag">Fruta · Grasa</div></div>
+<div class="meal-arrow">▾</div>
+</div>
+<div class="meal-body">
+<div class="food-item" id="fi-31" data-group="dot-carb" data-original="Manzana" data-original-qty="100 g"><div class="food-dot dot-carb"></div><div class="food-text">Manzana</div><div class="food-qty">100 g</div><button class="swap-btn" onclick="openSwap(event,31)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,31)">deshacer</span></div>
+<div class="food-item" id="fi-32" data-group="dot-grasa" data-original="Maní" data-original-qty="20 g"><div class="food-dot dot-grasa"></div><div class="food-text">Maní</div><div class="food-qty">20 g</div><button class="swap-btn" onclick="openSwap(event,32)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,32)">deshacer</span></div>
+<div class="food-item" id="fi-33" data-group="dot-beb" data-original="Gelatina light" data-original-qty="libre"><div class="food-dot dot-beb"></div><div class="food-text">Gelatina light</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,33)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,33)">deshacer</span></div>
+</div>
+</div>
 
-  <div class="meal-card">
-    <div class="meal-header" onclick="toggleMeal(this)">
-      <div class="meal-icon icon-almuerzo">🥩</div>
-      <div class="meal-meta"><div class="meal-name">Almuerzo</div><div class="meal-tag">1 Azúcar · Proteína · Grasa · Vegetales</div></div>
-      <div class="meal-arrow">▾</div>
-    </div>
-    <div class="meal-body">
-      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Arroz</div><div class="food-qty">40 g</div></div>
-      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Carne de cerdo magra</div><div class="food-qty">100 g</div></div>
-      <div class="food-item"><div class="food-dot dot-veg"></div><div class="food-text">Ensalada de vegetales</div><div class="food-qty">libre</div></div>
-      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Aguacate <em>ó</em> aceite de oliva</div><div class="food-qty">40 g / 10 g</div></div>
-      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Clight</div><div class="food-qty">libre</div></div>
-    </div>
-  </div>
+<div class="meal-card">
+<div class="meal-header" onclick="toggleMeal(this)">
+<div class="meal-icon icon-almuerzo">🥩</div>
+<div class="meal-meta"><div class="meal-name">Almuerzo</div><div class="meal-tag">1 Azúcar · Proteína · Grasa · Vegetales</div></div>
+<div class="meal-arrow">▾</div>
+</div>
+<div class="meal-body">
+<div class="food-item" id="fi-34" data-group="dot-carb" data-original="Arroz" data-original-qty="40 g"><div class="food-dot dot-carb"></div><div class="food-text">Arroz</div><div class="food-qty">40 g</div><button class="swap-btn" onclick="openSwap(event,34)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,34)">deshacer</span></div>
+<div class="food-item" id="fi-35" data-group="dot-prot" data-original="Carne de cerdo magra" data-original-qty="100 g"><div class="food-dot dot-prot"></div><div class="food-text">Carne de cerdo magra</div><div class="food-qty">100 g</div><button class="swap-btn" onclick="openSwap(event,35)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,35)">deshacer</span></div>
+<div class="food-item" id="fi-36" data-group="dot-veg" data-original="Ensalada de vegetales" data-original-qty="libre"><div class="food-dot dot-veg"></div><div class="food-text">Ensalada de vegetales</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,36)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,36)">deshacer</span></div>
+<div class="food-item" id="fi-37" data-group="dot-grasa" data-original="Aguacate ó aceite de oliva" data-original-qty="40 g / 10 g"><div class="food-dot dot-grasa"></div><div class="food-text">Aguacate <em>ó</em> aceite de oliva</div><div class="food-qty">40 g / 10 g</div><button class="swap-btn" onclick="openSwap(event,37)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,37)">deshacer</span></div>
+<div class="food-item" id="fi-38" data-group="dot-beb" data-original="Clight" data-original-qty="libre"><div class="food-dot dot-beb"></div><div class="food-text">Clight</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,38)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,38)">deshacer</span></div>
+</div>
+</div>
 
-  <div class="meal-card">
-    <div class="meal-header" onclick="toggleMeal(this)">
-      <div class="meal-icon icon-algo">🐟</div>
-      <div class="meal-meta"><div class="meal-name">Algo — Media Tarde</div><div class="meal-tag">Proteína · Grasa · DÍA DE PIERNA Y COLA</div></div>
-      <div class="meal-arrow">▾</div>
-    </div>
-    <div class="meal-body">
-      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">1 Copa Proteína ISO100</div><div class="food-qty">1 copa</div></div>
-      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Almendras</div><div class="food-qty">20 g</div></div>
-      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Gelatina light</div><div class="food-qty">libre</div></div>
-      <div class="day-note">— ó —</div>
-      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Atún en agua + aguacate</div><div class="food-qty">1 lata + 30 g</div></div>
-      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Clight</div><div class="food-qty">libre</div></div>
-      <div class="day-note">— ó en día sin entreno / tren superior —</div>
-      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Plancha de pollo</div><div class="food-qty">80 g</div></div>
-      <div class="food-item"><div class="food-dot dot-veg"></div><div class="food-text">Vegetales</div><div class="food-qty">1 taza</div></div>
-    </div>
-  </div>
+<div class="meal-card">
+<div class="meal-header" onclick="toggleMeal(this)">
+<div class="meal-icon icon-algo">🐟</div>
+<div class="meal-meta"><div class="meal-name">Algo — Media Tarde</div><div class="meal-tag">Proteína · Grasa · DÍA DE PIERNA Y COLA</div></div>
+<div class="meal-arrow">▾</div>
+</div>
+<div class="meal-body">
+<div class="food-item" id="fi-39" data-group="dot-prot" data-original="1 Copa Proteína ISO100" data-original-qty="1 copa"><div class="food-dot dot-prot"></div><div class="food-text">1 Copa Proteína ISO100</div><div class="food-qty">1 copa</div><button class="swap-btn" onclick="openSwap(event,39)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,39)">deshacer</span></div>
+<div class="food-item" id="fi-40" data-group="dot-grasa" data-original="Almendras" data-original-qty="20 g"><div class="food-dot dot-grasa"></div><div class="food-text">Almendras</div><div class="food-qty">20 g</div><button class="swap-btn" onclick="openSwap(event,40)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,40)">deshacer</span></div>
+<div class="food-item" id="fi-41" data-group="dot-beb" data-original="Gelatina light" data-original-qty="libre"><div class="food-dot dot-beb"></div><div class="food-text">Gelatina light</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,41)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,41)">deshacer</span></div>
+<div class="day-note">— ó —</div>
+<div class="food-item" id="fi-42" data-group="dot-prot" data-original="Atún en agua + aguacate" data-original-qty="1 lata + 30 g"><div class="food-dot dot-prot"></div><div class="food-text">Atún en agua + aguacate</div><div class="food-qty">1 lata + 30 g</div><button class="swap-btn" onclick="openSwap(event,42)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,42)">deshacer</span></div>
+<div class="food-item" id="fi-43" data-group="dot-beb" data-original="Clight" data-original-qty="libre"><div class="food-dot dot-beb"></div><div class="food-text">Clight</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,43)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,43)">deshacer</span></div>
+<div class="day-note">— ó en día sin entreno / tren superior —</div>
+<div class="food-item" id="fi-44" data-group="dot-prot" data-original="Plancha de pollo" data-original-qty="80 g"><div class="food-dot dot-prot"></div><div class="food-text">Plancha de pollo</div><div class="food-qty">80 g</div><button class="swap-btn" onclick="openSwap(event,44)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,44)">deshacer</span></div>
+<div class="food-item" id="fi-45" data-group="dot-veg" data-original="Vegetales" data-original-qty="1 taza"><div class="food-dot dot-veg"></div><div class="food-text">Vegetales</div><div class="food-qty">1 taza</div><button class="swap-btn" onclick="openSwap(event,45)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,45)">deshacer</span></div>
+</div>
+</div>
 
-  <div class="meal-card">
-    <div class="meal-header" onclick="toggleMeal(this)">
-      <div class="meal-icon icon-comida">🍳</div>
-      <div class="meal-meta"><div class="meal-name">Comida / Cena</div><div class="meal-tag">Proteína · Vegetales · Sin grasa</div></div>
-      <div class="meal-arrow">▾</div>
-    </div>
-    <div class="meal-body">
-      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Omelette — 3 huevos revueltos con cebolla y tomate</div><div class="food-qty">3 huevos</div></div>
-      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Aromática</div><div class="food-qty">libre</div></div>
-    </div>
-  </div>
+<div class="meal-card">
+<div class="meal-header" onclick="toggleMeal(this)">
+<div class="meal-icon icon-comida">🍳</div>
+<div class="meal-meta"><div class="meal-name">Comida / Cena</div><div class="meal-tag">Proteína · Vegetales · Sin grasa</div></div>
+<div class="meal-arrow">▾</div>
+</div>
+<div class="meal-body">
+<div class="food-item" id="fi-46" data-group="dot-prot" data-original="Omelette — 3 huevos revueltos con cebolla y tomate" data-original-qty="3 huevos"><div class="food-dot dot-prot"></div><div class="food-text">Omelette — 3 huevos revueltos con cebolla y tomate</div><div class="food-qty">3 huevos</div><button class="swap-btn" onclick="openSwap(event,46)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,46)">deshacer</span></div>
+<div class="food-item" id="fi-47" data-group="dot-beb" data-original="Aromática" data-original-qty="libre"><div class="food-dot dot-beb"></div><div class="food-text">Aromática</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,47)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,47)">deshacer</span></div>
+</div>
+</div>
 
-  <div class="meal-card">
-    <div class="meal-header" onclick="toggleMeal(this)">
-      <div class="meal-icon icon-merienda">🌙</div>
-      <div class="meal-meta"><div class="meal-name">Merienda</div><div class="meal-tag">Solo si no duermes antes de 2–3 h de cenar</div></div>
-      <div class="meal-arrow">▾</div>
-    </div>
-    <div class="meal-body">
-      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Proteína en polvo disuelta en agua</div><div class="food-qty">¾ copa</div></div>
-      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Maní <em>ó</em> 40 g queso</div><div class="food-qty">15 g</div></div>
-      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Aromática</div><div class="food-qty">libre</div></div>
-    </div>
-  </div>
+<div class="meal-card">
+<div class="meal-header" onclick="toggleMeal(this)">
+<div class="meal-icon icon-merienda">🌙</div>
+<div class="meal-meta"><div class="meal-name">Merienda</div><div class="meal-tag">Solo si no duermes antes de 2–3 h de cenar</div></div>
+<div class="meal-arrow">▾</div>
+</div>
+<div class="meal-body">
+<div class="food-item" id="fi-48" data-group="dot-prot" data-original="Proteína en polvo disuelta en agua" data-original-qty="¾ copa"><div class="food-dot dot-prot"></div><div class="food-text">Proteína en polvo disuelta en agua</div><div class="food-qty">¾ copa</div><button class="swap-btn" onclick="openSwap(event,48)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,48)">deshacer</span></div>
+<div class="food-item" id="fi-49" data-group="dot-grasa" data-original="Maní ó 40 g queso" data-original-qty="15 g"><div class="food-dot dot-grasa"></div><div class="food-text">Maní <em>ó</em> 40 g queso</div><div class="food-qty">15 g</div><button class="swap-btn" onclick="openSwap(event,49)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,49)">deshacer</span></div>
+<div class="food-item" id="fi-50" data-group="dot-beb" data-original="Aromática" data-original-qty="libre"><div class="food-dot dot-beb"></div><div class="food-text">Aromática</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,50)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,50)">deshacer</span></div>
+</div>
+</div>
 </div>
 
 <!-- ======== MIÉRCOLES ======== -->
 <div class="day-panel" id="day-2">
-  <div class="tip-box"><span>🥩</span><span>Día 3 — Carne asada en el almuerzo. Aprovecha los vegetales al máximo.</span></div>
+<div class="tip-box"><span>🥩</span><span>Día 3 — Carne asada en el almuerzo. Aprovecha los vegetales al máximo.</span></div>
 
-  <div class="meal-card open">
-    <div class="meal-header" onclick="toggleMeal(this)">
-      <div class="meal-icon icon-desayuno">🍳</div>
-      <div class="meal-meta"><div class="meal-name">Desayuno</div><div class="meal-tag">1 Azúcar · Proteína · Grasa</div></div>
-      <div class="meal-arrow">▾</div>
-    </div>
-    <div class="meal-body">
-      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Arepa extradelgada La Típica o Sary <em>ó</em> Avena</div><div class="food-qty">1 und / 30 g</div></div>
-      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">2 claras + 1 yema + 1 tajada jamón pavo/cerdo/pollo</div><div class="food-qty">2+1 / 1 taj</div></div>
-      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Aceite en spray</div><div class="food-qty">mínimo</div></div>
-      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Clight o limonada natural</div><div class="food-qty">libre</div></div>
-    </div>
-  </div>
+<div class="meal-card open">
+<div class="meal-header" onclick="toggleMeal(this)">
+<div class="meal-icon icon-desayuno">🍳</div>
+<div class="meal-meta"><div class="meal-name">Desayuno</div><div class="meal-tag">1 Azúcar · Proteína · Grasa</div></div>
+<div class="meal-arrow">▾</div>
+</div>
+<div class="meal-body">
+<div class="food-item" id="fi-51" data-group="dot-carb" data-original="Arepa extradelgada La Típica o Sary ó Avena" data-original-qty="1 und / 30 g"><div class="food-dot dot-carb"></div><div class="food-text">Arepa extradelgada La Típica o Sary <em>ó</em> Avena</div><div class="food-qty">1 und / 30 g</div><button class="swap-btn" onclick="openSwap(event,51)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,51)">deshacer</span></div>
+<div class="food-item" id="fi-52" data-group="dot-prot" data-original="2 claras + 1 yema + 1 tajada jamón pavo/cerdo/pollo" data-original-qty="2+1 / 1 taj"><div class="food-dot dot-prot"></div><div class="food-text">2 claras + 1 yema + 1 tajada jamón pavo/cerdo/pollo</div><div class="food-qty">2+1 / 1 taj</div><button class="swap-btn" onclick="openSwap(event,52)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,52)">deshacer</span></div>
+<div class="food-item" id="fi-53" data-group="dot-grasa" data-original="Aceite en spray" data-original-qty="mínimo"><div class="food-dot dot-grasa"></div><div class="food-text">Aceite en spray</div><div class="food-qty">mínimo</div><button class="swap-btn" onclick="openSwap(event,53)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,53)">deshacer</span></div>
+<div class="food-item" id="fi-54" data-group="dot-beb" data-original="Clight o limonada natural" data-original-qty="libre"><div class="food-dot dot-beb"></div><div class="food-text">Clight o limonada natural</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,54)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,54)">deshacer</span></div>
+</div>
+</div>
 
-  <div class="meal-card">
-    <div class="meal-header" onclick="toggleMeal(this)">
-      <div class="meal-icon icon-manana">🍍</div>
-      <div class="meal-meta"><div class="meal-name">Media Mañana</div><div class="meal-tag">Fruta · Grasa</div></div>
-      <div class="meal-arrow">▾</div>
-    </div>
-    <div class="meal-body">
-      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Piña <em>ó</em> Banano</div><div class="food-qty">100 g</div></div>
-      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Almendras</div><div class="food-qty">20 g</div></div>
-      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Gelatina light</div><div class="food-qty">libre</div></div>
-    </div>
-  </div>
+<div class="meal-card">
+<div class="meal-header" onclick="toggleMeal(this)">
+<div class="meal-icon icon-manana">🍍</div>
+<div class="meal-meta"><div class="meal-name">Media Mañana</div><div class="meal-tag">Fruta · Grasa</div></div>
+<div class="meal-arrow">▾</div>
+</div>
+<div class="meal-body">
+<div class="food-item" id="fi-55" data-group="dot-carb" data-original="Piña ó Banano" data-original-qty="100 g"><div class="food-dot dot-carb"></div><div class="food-text">Piña <em>ó</em> Banano</div><div class="food-qty">100 g</div><button class="swap-btn" onclick="openSwap(event,55)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,55)">deshacer</span></div>
+<div class="food-item" id="fi-56" data-group="dot-grasa" data-original="Almendras" data-original-qty="20 g"><div class="food-dot dot-grasa"></div><div class="food-text">Almendras</div><div class="food-qty">20 g</div><button class="swap-btn" onclick="openSwap(event,56)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,56)">deshacer</span></div>
+<div class="food-item" id="fi-57" data-group="dot-beb" data-original="Gelatina light" data-original-qty="libre"><div class="food-dot dot-beb"></div><div class="food-text">Gelatina light</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,57)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,57)">deshacer</span></div>
+</div>
+</div>
 
-  <div class="meal-card">
-    <div class="meal-header" onclick="toggleMeal(this)">
-      <div class="meal-icon icon-almuerzo">🥩</div>
-      <div class="meal-meta"><div class="meal-name">Almuerzo</div><div class="meal-tag">1 Azúcar · Proteína · Grasa · Vegetales</div></div>
-      <div class="meal-arrow">▾</div>
-    </div>
-    <div class="meal-body">
-      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Maduro <em>ó</em> Yuca</div><div class="food-qty">40 g</div></div>
-      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Carne asada</div><div class="food-qty">100 g</div></div>
-      <div class="food-item"><div class="food-dot dot-veg"></div><div class="food-text">2 tazas de vegetales</div><div class="food-qty">libre</div></div>
-      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">1 Tostada de arroz + mantequilla de maní</div><div class="food-qty">1 + 20 g</div></div>
-      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Clight</div><div class="food-qty">libre</div></div>
-    </div>
-  </div>
+<div class="meal-card">
+<div class="meal-header" onclick="toggleMeal(this)">
+<div class="meal-icon icon-almuerzo">🥩</div>
+<div class="meal-meta"><div class="meal-name">Almuerzo</div><div class="meal-tag">1 Azúcar · Proteína · Grasa · Vegetales</div></div>
+<div class="meal-arrow">▾</div>
+</div>
+<div class="meal-body">
+<div class="food-item" id="fi-58" data-group="dot-carb" data-original="Maduro ó Yuca" data-original-qty="40 g"><div class="food-dot dot-carb"></div><div class="food-text">Maduro <em>ó</em> Yuca</div><div class="food-qty">40 g</div><button class="swap-btn" onclick="openSwap(event,58)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,58)">deshacer</span></div>
+<div class="food-item" id="fi-59" data-group="dot-prot" data-original="Carne asada" data-original-qty="100 g"><div class="food-dot dot-prot"></div><div class="food-text">Carne asada</div><div class="food-qty">100 g</div><button class="swap-btn" onclick="openSwap(event,59)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,59)">deshacer</span></div>
+<div class="food-item" id="fi-60" data-group="dot-veg" data-original="2 tazas de vegetales" data-original-qty="libre"><div class="food-dot dot-veg"></div><div class="food-text">2 tazas de vegetales</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,60)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,60)">deshacer</span></div>
+<div class="food-item" id="fi-61" data-group="dot-carb" data-original="1 Tostada de arroz + mantequilla de maní" data-original-qty="1 + 20 g"><div class="food-dot dot-carb"></div><div class="food-text">1 Tostada de arroz + mantequilla de maní</div><div class="food-qty">1 + 20 g</div><button class="swap-btn" onclick="openSwap(event,61)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,61)">deshacer</span></div>
+<div class="food-item" id="fi-62" data-group="dot-beb" data-original="Clight" data-original-qty="libre"><div class="food-dot dot-beb"></div><div class="food-text">Clight</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,62)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,62)">deshacer</span></div>
+</div>
+</div>
 
-  <div class="meal-card">
-    <div class="meal-header" onclick="toggleMeal(this)">
-      <div class="meal-icon icon-algo">🧀</div>
-      <div class="meal-meta"><div class="meal-name">Algo — Media Tarde</div><div class="meal-tag">Proteína · Grasa · DÍA DE PIERNA Y COLA</div></div>
-      <div class="meal-arrow">▾</div>
-    </div>
-    <div class="meal-body">
-      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Queso pera <em>ó</em> queso blanco</div><div class="food-qty">40 g</div></div>
-      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Maní</div><div class="food-qty">30 g</div></div>
-      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Gelatina light</div><div class="food-qty">libre</div></div>
-      <div class="day-note">— ó —</div>
-      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">1 Barra ONE <em>(máx 2 veces/semana)</em></div><div class="food-qty">1 barra</div></div>
-      <div class="day-note">— ó en día sin entreno / tren superior —</div>
-      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">2 Claras cocinadas</div><div class="food-qty">2 und</div></div>
-      <div class="food-item"><div class="food-dot dot-veg"></div><div class="food-text">Vegetales</div><div class="food-qty">1 taza</div></div>
-    </div>
-  </div>
+<div class="meal-card">
+<div class="meal-header" onclick="toggleMeal(this)">
+<div class="meal-icon icon-algo">🧀</div>
+<div class="meal-meta"><div class="meal-name">Algo — Media Tarde</div><div class="meal-tag">Proteína · Grasa · DÍA DE PIERNA Y COLA</div></div>
+<div class="meal-arrow">▾</div>
+</div>
+<div class="meal-body">
+<div class="food-item" id="fi-63" data-group="dot-prot" data-original="Queso pera ó queso blanco" data-original-qty="40 g"><div class="food-dot dot-prot"></div><div class="food-text">Queso pera <em>ó</em> queso blanco</div><div class="food-qty">40 g</div><button class="swap-btn" onclick="openSwap(event,63)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,63)">deshacer</span></div>
+<div class="food-item" id="fi-64" data-group="dot-grasa" data-original="Maní" data-original-qty="30 g"><div class="food-dot dot-grasa"></div><div class="food-text">Maní</div><div class="food-qty">30 g</div><button class="swap-btn" onclick="openSwap(event,64)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,64)">deshacer</span></div>
+<div class="food-item" id="fi-65" data-group="dot-beb" data-original="Gelatina light" data-original-qty="libre"><div class="food-dot dot-beb"></div><div class="food-text">Gelatina light</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,65)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,65)">deshacer</span></div>
+<div class="day-note">— ó —</div>
+<div class="food-item" id="fi-66" data-group="dot-prot" data-original="1 Barra ONE (máx 2 veces/semana)" data-original-qty="1 barra"><div class="food-dot dot-prot"></div><div class="food-text">1 Barra ONE <em>(máx 2 veces/semana)</em></div><div class="food-qty">1 barra</div><button class="swap-btn" onclick="openSwap(event,66)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,66)">deshacer</span></div>
+<div class="day-note">— ó en día sin entreno / tren superior —</div>
+<div class="food-item" id="fi-67" data-group="dot-prot" data-original="2 Claras cocinadas" data-original-qty="2 und"><div class="food-dot dot-prot"></div><div class="food-text">2 Claras cocinadas</div><div class="food-qty">2 und</div><button class="swap-btn" onclick="openSwap(event,67)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,67)">deshacer</span></div>
+<div class="food-item" id="fi-68" data-group="dot-veg" data-original="Vegetales" data-original-qty="1 taza"><div class="food-dot dot-veg"></div><div class="food-text">Vegetales</div><div class="food-qty">1 taza</div><button class="swap-btn" onclick="openSwap(event,68)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,68)">deshacer</span></div>
+</div>
+</div>
 
-  <div class="meal-card">
-    <div class="meal-header" onclick="toggleMeal(this)">
-      <div class="meal-icon icon-comida">🫙</div>
-      <div class="meal-meta"><div class="meal-name">Comida / Cena</div><div class="meal-tag">1 Azúcar · Proteína · Vegetales · Sin grasa</div></div>
-      <div class="meal-arrow">▾</div>
-    </div>
-    <div class="meal-body">
-      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Arepa extradelgada La Típica</div><div class="food-qty">1 und</div></div>
-      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Cuajada <em>ó</em> Quesito</div><div class="food-qty">80 / 70 g</div></div>
-      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Jugo verde sin fruta + Clight</div><div class="food-qty">libre</div></div>
-    </div>
-  </div>
+<div class="meal-card">
+<div class="meal-header" onclick="toggleMeal(this)">
+<div class="meal-icon icon-comida">🫙</div>
+<div class="meal-meta"><div class="meal-name">Comida / Cena</div><div class="meal-tag">1 Azúcar · Proteína · Vegetales · Sin grasa</div></div>
+<div class="meal-arrow">▾</div>
+</div>
+<div class="meal-body">
+<div class="food-item" id="fi-69" data-group="dot-carb" data-original="Arepa extradelgada La Típica" data-original-qty="1 und"><div class="food-dot dot-carb"></div><div class="food-text">Arepa extradelgada La Típica</div><div class="food-qty">1 und</div><button class="swap-btn" onclick="openSwap(event,69)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,69)">deshacer</span></div>
+<div class="food-item" id="fi-70" data-group="dot-prot" data-original="Cuajada ó Quesito" data-original-qty="80 / 70 g"><div class="food-dot dot-prot"></div><div class="food-text">Cuajada <em>ó</em> Quesito</div><div class="food-qty">80 / 70 g</div><button class="swap-btn" onclick="openSwap(event,70)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,70)">deshacer</span></div>
+<div class="food-item" id="fi-71" data-group="dot-beb" data-original="Jugo verde sin fruta + Clight" data-original-qty="libre"><div class="food-dot dot-beb"></div><div class="food-text">Jugo verde sin fruta + Clight</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,71)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,71)">deshacer</span></div>
+</div>
+</div>
 
-  <div class="meal-card">
-    <div class="meal-header" onclick="toggleMeal(this)">
-      <div class="meal-icon icon-merienda">🌙</div>
-      <div class="meal-meta"><div class="meal-name">Merienda</div><div class="meal-tag">Solo si no duermes antes de 2–3 h de cenar</div></div>
-      <div class="meal-arrow">▾</div>
-    </div>
-    <div class="meal-body">
-      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Proteína en polvo disuelta en agua</div><div class="food-qty">¾ copa</div></div>
-      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Almendras <em>ó</em> 40 g queso</div><div class="food-qty">15 g</div></div>
-      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Aromática</div><div class="food-qty">libre</div></div>
-    </div>
-  </div>
+<div class="meal-card">
+<div class="meal-header" onclick="toggleMeal(this)">
+<div class="meal-icon icon-merienda">🌙</div>
+<div class="meal-meta"><div class="meal-name">Merienda</div><div class="meal-tag">Solo si no duermes antes de 2–3 h de cenar</div></div>
+<div class="meal-arrow">▾</div>
+</div>
+<div class="meal-body">
+<div class="food-item" id="fi-72" data-group="dot-prot" data-original="Proteína en polvo disuelta en agua" data-original-qty="¾ copa"><div class="food-dot dot-prot"></div><div class="food-text">Proteína en polvo disuelta en agua</div><div class="food-qty">¾ copa</div><button class="swap-btn" onclick="openSwap(event,72)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,72)">deshacer</span></div>
+<div class="food-item" id="fi-73" data-group="dot-grasa" data-original="Almendras ó 40 g queso" data-original-qty="15 g"><div class="food-dot dot-grasa"></div><div class="food-text">Almendras <em>ó</em> 40 g queso</div><div class="food-qty">15 g</div><button class="swap-btn" onclick="openSwap(event,73)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,73)">deshacer</span></div>
+<div class="food-item" id="fi-74" data-group="dot-beb" data-original="Aromática" data-original-qty="libre"><div class="food-dot dot-beb"></div><div class="food-text">Aromática</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,74)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,74)">deshacer</span></div>
+</div>
+</div>
 </div>
 
 <!-- ======== JUEVES ======== -->
 <div class="day-panel" id="day-3">
-  <div class="tip-box"><span>🥣</span><span>Día 4 — Desayuno con cereal o quinua pops. Almuerzo con pastas.</span></div>
+<div class="tip-box"><span>🥣</span><span>Día 4 — Desayuno con cereal o quinua pops. Almuerzo con pastas.</span></div>
 
-  <div class="meal-card open">
-    <div class="meal-header" onclick="toggleMeal(this)">
-      <div class="meal-icon icon-desayuno">🥣</div>
-      <div class="meal-meta"><div class="meal-name">Desayuno</div><div class="meal-tag">1 Azúcar · Proteína · Grasa</div></div>
-      <div class="meal-arrow">▾</div>
-    </div>
-    <div class="meal-body">
-      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Cereal sin azúcar <em>ó</em> quinua pops</div><div class="food-qty">40 g</div></div>
-      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Leche de almendras + Yogurt griego + Proteína en polvo</div><div class="food-qty">1 taza + 60 g + 10 g</div></div>
-    </div>
-  </div>
+<div class="meal-card open">
+<div class="meal-header" onclick="toggleMeal(this)">
+<div class="meal-icon icon-desayuno">🥣</div>
+<div class="meal-meta"><div class="meal-name">Desayuno</div><div class="meal-tag">1 Azúcar · Proteína · Grasa</div></div>
+<div class="meal-arrow">▾</div>
+</div>
+<div class="meal-body">
+<div class="food-item" id="fi-75" data-group="dot-carb" data-original="Cereal sin azúcar ó quinua pops" data-original-qty="40 g"><div class="food-dot dot-carb"></div><div class="food-text">Cereal sin azúcar <em>ó</em> quinua pops</div><div class="food-qty">40 g</div><button class="swap-btn" onclick="openSwap(event,75)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,75)">deshacer</span></div>
+<div class="food-item" id="fi-76" data-group="dot-prot" data-original="Leche de almendras + Yogurt griego + Proteína en polvo" data-original-qty="1 taza + 60 g + 10 g"><div class="food-dot dot-prot"></div><div class="food-text">Leche de almendras + Yogurt griego + Proteína en polvo</div><div class="food-qty">1 taza + 60 g + 10 g</div><button class="swap-btn" onclick="openSwap(event,76)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,76)">deshacer</span></div>
+</div>
+</div>
 
-  <div class="meal-card">
-    <div class="meal-header" onclick="toggleMeal(this)">
-      <div class="meal-icon icon-manana">🍈</div>
-      <div class="meal-meta"><div class="meal-name">Media Mañana</div><div class="meal-tag">Fruta · Grasa</div></div>
-      <div class="meal-arrow">▾</div>
-    </div>
-    <div class="meal-body">
-      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Melón</div><div class="food-qty">100 g</div></div>
-      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Mantequilla de maní</div><div class="food-qty">20 g</div></div>
-      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Gelatina light</div><div class="food-qty">libre</div></div>
-    </div>
-  </div>
+<div class="meal-card">
+<div class="meal-header" onclick="toggleMeal(this)">
+<div class="meal-icon icon-manana">🍈</div>
+<div class="meal-meta"><div class="meal-name">Media Mañana</div><div class="meal-tag">Fruta · Grasa</div></div>
+<div class="meal-arrow">▾</div>
+</div>
+<div class="meal-body">
+<div class="food-item" id="fi-77" data-group="dot-carb" data-original="Melón" data-original-qty="100 g"><div class="food-dot dot-carb"></div><div class="food-text">Melón</div><div class="food-qty">100 g</div><button class="swap-btn" onclick="openSwap(event,77)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,77)">deshacer</span></div>
+<div class="food-item" id="fi-78" data-group="dot-grasa" data-original="Mantequilla de maní" data-original-qty="20 g"><div class="food-dot dot-grasa"></div><div class="food-text">Mantequilla de maní</div><div class="food-qty">20 g</div><button class="swap-btn" onclick="openSwap(event,78)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,78)">deshacer</span></div>
+<div class="food-item" id="fi-79" data-group="dot-beb" data-original="Gelatina light" data-original-qty="libre"><div class="food-dot dot-beb"></div><div class="food-text">Gelatina light</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,79)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,79)">deshacer</span></div>
+</div>
+</div>
 
-  <div class="meal-card">
-    <div class="meal-header" onclick="toggleMeal(this)">
-      <div class="meal-icon icon-almuerzo">🍝</div>
-      <div class="meal-meta"><div class="meal-name">Almuerzo</div><div class="meal-tag">1 Azúcar · Proteína · Grasa · Vegetales</div></div>
-      <div class="meal-arrow">▾</div>
-    </div>
-    <div class="meal-body">
-      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Pastas</div><div class="food-qty">40 g</div></div>
-      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Plancha de pollo</div><div class="food-qty">100 g</div></div>
-      <div class="food-item"><div class="food-dot dot-veg"></div><div class="food-text">Ensalada de vegetales</div><div class="food-qty">libre</div></div>
-      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Aceite de oliva</div><div class="food-qty">1 cdta / 10 g</div></div>
-      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">H2oh</div><div class="food-qty">libre</div></div>
-    </div>
-  </div>
+<div class="meal-card">
+<div class="meal-header" onclick="toggleMeal(this)">
+<div class="meal-icon icon-almuerzo">🍝</div>
+<div class="meal-meta"><div class="meal-name">Almuerzo</div><div class="meal-tag">1 Azúcar · Proteína · Grasa · Vegetales</div></div>
+<div class="meal-arrow">▾</div>
+</div>
+<div class="meal-body">
+<div class="food-item" id="fi-80" data-group="dot-carb" data-original="Pastas" data-original-qty="40 g"><div class="food-dot dot-carb"></div><div class="food-text">Pastas</div><div class="food-qty">40 g</div><button class="swap-btn" onclick="openSwap(event,80)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,80)">deshacer</span></div>
+<div class="food-item" id="fi-81" data-group="dot-prot" data-original="Plancha de pollo" data-original-qty="100 g"><div class="food-dot dot-prot"></div><div class="food-text">Plancha de pollo</div><div class="food-qty">100 g</div><button class="swap-btn" onclick="openSwap(event,81)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,81)">deshacer</span></div>
+<div class="food-item" id="fi-82" data-group="dot-veg" data-original="Ensalada de vegetales" data-original-qty="libre"><div class="food-dot dot-veg"></div><div class="food-text">Ensalada de vegetales</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,82)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,82)">deshacer</span></div>
+<div class="food-item" id="fi-83" data-group="dot-grasa" data-original="Aceite de oliva" data-original-qty="1 cdta / 10 g"><div class="food-dot dot-grasa"></div><div class="food-text">Aceite de oliva</div><div class="food-qty">1 cdta / 10 g</div><button class="swap-btn" onclick="openSwap(event,83)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,83)">deshacer</span></div>
+<div class="food-item" id="fi-84" data-group="dot-beb" data-original="H2oh" data-original-qty="libre"><div class="food-dot dot-beb"></div><div class="food-text">H2oh</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,84)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,84)">deshacer</span></div>
+</div>
+</div>
 
-  <div class="meal-card">
-    <div class="meal-header" onclick="toggleMeal(this)">
-      <div class="meal-icon icon-algo">🥓</div>
-      <div class="meal-meta"><div class="meal-name">Algo — Media Tarde</div><div class="meal-tag">Proteína · Grasa · DÍA DE PIERNA Y COLA</div></div>
-      <div class="meal-arrow">▾</div>
-    </div>
-    <div class="meal-body">
-      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Jamón personal</div><div class="food-qty">30 g</div></div>
-      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Maní</div><div class="food-qty">20 g</div></div>
-      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Gelatina light</div><div class="food-qty">libre</div></div>
-      <div class="day-note">— ó —</div>
-      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">½ Barra ONE</div><div class="food-qty">½ barra</div></div>
-      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Almendras</div><div class="food-qty">20 g</div></div>
-      <div class="day-note">— ó en día sin entreno / tren superior —</div>
-      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Cañón</div><div class="food-qty">80 g</div></div>
-      <div class="food-item"><div class="food-dot dot-veg"></div><div class="food-text">Ensalada vegetales</div><div class="food-qty">1 taza</div></div>
-    </div>
-  </div>
+<div class="meal-card">
+<div class="meal-header" onclick="toggleMeal(this)">
+<div class="meal-icon icon-algo">🥓</div>
+<div class="meal-meta"><div class="meal-name">Algo — Media Tarde</div><div class="meal-tag">Proteína · Grasa · DÍA DE PIERNA Y COLA</div></div>
+<div class="meal-arrow">▾</div>
+</div>
+<div class="meal-body">
+<div class="food-item" id="fi-85" data-group="dot-prot" data-original="Jamón personal" data-original-qty="30 g"><div class="food-dot dot-prot"></div><div class="food-text">Jamón personal</div><div class="food-qty">30 g</div><button class="swap-btn" onclick="openSwap(event,85)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,85)">deshacer</span></div>
+<div class="food-item" id="fi-86" data-group="dot-grasa" data-original="Maní" data-original-qty="20 g"><div class="food-dot dot-grasa"></div><div class="food-text">Maní</div><div class="food-qty">20 g</div><button class="swap-btn" onclick="openSwap(event,86)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,86)">deshacer</span></div>
+<div class="food-item" id="fi-87" data-group="dot-beb" data-original="Gelatina light" data-original-qty="libre"><div class="food-dot dot-beb"></div><div class="food-text">Gelatina light</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,87)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,87)">deshacer</span></div>
+<div class="day-note">— ó —</div>
+<div class="food-item" id="fi-88" data-group="dot-prot" data-original="½ Barra ONE" data-original-qty="½ barra"><div class="food-dot dot-prot"></div><div class="food-text">½ Barra ONE</div><div class="food-qty">½ barra</div><button class="swap-btn" onclick="openSwap(event,88)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,88)">deshacer</span></div>
+<div class="food-item" id="fi-89" data-group="dot-grasa" data-original="Almendras" data-original-qty="20 g"><div class="food-dot dot-grasa"></div><div class="food-text">Almendras</div><div class="food-qty">20 g</div><button class="swap-btn" onclick="openSwap(event,89)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,89)">deshacer</span></div>
+<div class="day-note">— ó en día sin entreno / tren superior —</div>
+<div class="food-item" id="fi-90" data-group="dot-prot" data-original="Cañón" data-original-qty="80 g"><div class="food-dot dot-prot"></div><div class="food-text">Cañón</div><div class="food-qty">80 g</div><button class="swap-btn" onclick="openSwap(event,90)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,90)">deshacer</span></div>
+<div class="food-item" id="fi-91" data-group="dot-veg" data-original="Ensalada vegetales" data-original-qty="1 taza"><div class="food-dot dot-veg"></div><div class="food-text">Ensalada vegetales</div><div class="food-qty">1 taza</div><button class="swap-btn" onclick="openSwap(event,91)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,91)">deshacer</span></div>
+</div>
+</div>
 
-  <div class="meal-card">
-    <div class="meal-header" onclick="toggleMeal(this)">
-      <div class="meal-icon icon-comida">🥗</div>
-      <div class="meal-meta"><div class="meal-name">Comida / Cena</div><div class="meal-tag">Proteína · Vegetales · Sin grasa</div></div>
-      <div class="meal-arrow">▾</div>
-    </div>
-    <div class="meal-body">
-      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Plancha de pollo</div><div class="food-qty">100 g</div></div>
-      <div class="food-item"><div class="food-dot dot-veg"></div><div class="food-text">Ensalada / sopa de vegetales</div><div class="food-qty">libre</div></div>
-      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Clight</div><div class="food-qty">libre</div></div>
-    </div>
-  </div>
+<div class="meal-card">
+<div class="meal-header" onclick="toggleMeal(this)">
+<div class="meal-icon icon-comida">🥗</div>
+<div class="meal-meta"><div class="meal-name">Comida / Cena</div><div class="meal-tag">Proteína · Vegetales · Sin grasa</div></div>
+<div class="meal-arrow">▾</div>
+</div>
+<div class="meal-body">
+<div class="food-item" id="fi-92" data-group="dot-prot" data-original="Plancha de pollo" data-original-qty="100 g"><div class="food-dot dot-prot"></div><div class="food-text">Plancha de pollo</div><div class="food-qty">100 g</div><button class="swap-btn" onclick="openSwap(event,92)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,92)">deshacer</span></div>
+<div class="food-item" id="fi-93" data-group="dot-veg" data-original="Ensalada / sopa de vegetales" data-original-qty="libre"><div class="food-dot dot-veg"></div><div class="food-text">Ensalada / sopa de vegetales</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,93)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,93)">deshacer</span></div>
+<div class="food-item" id="fi-94" data-group="dot-beb" data-original="Clight" data-original-qty="libre"><div class="food-dot dot-beb"></div><div class="food-text">Clight</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,94)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,94)">deshacer</span></div>
+</div>
+</div>
 
-  <div class="meal-card">
-    <div class="meal-header" onclick="toggleMeal(this)">
-      <div class="meal-icon icon-merienda">🌙</div>
-      <div class="meal-meta"><div class="meal-name">Merienda</div><div class="meal-tag">Solo si no duermes antes de 2–3 h de cenar</div></div>
-      <div class="meal-arrow">▾</div>
-    </div>
-    <div class="meal-body">
-      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Proteína en polvo disuelta en agua</div><div class="food-qty">¾ copa</div></div>
-      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Maní <em>ó</em> 40 g queso</div><div class="food-qty">15 g</div></div>
-      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Aromática</div><div class="food-qty">libre</div></div>
-    </div>
-  </div>
+<div class="meal-card">
+<div class="meal-header" onclick="toggleMeal(this)">
+<div class="meal-icon icon-merienda">🌙</div>
+<div class="meal-meta"><div class="meal-name">Merienda</div><div class="meal-tag">Solo si no duermes antes de 2–3 h de cenar</div></div>
+<div class="meal-arrow">▾</div>
+</div>
+<div class="meal-body">
+<div class="food-item" id="fi-95" data-group="dot-prot" data-original="Proteína en polvo disuelta en agua" data-original-qty="¾ copa"><div class="food-dot dot-prot"></div><div class="food-text">Proteína en polvo disuelta en agua</div><div class="food-qty">¾ copa</div><button class="swap-btn" onclick="openSwap(event,95)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,95)">deshacer</span></div>
+<div class="food-item" id="fi-96" data-group="dot-grasa" data-original="Maní ó 40 g queso" data-original-qty="15 g"><div class="food-dot dot-grasa"></div><div class="food-text">Maní <em>ó</em> 40 g queso</div><div class="food-qty">15 g</div><button class="swap-btn" onclick="openSwap(event,96)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,96)">deshacer</span></div>
+<div class="food-item" id="fi-97" data-group="dot-beb" data-original="Aromática" data-original-qty="libre"><div class="food-dot dot-beb"></div><div class="food-text">Aromática</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,97)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,97)">deshacer</span></div>
+</div>
+</div>
 </div>
 
 <!-- ======== VIERNES ======== -->
 <div class="day-panel" id="day-4">
-  <div class="tip-box"><span>🌾</span><span>Día 5 — Avena trasnochada. ¡Prepárala desde la noche anterior!</span></div>
+<div class="tip-box"><span>🌾</span><span>Día 5 — Avena trasnochada. ¡Prepárala desde la noche anterior!</span></div>
 
-  <div class="meal-card open">
-    <div class="meal-header" onclick="toggleMeal(this)">
-      <div class="meal-icon icon-desayuno">🌾</div>
-      <div class="meal-meta"><div class="meal-name">Desayuno — Avena Trasnochada</div><div class="meal-tag">1 Azúcar · Proteína · Grasa</div></div>
-      <div class="meal-arrow">▾</div>
-    </div>
-    <div class="meal-body">
-      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Avena en hojuelas</div><div class="food-qty">40 g</div></div>
-      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Chía</div><div class="food-qty">10 g</div></div>
-      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Yogurt griego</div><div class="food-qty">60 g</div></div>
-      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Banano</div><div class="food-qty">30 g</div></div>
-      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Leche de almendras</div><div class="food-qty">100 ml</div></div>
-    </div>
-  </div>
+<div class="meal-card open">
+<div class="meal-header" onclick="toggleMeal(this)">
+<div class="meal-icon icon-desayuno">🌾</div>
+<div class="meal-meta"><div class="meal-name">Desayuno — Avena Trasnochada</div><div class="meal-tag">1 Azúcar · Proteína · Grasa</div></div>
+<div class="meal-arrow">▾</div>
+</div>
+<div class="meal-body">
+<div class="food-item" id="fi-98" data-group="dot-carb" data-original="Avena en hojuelas" data-original-qty="40 g"><div class="food-dot dot-carb"></div><div class="food-text">Avena en hojuelas</div><div class="food-qty">40 g</div><button class="swap-btn" onclick="openSwap(event,98)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,98)">deshacer</span></div>
+<div class="food-item" id="fi-99" data-group="dot-carb" data-original="Chía" data-original-qty="10 g"><div class="food-dot dot-carb"></div><div class="food-text">Chía</div><div class="food-qty">10 g</div><button class="swap-btn" onclick="openSwap(event,99)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,99)">deshacer</span></div>
+<div class="food-item" id="fi-100" data-group="dot-prot" data-original="Yogurt griego" data-original-qty="60 g"><div class="food-dot dot-prot"></div><div class="food-text">Yogurt griego</div><div class="food-qty">60 g</div><button class="swap-btn" onclick="openSwap(event,100)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,100)">deshacer</span></div>
+<div class="food-item" id="fi-101" data-group="dot-carb" data-original="Banano" data-original-qty="30 g"><div class="food-dot dot-carb"></div><div class="food-text">Banano</div><div class="food-qty">30 g</div><button class="swap-btn" onclick="openSwap(event,101)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,101)">deshacer</span></div>
+<div class="food-item" id="fi-102" data-group="dot-beb" data-original="Leche de almendras" data-original-qty="100 ml"><div class="food-dot dot-beb"></div><div class="food-text">Leche de almendras</div><div class="food-qty">100 ml</div><button class="swap-btn" onclick="openSwap(event,102)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,102)">deshacer</span></div>
+</div>
+</div>
 
-  <div class="meal-card">
-    <div class="meal-header" onclick="toggleMeal(this)">
-      <div class="meal-icon icon-manana">🍐</div>
-      <div class="meal-meta"><div class="meal-name">Media Mañana</div><div class="meal-tag">Fruta · Grasa</div></div>
-      <div class="meal-arrow">▾</div>
-    </div>
-    <div class="meal-body">
-      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Pera</div><div class="food-qty">100 g</div></div>
-      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Mantequilla de maní</div><div class="food-qty">20 g</div></div>
-      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Gelatina light</div><div class="food-qty">libre</div></div>
-    </div>
-  </div>
+<div class="meal-card">
+<div class="meal-header" onclick="toggleMeal(this)">
+<div class="meal-icon icon-manana">🍐</div>
+<div class="meal-meta"><div class="meal-name">Media Mañana</div><div class="meal-tag">Fruta · Grasa</div></div>
+<div class="meal-arrow">▾</div>
+</div>
+<div class="meal-body">
+<div class="food-item" id="fi-103" data-group="dot-carb" data-original="Pera" data-original-qty="100 g"><div class="food-dot dot-carb"></div><div class="food-text">Pera</div><div class="food-qty">100 g</div><button class="swap-btn" onclick="openSwap(event,103)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,103)">deshacer</span></div>
+<div class="food-item" id="fi-104" data-group="dot-grasa" data-original="Mantequilla de maní" data-original-qty="20 g"><div class="food-dot dot-grasa"></div><div class="food-text">Mantequilla de maní</div><div class="food-qty">20 g</div><button class="swap-btn" onclick="openSwap(event,104)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,104)">deshacer</span></div>
+<div class="food-item" id="fi-105" data-group="dot-beb" data-original="Gelatina light" data-original-qty="libre"><div class="food-dot dot-beb"></div><div class="food-text">Gelatina light</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,105)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,105)">deshacer</span></div>
+</div>
+</div>
 
-  <div class="meal-card">
-    <div class="meal-header" onclick="toggleMeal(this)">
-      <div class="meal-icon icon-almuerzo">🍝</div>
-      <div class="meal-meta"><div class="meal-name">Almuerzo</div><div class="meal-tag">1 Azúcar · Proteína · Grasa · Vegetales</div></div>
-      <div class="meal-arrow">▾</div>
-    </div>
-    <div class="meal-body">
-      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Pastas</div><div class="food-qty">40 g</div></div>
-      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Pechuga de pollo</div><div class="food-qty">100 g</div></div>
-      <div class="food-item"><div class="food-dot dot-veg"></div><div class="food-text">Ensalada de vegetales</div><div class="food-qty">libre</div></div>
-      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Aguacate</div><div class="food-qty">40 g</div></div>
-      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Mr Tea cero</div><div class="food-qty">libre</div></div>
-    </div>
-  </div>
+<div class="meal-card">
+<div class="meal-header" onclick="toggleMeal(this)">
+<div class="meal-icon icon-almuerzo">🍝</div>
+<div class="meal-meta"><div class="meal-name">Almuerzo</div><div class="meal-tag">1 Azúcar · Proteína · Grasa · Vegetales</div></div>
+<div class="meal-arrow">▾</div>
+</div>
+<div class="meal-body">
+<div class="food-item" id="fi-106" data-group="dot-carb" data-original="Pastas" data-original-qty="40 g"><div class="food-dot dot-carb"></div><div class="food-text">Pastas</div><div class="food-qty">40 g</div><button class="swap-btn" onclick="openSwap(event,106)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,106)">deshacer</span></div>
+<div class="food-item" id="fi-107" data-group="dot-prot" data-original="Pechuga de pollo" data-original-qty="100 g"><div class="food-dot dot-prot"></div><div class="food-text">Pechuga de pollo</div><div class="food-qty">100 g</div><button class="swap-btn" onclick="openSwap(event,107)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,107)">deshacer</span></div>
+<div class="food-item" id="fi-108" data-group="dot-veg" data-original="Ensalada de vegetales" data-original-qty="libre"><div class="food-dot dot-veg"></div><div class="food-text">Ensalada de vegetales</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,108)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,108)">deshacer</span></div>
+<div class="food-item" id="fi-109" data-group="dot-grasa" data-original="Aguacate" data-original-qty="40 g"><div class="food-dot dot-grasa"></div><div class="food-text">Aguacate</div><div class="food-qty">40 g</div><button class="swap-btn" onclick="openSwap(event,109)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,109)">deshacer</span></div>
+<div class="food-item" id="fi-110" data-group="dot-beb" data-original="Mr Tea cero" data-original-qty="libre"><div class="food-dot dot-beb"></div><div class="food-text">Mr Tea cero</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,110)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,110)">deshacer</span></div>
+</div>
+</div>
 
-  <div class="meal-card">
-    <div class="meal-header" onclick="toggleMeal(this)">
-      <div class="meal-icon icon-algo">🫙</div>
-      <div class="meal-meta"><div class="meal-name">Algo — Media Tarde</div><div class="meal-tag">Proteína · Grasa · DÍA DE PIERNA Y COLA</div></div>
-      <div class="meal-arrow">▾</div>
-    </div>
-    <div class="meal-body">
-      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Yogurt griego Zorba o Taeq (máx 4 g azúcar natural)</div><div class="food-qty">130 g</div></div>
-      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Almendras</div><div class="food-qty">20 g</div></div>
-      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Gelatina light</div><div class="food-qty">libre</div></div>
-      <div class="day-note">— ó en día sin entreno / tren superior —</div>
-      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">1 lata de atún pequeña</div><div class="food-qty">1 lata</div></div>
-      <div class="food-item"><div class="food-dot dot-veg"></div><div class="food-text">Vegetales</div><div class="food-qty">1 taza</div></div>
-    </div>
-  </div>
+<div class="meal-card">
+<div class="meal-header" onclick="toggleMeal(this)">
+<div class="meal-icon icon-algo">🫙</div>
+<div class="meal-meta"><div class="meal-name">Algo — Media Tarde</div><div class="meal-tag">Proteína · Grasa · DÍA DE PIERNA Y COLA</div></div>
+<div class="meal-arrow">▾</div>
+</div>
+<div class="meal-body">
+<div class="food-item" id="fi-111" data-group="dot-prot" data-original="Yogurt griego Zorba o Taeq (máx 4 g azúcar natural)" data-original-qty="130 g"><div class="food-dot dot-prot"></div><div class="food-text">Yogurt griego Zorba o Taeq (máx 4 g azúcar natural)</div><div class="food-qty">130 g</div><button class="swap-btn" onclick="openSwap(event,111)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,111)">deshacer</span></div>
+<div class="food-item" id="fi-112" data-group="dot-grasa" data-original="Almendras" data-original-qty="20 g"><div class="food-dot dot-grasa"></div><div class="food-text">Almendras</div><div class="food-qty">20 g</div><button class="swap-btn" onclick="openSwap(event,112)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,112)">deshacer</span></div>
+<div class="food-item" id="fi-113" data-group="dot-beb" data-original="Gelatina light" data-original-qty="libre"><div class="food-dot dot-beb"></div><div class="food-text">Gelatina light</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,113)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,113)">deshacer</span></div>
+<div class="day-note">— ó en día sin entreno / tren superior —</div>
+<div class="food-item" id="fi-114" data-group="dot-prot" data-original="1 lata de atún pequeña" data-original-qty="1 lata"><div class="food-dot dot-prot"></div><div class="food-text">1 lata de atún pequeña</div><div class="food-qty">1 lata</div><button class="swap-btn" onclick="openSwap(event,114)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,114)">deshacer</span></div>
+<div class="food-item" id="fi-115" data-group="dot-veg" data-original="Vegetales" data-original-qty="1 taza"><div class="food-dot dot-veg"></div><div class="food-text">Vegetales</div><div class="food-qty">1 taza</div><button class="swap-btn" onclick="openSwap(event,115)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,115)">deshacer</span></div>
+</div>
+</div>
 
-  <div class="meal-card">
-    <div class="meal-header" onclick="toggleMeal(this)">
-      <div class="meal-icon icon-comida">🥗</div>
-      <div class="meal-meta"><div class="meal-name">Comida / Cena</div><div class="meal-tag">1 Azúcar · Proteína · Vegetales · Sin grasa</div></div>
-      <div class="meal-arrow">▾</div>
-    </div>
-    <div class="meal-body">
-      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Arepa extradelgada La Típica</div><div class="food-qty">1 und</div></div>
-      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Cuajada <em>ó</em> Quesito</div><div class="food-qty">80 / 70 g</div></div>
-      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Jugo verde sin fruta + Clight</div><div class="food-qty">libre</div></div>
-    </div>
-  </div>
+<div class="meal-card">
+<div class="meal-header" onclick="toggleMeal(this)">
+<div class="meal-icon icon-comida">🥗</div>
+<div class="meal-meta"><div class="meal-name">Comida / Cena</div><div class="meal-tag">1 Azúcar · Proteína · Vegetales · Sin grasa</div></div>
+<div class="meal-arrow">▾</div>
+</div>
+<div class="meal-body">
+<div class="food-item" id="fi-116" data-group="dot-carb" data-original="Arepa extradelgada La Típica" data-original-qty="1 und"><div class="food-dot dot-carb"></div><div class="food-text">Arepa extradelgada La Típica</div><div class="food-qty">1 und</div><button class="swap-btn" onclick="openSwap(event,116)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,116)">deshacer</span></div>
+<div class="food-item" id="fi-117" data-group="dot-prot" data-original="Cuajada ó Quesito" data-original-qty="80 / 70 g"><div class="food-dot dot-prot"></div><div class="food-text">Cuajada <em>ó</em> Quesito</div><div class="food-qty">80 / 70 g</div><button class="swap-btn" onclick="openSwap(event,117)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,117)">deshacer</span></div>
+<div class="food-item" id="fi-118" data-group="dot-beb" data-original="Jugo verde sin fruta + Clight" data-original-qty="libre"><div class="food-dot dot-beb"></div><div class="food-text">Jugo verde sin fruta + Clight</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,118)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,118)">deshacer</span></div>
+</div>
+</div>
 
-  <div class="meal-card">
-    <div class="meal-header" onclick="toggleMeal(this)">
-      <div class="meal-icon icon-merienda">🌙</div>
-      <div class="meal-meta"><div class="meal-name">Merienda</div><div class="meal-tag">Solo si no duermes antes de 2–3 h de cenar</div></div>
-      <div class="meal-arrow">▾</div>
-    </div>
-    <div class="meal-body">
-      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Proteína en polvo disuelta en agua</div><div class="food-qty">¾ copa</div></div>
-      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Almendras <em>ó</em> 40 g queso</div><div class="food-qty">15 g</div></div>
-      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Aromática</div><div class="food-qty">libre</div></div>
-    </div>
-  </div>
+<div class="meal-card">
+<div class="meal-header" onclick="toggleMeal(this)">
+<div class="meal-icon icon-merienda">🌙</div>
+<div class="meal-meta"><div class="meal-name">Merienda</div><div class="meal-tag">Solo si no duermes antes de 2–3 h de cenar</div></div>
+<div class="meal-arrow">▾</div>
+</div>
+<div class="meal-body">
+<div class="food-item" id="fi-119" data-group="dot-prot" data-original="Proteína en polvo disuelta en agua" data-original-qty="¾ copa"><div class="food-dot dot-prot"></div><div class="food-text">Proteína en polvo disuelta en agua</div><div class="food-qty">¾ copa</div><button class="swap-btn" onclick="openSwap(event,119)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,119)">deshacer</span></div>
+<div class="food-item" id="fi-120" data-group="dot-grasa" data-original="Almendras ó 40 g queso" data-original-qty="15 g"><div class="food-dot dot-grasa"></div><div class="food-text">Almendras <em>ó</em> 40 g queso</div><div class="food-qty">15 g</div><button class="swap-btn" onclick="openSwap(event,120)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,120)">deshacer</span></div>
+<div class="food-item" id="fi-121" data-group="dot-beb" data-original="Aromática" data-original-qty="libre"><div class="food-dot dot-beb"></div><div class="food-text">Aromática</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,121)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,121)">deshacer</span></div>
+</div>
+</div>
 </div>
 
 <!-- ======== SÁBADO ======== -->
 <div class="day-panel" id="day-5">
-  <div class="tip-box"><span>🥞</span><span>Día 6 — Pancakes de nuevo. ¡Disfruta el fin de semana dentro del plan!</span></div>
+<div class="tip-box"><span>🥞</span><span>Día 6 — Pancakes de nuevo. ¡Disfruta el fin de semana dentro del plan!</span></div>
 
-  <div class="meal-card open">
-    <div class="meal-header" onclick="toggleMeal(this)">
-      <div class="meal-icon icon-desayuno">🥞</div>
-      <div class="meal-meta"><div class="meal-name">Desayuno</div><div class="meal-tag">1 Azúcar · Proteína · Grasa</div></div>
-      <div class="meal-arrow">▾</div>
-    </div>
-    <div class="meal-body">
-      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Pancake — 4 copas de Why Not</div><div class="food-qty">4 copas</div></div>
-      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">1 Huevo <em>ó</em> Queso blanco / quesito / cuajada</div><div class="food-qty">1 / 40 g</div></div>
-      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Mantequilla Alma en spray</div><div class="food-qty">mínimo</div></div>
-      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Miel Diety o mermelada Konfyt</div><div class="food-qty">al gusto</div></div>
-      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Cocoa en agua con endulzante</div><div class="food-qty">libre</div></div>
-    </div>
-  </div>
+<div class="meal-card open">
+<div class="meal-header" onclick="toggleMeal(this)">
+<div class="meal-icon icon-desayuno">🥞</div>
+<div class="meal-meta"><div class="meal-name">Desayuno</div><div class="meal-tag">1 Azúcar · Proteína · Grasa</div></div>
+<div class="meal-arrow">▾</div>
+</div>
+<div class="meal-body">
+<div class="food-item" id="fi-122" data-group="dot-carb" data-original="Pancake — 4 copas de Why Not" data-original-qty="4 copas"><div class="food-dot dot-carb"></div><div class="food-text">Pancake — 4 copas de Why Not</div><div class="food-qty">4 copas</div><button class="swap-btn" onclick="openSwap(event,122)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,122)">deshacer</span></div>
+<div class="food-item" id="fi-123" data-group="dot-prot" data-original="1 Huevo ó Queso blanco / quesito / cuajada" data-original-qty="1 / 40 g"><div class="food-dot dot-prot"></div><div class="food-text">1 Huevo <em>ó</em> Queso blanco / quesito / cuajada</div><div class="food-qty">1 / 40 g</div><button class="swap-btn" onclick="openSwap(event,123)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,123)">deshacer</span></div>
+<div class="food-item" id="fi-124" data-group="dot-grasa" data-original="Mantequilla Alma en spray" data-original-qty="mínimo"><div class="food-dot dot-grasa"></div><div class="food-text">Mantequilla Alma en spray</div><div class="food-qty">mínimo</div><button class="swap-btn" onclick="openSwap(event,124)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,124)">deshacer</span></div>
+<div class="food-item" id="fi-125" data-group="dot-beb" data-original="Miel Diety o mermelada Konfyt" data-original-qty="al gusto"><div class="food-dot dot-beb"></div><div class="food-text">Miel Diety o mermelada Konfyt</div><div class="food-qty">al gusto</div><button class="swap-btn" onclick="openSwap(event,125)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,125)">deshacer</span></div>
+<div class="food-item" id="fi-126" data-group="dot-beb" data-original="Cocoa en agua con endulzante" data-original-qty="libre"><div class="food-dot dot-beb"></div><div class="food-text">Cocoa en agua con endulzante</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,126)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,126)">deshacer</span></div>
+</div>
+</div>
 
-  <div class="meal-card">
-    <div class="meal-header" onclick="toggleMeal(this)">
-      <div class="meal-icon icon-manana">🍈</div>
-      <div class="meal-meta"><div class="meal-name">Media Mañana</div><div class="meal-tag">Fruta · Grasa</div></div>
-      <div class="meal-arrow">▾</div>
-    </div>
-    <div class="meal-body">
-      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Papaya <em>ó</em> Granadilla</div><div class="food-qty">100 g</div></div>
-      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Mantequilla de maní</div><div class="food-qty">20 g</div></div>
-      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Gelatina light</div><div class="food-qty">libre</div></div>
-    </div>
-  </div>
+<div class="meal-card">
+<div class="meal-header" onclick="toggleMeal(this)">
+<div class="meal-icon icon-manana">🍈</div>
+<div class="meal-meta"><div class="meal-name">Media Mañana</div><div class="meal-tag">Fruta · Grasa</div></div>
+<div class="meal-arrow">▾</div>
+</div>
+<div class="meal-body">
+<div class="food-item" id="fi-127" data-group="dot-carb" data-original="Papaya ó Granadilla" data-original-qty="100 g"><div class="food-dot dot-carb"></div><div class="food-text">Papaya <em>ó</em> Granadilla</div><div class="food-qty">100 g</div><button class="swap-btn" onclick="openSwap(event,127)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,127)">deshacer</span></div>
+<div class="food-item" id="fi-128" data-group="dot-grasa" data-original="Mantequilla de maní" data-original-qty="20 g"><div class="food-dot dot-grasa"></div><div class="food-text">Mantequilla de maní</div><div class="food-qty">20 g</div><button class="swap-btn" onclick="openSwap(event,128)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,128)">deshacer</span></div>
+<div class="food-item" id="fi-129" data-group="dot-beb" data-original="Gelatina light" data-original-qty="libre"><div class="food-dot dot-beb"></div><div class="food-text">Gelatina light</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,129)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,129)">deshacer</span></div>
+</div>
+</div>
 
-  <div class="meal-card">
-    <div class="meal-header" onclick="toggleMeal(this)">
-      <div class="meal-icon icon-almuerzo">🥩</div>
-      <div class="meal-meta"><div class="meal-name">Almuerzo</div><div class="meal-tag">1 Azúcar · Proteína · Grasa · Vegetales</div></div>
-      <div class="meal-arrow">▾</div>
-    </div>
-    <div class="meal-body">
-      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Arroz</div><div class="food-qty">40 g</div></div>
-      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Carne de cerdo magra</div><div class="food-qty">100 g</div></div>
-      <div class="food-item"><div class="food-dot dot-veg"></div><div class="food-text">Ensalada de vegetales</div><div class="food-qty">libre</div></div>
-      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Aceite de oliva</div><div class="food-qty">1 cdta / 10 g</div></div>
-      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Agua</div><div class="food-qty">libre</div></div>
-    </div>
-  </div>
+<div class="meal-card">
+<div class="meal-header" onclick="toggleMeal(this)">
+<div class="meal-icon icon-almuerzo">🥩</div>
+<div class="meal-meta"><div class="meal-name">Almuerzo</div><div class="meal-tag">1 Azúcar · Proteína · Grasa · Vegetales</div></div>
+<div class="meal-arrow">▾</div>
+</div>
+<div class="meal-body">
+<div class="food-item" id="fi-130" data-group="dot-carb" data-original="Arroz" data-original-qty="40 g"><div class="food-dot dot-carb"></div><div class="food-text">Arroz</div><div class="food-qty">40 g</div><button class="swap-btn" onclick="openSwap(event,130)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,130)">deshacer</span></div>
+<div class="food-item" id="fi-131" data-group="dot-prot" data-original="Carne de cerdo magra" data-original-qty="100 g"><div class="food-dot dot-prot"></div><div class="food-text">Carne de cerdo magra</div><div class="food-qty">100 g</div><button class="swap-btn" onclick="openSwap(event,131)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,131)">deshacer</span></div>
+<div class="food-item" id="fi-132" data-group="dot-veg" data-original="Ensalada de vegetales" data-original-qty="libre"><div class="food-dot dot-veg"></div><div class="food-text">Ensalada de vegetales</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,132)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,132)">deshacer</span></div>
+<div class="food-item" id="fi-133" data-group="dot-grasa" data-original="Aceite de oliva" data-original-qty="1 cdta / 10 g"><div class="food-dot dot-grasa"></div><div class="food-text">Aceite de oliva</div><div class="food-qty">1 cdta / 10 g</div><button class="swap-btn" onclick="openSwap(event,133)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,133)">deshacer</span></div>
+<div class="food-item" id="fi-134" data-group="dot-beb" data-original="Agua" data-original-qty="libre"><div class="food-dot dot-beb"></div><div class="food-text">Agua</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,134)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,134)">deshacer</span></div>
+</div>
+</div>
 
-  <div class="meal-card">
-    <div class="meal-header" onclick="toggleMeal(this)">
-      <div class="meal-icon icon-algo">💪</div>
-      <div class="meal-meta"><div class="meal-name">Algo — Media Tarde</div><div class="meal-tag">Proteína · Grasa · DÍA DE PIERNA Y COLA</div></div>
-      <div class="meal-arrow">▾</div>
-    </div>
-    <div class="meal-body">
-      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">½ Barra Proteína</div><div class="food-qty">½ barra</div></div>
-      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Almendras</div><div class="food-qty">20 g</div></div>
-      <div class="day-note">— ó en día sin entreno / tren superior —</div>
-      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Pollo desmechado o camarones</div><div class="food-qty">80 g</div></div>
-      <div class="food-item"><div class="food-dot dot-veg"></div><div class="food-text">Vegetales</div><div class="food-qty">1 taza</div></div>
-    </div>
-  </div>
+<div class="meal-card">
+<div class="meal-header" onclick="toggleMeal(this)">
+<div class="meal-icon icon-algo">💪</div>
+<div class="meal-meta"><div class="meal-name">Algo — Media Tarde</div><div class="meal-tag">Proteína · Grasa · DÍA DE PIERNA Y COLA</div></div>
+<div class="meal-arrow">▾</div>
+</div>
+<div class="meal-body">
+<div class="food-item" id="fi-135" data-group="dot-prot" data-original="½ Barra Proteína" data-original-qty="½ barra"><div class="food-dot dot-prot"></div><div class="food-text">½ Barra Proteína</div><div class="food-qty">½ barra</div><button class="swap-btn" onclick="openSwap(event,135)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,135)">deshacer</span></div>
+<div class="food-item" id="fi-136" data-group="dot-grasa" data-original="Almendras" data-original-qty="20 g"><div class="food-dot dot-grasa"></div><div class="food-text">Almendras</div><div class="food-qty">20 g</div><button class="swap-btn" onclick="openSwap(event,136)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,136)">deshacer</span></div>
+<div class="day-note">— ó en día sin entreno / tren superior —</div>
+<div class="food-item" id="fi-137" data-group="dot-prot" data-original="Pollo desmechado o camarones" data-original-qty="80 g"><div class="food-dot dot-prot"></div><div class="food-text">Pollo desmechado o camarones</div><div class="food-qty">80 g</div><button class="swap-btn" onclick="openSwap(event,137)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,137)">deshacer</span></div>
+<div class="food-item" id="fi-138" data-group="dot-veg" data-original="Vegetales" data-original-qty="1 taza"><div class="food-dot dot-veg"></div><div class="food-text">Vegetales</div><div class="food-qty">1 taza</div><button class="swap-btn" onclick="openSwap(event,138)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,138)">deshacer</span></div>
+</div>
+</div>
 
-  <div class="meal-card">
-    <div class="meal-header" onclick="toggleMeal(this)">
-      <div class="meal-icon icon-comida">🥩</div>
-      <div class="meal-meta"><div class="meal-name">Comida / Cena</div><div class="meal-tag">Proteína · Vegetales · Sin grasa</div></div>
-      <div class="meal-arrow">▾</div>
-    </div>
-    <div class="meal-body">
-      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Solomo</div><div class="food-qty">100 g</div></div>
-      <div class="food-item"><div class="food-dot dot-veg"></div><div class="food-text">Ensalada de vegetales</div><div class="food-qty">libre</div></div>
-      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Limonada sin azúcar</div><div class="food-qty">libre</div></div>
-    </div>
-  </div>
+<div class="meal-card">
+<div class="meal-header" onclick="toggleMeal(this)">
+<div class="meal-icon icon-comida">🥩</div>
+<div class="meal-meta"><div class="meal-name">Comida / Cena</div><div class="meal-tag">Proteína · Vegetales · Sin grasa</div></div>
+<div class="meal-arrow">▾</div>
+</div>
+<div class="meal-body">
+<div class="food-item" id="fi-139" data-group="dot-prot" data-original="Solomo" data-original-qty="100 g"><div class="food-dot dot-prot"></div><div class="food-text">Solomo</div><div class="food-qty">100 g</div><button class="swap-btn" onclick="openSwap(event,139)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,139)">deshacer</span></div>
+<div class="food-item" id="fi-140" data-group="dot-veg" data-original="Ensalada de vegetales" data-original-qty="libre"><div class="food-dot dot-veg"></div><div class="food-text">Ensalada de vegetales</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,140)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,140)">deshacer</span></div>
+<div class="food-item" id="fi-141" data-group="dot-beb" data-original="Limonada sin azúcar" data-original-qty="libre"><div class="food-dot dot-beb"></div><div class="food-text">Limonada sin azúcar</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,141)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,141)">deshacer</span></div>
+</div>
+</div>
 
-  <div class="meal-card">
-    <div class="meal-header" onclick="toggleMeal(this)">
-      <div class="meal-icon icon-merienda">🌙</div>
-      <div class="meal-meta"><div class="meal-name">Merienda</div><div class="meal-tag">Solo si no duermes antes de 2–3 h de cenar</div></div>
-      <div class="meal-arrow">▾</div>
-    </div>
-    <div class="meal-body">
-      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Proteína en polvo disuelta en agua</div><div class="food-qty">¾ copa</div></div>
-      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Maní <em>ó</em> 40 g queso</div><div class="food-qty">15 g</div></div>
-      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Aromática</div><div class="food-qty">libre</div></div>
-    </div>
-  </div>
+<div class="meal-card">
+<div class="meal-header" onclick="toggleMeal(this)">
+<div class="meal-icon icon-merienda">🌙</div>
+<div class="meal-meta"><div class="meal-name">Merienda</div><div class="meal-tag">Solo si no duermes antes de 2–3 h de cenar</div></div>
+<div class="meal-arrow">▾</div>
+</div>
+<div class="meal-body">
+<div class="food-item" id="fi-142" data-group="dot-prot" data-original="Proteína en polvo disuelta en agua" data-original-qty="¾ copa"><div class="food-dot dot-prot"></div><div class="food-text">Proteína en polvo disuelta en agua</div><div class="food-qty">¾ copa</div><button class="swap-btn" onclick="openSwap(event,142)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,142)">deshacer</span></div>
+<div class="food-item" id="fi-143" data-group="dot-grasa" data-original="Maní ó 40 g queso" data-original-qty="15 g"><div class="food-dot dot-grasa"></div><div class="food-text">Maní <em>ó</em> 40 g queso</div><div class="food-qty">15 g</div><button class="swap-btn" onclick="openSwap(event,143)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,143)">deshacer</span></div>
+<div class="food-item" id="fi-144" data-group="dot-beb" data-original="Aromática" data-original-qty="libre"><div class="food-dot dot-beb"></div><div class="food-text">Aromática</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,144)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,144)">deshacer</span></div>
+</div>
+</div>
 </div>
 
 <!-- ======== DOMINGO ======== -->
 <div class="day-panel" id="day-6">
-  <div class="tip-box"><span>🫘</span><span>Día 7 — Lentejas en el almuerzo. Cierra la semana fuerte. ¡Lo lograste!</span></div>
+<div class="tip-box"><span>🫘</span><span>Día 7 — Lentejas en el almuerzo. Cierra la semana fuerte. ¡Lo lograste!</span></div>
 
-  <div class="meal-card open">
-    <div class="meal-header" onclick="toggleMeal(this)">
-      <div class="meal-icon icon-desayuno">🍳</div>
-      <div class="meal-meta"><div class="meal-name">Desayuno</div><div class="meal-tag">1 Azúcar · Proteína · Grasa</div></div>
-      <div class="meal-arrow">▾</div>
+<div class="meal-card open">
+<div class="meal-header" onclick="toggleMeal(this)">
+<div class="meal-icon icon-desayuno">🍳</div>
+<div class="meal-meta"><div class="meal-name">Desayuno</div><div class="meal-tag">1 Azúcar · Proteína · Grasa</div></div>
+<div class="meal-arrow">▾</div>
+</div>
+<div class="meal-body">
+<div class="food-item" id="fi-145" data-group="dot-carb" data-original="Arepa extradelgada Sary ó Avena" data-original-qty="1 und / 40 g"><div class="food-dot dot-carb"></div><div class="food-text">Arepa extradelgada Sary <em>ó</em> Avena</div><div class="food-qty">1 und / 40 g</div><button class="swap-btn" onclick="openSwap(event,145)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,145)">deshacer</span></div>
+<div class="food-item" id="fi-146" data-group="dot-prot" data-original="Quesito + 2 Claras + 1 Yema" data-original-qty="30 g + 2 + 1"><div class="food-dot dot-prot"></div><div class="food-text">Quesito + 2 Claras + 1 Yema</div><div class="food-qty">30 g + 2 + 1</div><button class="swap-btn" onclick="openSwap(event,146)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,146)">deshacer</span></div>
+<div class="food-item" id="fi-147" data-group="dot-grasa" data-original="Aceite en spray" data-original-qty="mínimo"><div class="food-dot dot-grasa"></div><div class="food-text">Aceite en spray</div><div class="food-qty">mínimo</div><button class="swap-btn" onclick="openSwap(event,147)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,147)">deshacer</span></div>
+<div class="food-item" id="fi-148" data-group="dot-beb" data-original="Aromática o té verde" data-original-qty="libre"><div class="food-dot dot-beb"></div><div class="food-text">Aromática o té verde</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,148)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,148)">deshacer</span></div>
+</div>
+</div>
+
+<div class="meal-card">
+<div class="meal-header" onclick="toggleMeal(this)">
+<div class="meal-icon icon-manana">🍍</div>
+<div class="meal-meta"><div class="meal-name">Media Mañana</div><div class="meal-tag">Fruta · Grasa</div></div>
+<div class="meal-arrow">▾</div>
+</div>
+<div class="meal-body">
+<div class="food-item" id="fi-149" data-group="dot-carb" data-original="Piña" data-original-qty="100 g"><div class="food-dot dot-carb"></div><div class="food-text">Piña</div><div class="food-qty">100 g</div><button class="swap-btn" onclick="openSwap(event,149)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,149)">deshacer</span></div>
+<div class="food-item" id="fi-150" data-group="dot-grasa" data-original="Almendras" data-original-qty="20 g"><div class="food-dot dot-grasa"></div><div class="food-text">Almendras</div><div class="food-qty">20 g</div><button class="swap-btn" onclick="openSwap(event,150)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,150)">deshacer</span></div>
+<div class="food-item" id="fi-151" data-group="dot-beb" data-original="Gelatina light" data-original-qty="libre"><div class="food-dot dot-beb"></div><div class="food-text">Gelatina light</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,151)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,151)">deshacer</span></div>
+</div>
+</div>
+
+<div class="meal-card">
+<div class="meal-header" onclick="toggleMeal(this)">
+<div class="meal-icon icon-almuerzo">🫘</div>
+<div class="meal-meta"><div class="meal-name">Almuerzo</div><div class="meal-tag">1 Azúcar · Proteína · Grasa · Vegetales</div></div>
+<div class="meal-arrow">▾</div>
+</div>
+<div class="meal-body">
+<div class="food-item" id="fi-152" data-group="dot-carb" data-original="Lentejas" data-original-qty="40 g"><div class="food-dot dot-carb"></div><div class="food-text">Lentejas</div><div class="food-qty">40 g</div><button class="swap-btn" onclick="openSwap(event,152)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,152)">deshacer</span></div>
+<div class="food-item" id="fi-153" data-group="dot-prot" data-original="Carne de res magra" data-original-qty="100 g"><div class="food-dot dot-prot"></div><div class="food-text">Carne de res magra</div><div class="food-qty">100 g</div><button class="swap-btn" onclick="openSwap(event,153)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,153)">deshacer</span></div>
+<div class="food-item" id="fi-154" data-group="dot-veg" data-original="Ensalada de vegetales" data-original-qty="libre"><div class="food-dot dot-veg"></div><div class="food-text">Ensalada de vegetales</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,154)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,154)">deshacer</span></div>
+<div class="food-item" id="fi-155" data-group="dot-grasa" data-original="Aguacate" data-original-qty="40 g"><div class="food-dot dot-grasa"></div><div class="food-text">Aguacate</div><div class="food-qty">40 g</div><button class="swap-btn" onclick="openSwap(event,155)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,155)">deshacer</span></div>
+<div class="food-item" id="fi-156" data-group="dot-beb" data-original="Agua" data-original-qty="libre"><div class="food-dot dot-beb"></div><div class="food-text">Agua</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,156)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,156)">deshacer</span></div>
+</div>
+</div>
+
+<div class="meal-card">
+<div class="meal-header" onclick="toggleMeal(this)">
+<div class="meal-icon icon-algo">🧀</div>
+<div class="meal-meta"><div class="meal-name">Algo — Media Tarde</div><div class="meal-tag">Proteína · Grasa · DÍA DE PIERNA Y COLA</div></div>
+<div class="meal-arrow">▾</div>
+</div>
+<div class="meal-body">
+<div class="food-item" id="fi-157" data-group="dot-prot" data-original="Barra de queso Finesse ó queso blanco bajo en grasa" data-original-qty="40 g"><div class="food-dot dot-prot"></div><div class="food-text">Barra de queso Finesse <em>ó</em> queso blanco bajo en grasa</div><div class="food-qty">40 g</div><button class="swap-btn" onclick="openSwap(event,157)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,157)">deshacer</span></div>
+<div class="food-item" id="fi-158" data-group="dot-grasa" data-original="Maní" data-original-qty="20 g"><div class="food-dot dot-grasa"></div><div class="food-text">Maní</div><div class="food-qty">20 g</div><button class="swap-btn" onclick="openSwap(event,158)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,158)">deshacer</span></div>
+<div class="food-item" id="fi-159" data-group="dot-beb" data-original="Gelatina light" data-original-qty="libre"><div class="food-dot dot-beb"></div><div class="food-text">Gelatina light</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,159)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,159)">deshacer</span></div>
+<div class="day-note">— ó en día sin entreno / tren superior —</div>
+<div class="food-item" id="fi-160" data-group="dot-prot" data-original="Plancha de pollo" data-original-qty="80 g"><div class="food-dot dot-prot"></div><div class="food-text">Plancha de pollo</div><div class="food-qty">80 g</div><button class="swap-btn" onclick="openSwap(event,160)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,160)">deshacer</span></div>
+<div class="food-item" id="fi-161" data-group="dot-veg" data-original="Vegetales" data-original-qty="1 taza"><div class="food-dot dot-veg"></div><div class="food-text">Vegetales</div><div class="food-qty">1 taza</div><button class="swap-btn" onclick="openSwap(event,161)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,161)">deshacer</span></div>
+</div>
+</div>
+
+<div class="meal-card">
+<div class="meal-header" onclick="toggleMeal(this)">
+<div class="meal-icon icon-comida">🥗</div>
+<div class="meal-meta"><div class="meal-name">Comida / Cena</div><div class="meal-tag">1 Azúcar · Proteína · Vegetales · Sin grasa</div></div>
+<div class="meal-arrow">▾</div>
+</div>
+<div class="meal-body">
+<div class="food-item" id="fi-162" data-group="dot-carb" data-original="Papa al vapor" data-original-qty="60 g"><div class="food-dot dot-carb"></div><div class="food-text">Papa al vapor</div><div class="food-qty">60 g</div><button class="swap-btn" onclick="openSwap(event,162)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,162)">deshacer</span></div>
+<div class="food-item" id="fi-163" data-group="dot-prot" data-original="Plancha de pollo" data-original-qty="100 g"><div class="food-dot dot-prot"></div><div class="food-text">Plancha de pollo</div><div class="food-qty">100 g</div><button class="swap-btn" onclick="openSwap(event,163)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,163)">deshacer</span></div>
+<div class="food-item" id="fi-164" data-group="dot-veg" data-original="Ensalada de vegetales / crema o jugo verde" data-original-qty="libre"><div class="food-dot dot-veg"></div><div class="food-text">Ensalada de vegetales / crema o jugo verde</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,164)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,164)">deshacer</span></div>
+<div class="food-item" id="fi-165" data-group="dot-beb" data-original="Limonada sin azúcar" data-original-qty="libre"><div class="food-dot dot-beb"></div><div class="food-text">Limonada sin azúcar</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,165)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,165)">deshacer</span></div>
+</div>
+</div>
+
+<div class="meal-card">
+<div class="meal-header" onclick="toggleMeal(this)">
+<div class="meal-icon icon-merienda">🌙</div>
+<div class="meal-meta"><div class="meal-name">Merienda</div><div class="meal-tag">Solo si no duermes antes de 2–3 h de cenar</div></div>
+<div class="meal-arrow">▾</div>
+</div>
+<div class="meal-body">
+<div class="food-item" id="fi-166" data-group="dot-prot" data-original="Proteína en polvo disuelta en agua" data-original-qty="¾ copa"><div class="food-dot dot-prot"></div><div class="food-text">Proteína en polvo disuelta en agua</div><div class="food-qty">¾ copa</div><button class="swap-btn" onclick="openSwap(event,166)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,166)">deshacer</span></div>
+<div class="food-item" id="fi-167" data-group="dot-grasa" data-original="Almendras ó 40 g queso" data-original-qty="15 g"><div class="food-dot dot-grasa"></div><div class="food-text">Almendras <em>ó</em> 40 g queso</div><div class="food-qty">15 g</div><button class="swap-btn" onclick="openSwap(event,167)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,167)">deshacer</span></div>
+<div class="food-item" id="fi-168" data-group="dot-beb" data-original="Aromática" data-original-qty="libre"><div class="food-dot dot-beb"></div><div class="food-text">Aromática</div><div class="food-qty">libre</div><button class="swap-btn" onclick="openSwap(event,168)" title="Sustituir por otro alimento del mismo grupo" aria-label="Sustituir alimento"><span class="swap-icon">⇄</span><span class="swap-label">Cambiar</span></button><span class="swap-undo" onclick="undoSwap(event,168)">deshacer</span></div>
+</div>
+</div>
+</div>
+
+</main>
+
+<!-- ══════════════ LISTA COMPLETA DE INTERCAMBIOS ══════════════ -->
+<div class="exchange-section">
+  <div class="exchange-toggle" id="exchangeToggle" onclick="toggleExchange()">
+    <span class="exchange-toggle-icon">📖</span>
+    <div class="exchange-toggle-text">
+      <div class="exchange-toggle-title">Lista completa de intercambios</div>
+      <div class="exchange-toggle-sub">Consulta todos los alimentos permitidos por grupo</div>
     </div>
-    <div class="meal-body">
-      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Arepa extradelgada Sary <em>ó</em> Avena</div><div class="food-qty">1 und / 40 g</div></div>
-      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Quesito + 2 Claras + 1 Yema</div><div class="food-qty">30 g + 2 + 1</div></div>
-      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Aceite en spray</div><div class="food-qty">mínimo</div></div>
-      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Aromática o té verde</div><div class="food-qty">libre</div></div>
-    </div>
+    <span class="exchange-toggle-arrow">▾</span>
   </div>
 
-  <div class="meal-card">
-    <div class="meal-header" onclick="toggleMeal(this)">
-      <div class="meal-icon icon-manana">🍍</div>
-      <div class="meal-meta"><div class="meal-name">Media Mañana</div><div class="meal-tag">Fruta · Grasa</div></div>
-      <div class="meal-arrow">▾</div>
-    </div>
-    <div class="meal-body">
-      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Piña</div><div class="food-qty">100 g</div></div>
-      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Almendras</div><div class="food-qty">20 g</div></div>
-      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Gelatina light</div><div class="food-qty">libre</div></div>
-    </div>
-  </div>
+  <div class="exchange-body">
+    <div class="exchange-grid">
 
-  <div class="meal-card">
-    <div class="meal-header" onclick="toggleMeal(this)">
-      <div class="meal-icon icon-almuerzo">🫘</div>
-      <div class="meal-meta"><div class="meal-name">Almuerzo</div><div class="meal-tag">1 Azúcar · Proteína · Grasa · Vegetales</div></div>
-      <div class="meal-arrow">▾</div>
-    </div>
-    <div class="meal-body">
-      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Lentejas</div><div class="food-qty">40 g</div></div>
-      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Carne de res magra</div><div class="food-qty">100 g</div></div>
-      <div class="food-item"><div class="food-dot dot-veg"></div><div class="food-text">Ensalada de vegetales</div><div class="food-qty">libre</div></div>
-      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Aguacate</div><div class="food-qty">40 g</div></div>
-      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Agua</div><div class="food-qty">libre</div></div>
-    </div>
-  </div>
+      <!-- AZÚCARES / CARBOHIDRATOS -->
+      <div class="exchange-card" style="grid-column: 1 / -1;">
+        <div class="exchange-card-title" style="color:#C0392B; border-color:#FADBD8;">🍞 Azúcares · Carbohidratos</div>
 
-  <div class="meal-card">
-    <div class="meal-header" onclick="toggleMeal(this)">
-      <div class="meal-icon icon-algo">🧀</div>
-      <div class="meal-meta"><div class="meal-name">Algo — Media Tarde</div><div class="meal-tag">Proteína · Grasa · DÍA DE PIERNA Y COLA</div></div>
-      <div class="meal-arrow">▾</div>
-    </div>
-    <div class="meal-body">
-      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Barra de queso Finesse <em>ó</em> queso blanco bajo en grasa</div><div class="food-qty">40 g</div></div>
-      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Maní</div><div class="food-qty">20 g</div></div>
-      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Gelatina light</div><div class="food-qty">libre</div></div>
-      <div class="day-note">— ó en día sin entreno / tren superior —</div>
-      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Plancha de pollo</div><div class="food-qty">80 g</div></div>
-      <div class="food-item"><div class="food-dot dot-veg"></div><div class="food-text">Vegetales</div><div class="food-qty">1 taza</div></div>
-    </div>
-  </div>
+        <div class="exchange-sub-label">Frutas</div>
+        <div class="exchange-items">
+          <span class="exchange-pill">Arándanos frescos</span><span class="exchange-pill">Banano</span><span class="exchange-pill">Ciruelas</span><span class="exchange-pill">Cúruba</span><span class="exchange-pill">Durazno</span><span class="exchange-pill">Fresa</span><span class="exchange-pill">Granadilla</span><span class="exchange-pill">Guayaba</span><span class="exchange-pill">Lima</span><span class="exchange-pill">Limón</span><span class="exchange-pill">Lulo</span><span class="exchange-pill">Mandarina</span><span class="exchange-pill">Manzana</span><span class="exchange-pill">Mango</span><span class="exchange-pill">Maracuyá</span><span class="exchange-pill">Melón</span><span class="exchange-pill">Mora</span><span class="exchange-pill">Naranja</span><span class="exchange-pill">Papaya</span><span class="exchange-pill">Pera</span><span class="exchange-pill">Piña</span><span class="exchange-pill">Sandía</span><span class="exchange-pill">Tomate de árbol</span><span class="exchange-pill">Toronja</span>
+        </div>
 
-  <div class="meal-card">
-    <div class="meal-header" onclick="toggleMeal(this)">
-      <div class="meal-icon icon-comida">🥗</div>
-      <div class="meal-meta"><div class="meal-name">Comida / Cena</div><div class="meal-tag">1 Azúcar · Proteína · Vegetales · Sin grasa</div></div>
-      <div class="meal-arrow">▾</div>
-    </div>
-    <div class="meal-body">
-      <div class="food-item"><div class="food-dot dot-carb"></div><div class="food-text">Papa al vapor</div><div class="food-qty">60 g</div></div>
-      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Plancha de pollo</div><div class="food-qty">100 g</div></div>
-      <div class="food-item"><div class="food-dot dot-veg"></div><div class="food-text">Ensalada de vegetales / crema o jugo verde</div><div class="food-qty">libre</div></div>
-      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Limonada sin azúcar</div><div class="food-qty">libre</div></div>
-    </div>
-  </div>
+        <div class="exchange-sub-label">Harinas naturales</div>
+        <div class="exchange-items">
+          <span class="exchange-pill">Arepa de maíz amarillo</span><span class="exchange-pill">Arepa extradelgada</span><span class="exchange-pill">Arepa redonda</span><span class="exchange-pill">Arroz blanco</span><span class="exchange-pill">Arroz integral</span><span class="exchange-pill">Avena</span><span class="exchange-pill">Pasta</span><span class="exchange-pill">Plátano verde</span><span class="exchange-pill">Plátano maduro</span><span class="exchange-pill">Papa</span><span class="exchange-pill">Papas criollas</span><span class="exchange-pill">Yuca</span><span class="exchange-pill">Batata</span><span class="exchange-pill">Quinua</span>
+        </div>
 
-  <div class="meal-card">
-    <div class="meal-header" onclick="toggleMeal(this)">
-      <div class="meal-icon icon-merienda">🌙</div>
-      <div class="meal-meta"><div class="meal-name">Merienda</div><div class="meal-tag">Solo si no duermes antes de 2–3 h de cenar</div></div>
-      <div class="meal-arrow">▾</div>
-    </div>
-    <div class="meal-body">
-      <div class="food-item"><div class="food-dot dot-prot"></div><div class="food-text">Proteína en polvo disuelta en agua</div><div class="food-qty">¾ copa</div></div>
-      <div class="food-item"><div class="food-dot dot-grasa"></div><div class="food-text">Almendras <em>ó</em> 40 g queso</div><div class="food-qty">15 g</div></div>
-      <div class="food-item"><div class="food-dot dot-beb"></div><div class="food-text">Aromática</div><div class="food-qty">libre</div></div>
+        <div class="exchange-sub-label">Harinas procesadas (con moderación)</div>
+        <div class="exchange-items">
+          <span class="exchange-pill">Galletas integrales</span><span class="exchange-pill">Galletas soda</span><span class="exchange-pill">Pan blanco tajado</span><span class="exchange-pill">Pan integral tajado</span><span class="exchange-pill">Pan francés</span><span class="exchange-pill">Tortillas tipo wrap</span><span class="exchange-pill">Tostadas</span>
+        </div>
+
+        <div class="exchange-sub-label">Leguminosas</div>
+        <div class="exchange-items">
+          <span class="exchange-pill">Arveja</span><span class="exchange-pill">Fríjoles</span><span class="exchange-pill">Garbanzos</span><span class="exchange-pill">Habas</span><span class="exchange-pill">Lenteja</span><span class="exchange-pill">Soya</span>
+        </div>
+
+        <div class="exchange-sub-label">Verduras fuente de carbohidrato</div>
+        <div class="exchange-items">
+          <span class="exchange-pill">Zanahoria</span><span class="exchange-pill">Arveja</span><span class="exchange-pill">Ahuyama</span><span class="exchange-pill">Habichuela</span><span class="exchange-pill">Remolacha</span><span class="exchange-pill">Berenjena</span><span class="exchange-pill">Maicitos</span>
+        </div>
+      </div>
+
+      <!-- ZERO -->
+      <div class="exchange-card">
+        <div class="exchange-card-title" style="color:#1A7A4A; border-color:#D8F3DC;">🥬 Zero — libre consumo</div>
+
+        <div class="exchange-sub-label">Verduras libres</div>
+        <div class="exchange-items">
+          <span class="exchange-pill">Acelgas</span><span class="exchange-pill">Alcachofa</span><span class="exchange-pill">Apio</span><span class="exchange-pill">Brócoli</span><span class="exchange-pill">Calabacín</span><span class="exchange-pill">Cebolla cabezona</span><span class="exchange-pill">Cebolla larga</span><span class="exchange-pill">Pepino cohombro</span><span class="exchange-pill">Coles</span><span class="exchange-pill">Coliflor</span><span class="exchange-pill">Champiñón</span><span class="exchange-pill">Chiles</span><span class="exchange-pill">Encurtidos</span><span class="exchange-pill">Espárragos</span><span class="exchange-pill">Espinacas</span><span class="exchange-pill">Lechuga</span><span class="exchange-pill">Palmito</span><span class="exchange-pill">Pepino relleno</span><span class="exchange-pill">Pimentón</span><span class="exchange-pill">Raíces chinas</span><span class="exchange-pill">Repollo</span><span class="exchange-pill">Tomate</span><span class="exchange-pill">Puerro</span>
+        </div>
+
+        <div class="exchange-sub-label">Bebidas libres (cualquier momento)</div>
+        <div class="exchange-items">
+          <span class="exchange-pill">Agua de flor de Jamaica</span><span class="exchange-pill">Agua</span><span class="exchange-pill">Agua natural</span><span class="exchange-pill">Aromática sin calorías</span><span class="exchange-pill">Café negro</span><span class="exchange-pill">Clight / Lightya</span><span class="exchange-pill">Cristal Light</span><span class="exchange-pill">Té instantáneo sin calorías</span><span class="exchange-pill">Limonada sin azúcar</span><span class="exchange-pill">Té natural sin azúcar</span><span class="exchange-pill">Gelatina dietética</span><span class="exchange-pill">Bebidas Zero / Light</span><span class="exchange-pill">Leche de almendras (máx 30 cal, 1 vez/día)</span>
+        </div>
+
+        <div class="exchange-sub-label">Endulzantes permitidos</div>
+        <div class="exchange-items">
+          <span class="exchange-pill">Incauca Zero</span><span class="exchange-pill">Riopaila Senza</span><span class="exchange-pill">Stevia 100%</span><span class="exchange-pill">Sucralosa 100%</span><span class="exchange-pill">Monk Fruit 100%</span><span class="exchange-pill">Polialcoholes</span><span class="exchange-pill">Maltitol</span><span class="exchange-pill">Xilitol</span><span class="exchange-pill">Inositol</span>
+        </div>
+        <div class="exchange-note">⚠️ NO miel, NO maltodextrina en alta cantidad, NO dextrosa, NO jarabe de maíz, NO azúcar orgánica, NI panela.</div>
+
+        <div class="exchange-sub-label">Licores (consultar con tu nutricionista — máx 1 vez al mes)</div>
+        <div class="exchange-items">
+          <span class="exchange-pill">Vino blanco</span><span class="exchange-pill">Vino tinto</span><span class="exchange-pill">Vodka</span><span class="exchange-pill">Whisky</span><span class="exchange-pill">Ginebra</span>
+        </div>
+        <div class="exchange-note">⚠️ NO jugo de naranja ni tónica. No mezclar con bebidas zero.</div>
+      </div>
+
+      <!-- PROTEÍNA -->
+      <div class="exchange-card">
+        <div class="exchange-card-title" style="color:#185FA5; border-color:#DBEAFE;">🥩 Proteína</div>
+
+        <div class="exchange-sub-label">Carnes</div>
+        <div class="exchange-items">
+          <span class="exchange-pill">Carne res magra</span><span class="exchange-pill">Carne de cerdo magra — pierna o lomo</span><span class="exchange-pill">Pavo sin piel</span><span class="exchange-pill">Pollo pechuga</span><span class="exchange-pill">Muslo</span>
+        </div>
+
+        <div class="exchange-sub-label">Pescados</div>
+        <div class="exchange-items">
+          <span class="exchange-pill">Atún en agua</span><span class="exchange-pill">Atún en filete</span><span class="exchange-pill">Mojarra</span><span class="exchange-pill">Róbalo</span><span class="exchange-pill">Salmón</span><span class="exchange-pill">Sardinas</span><span class="exchange-pill">Trucha</span><span class="exchange-pill">Corvina</span><span class="exchange-pill">Tilapia</span>
+        </div>
+
+        <div class="exchange-sub-label">Huevos y embutidos</div>
+        <div class="exchange-items">
+          <span class="exchange-pill">Claras de huevo</span><span class="exchange-pill">Huevos</span><span class="exchange-pill">Jamón cerdo/pavo/pollo bajo en grasa</span><span class="exchange-pill">Pechuga de pavo</span><span class="exchange-pill">Salchichas pollo/pavo bajas en grasa</span>
+        </div>
+
+        <div class="exchange-sub-label">Quesos y yogurt</div>
+        <div class="exchange-items">
+          <span class="exchange-pill">Campesino</span><span class="exchange-pill">Queso blanco fresco</span><span class="exchange-pill">Costeño</span><span class="exchange-pill">Cottage</span><span class="exchange-pill">Ricotta</span><span class="exchange-pill">Cuajada</span><span class="exchange-pill">Mozzarella light</span><span class="exchange-pill">Sticks (palitos)</span><span class="exchange-pill">Mozzarella</span><span class="exchange-pill">Pera</span><span class="exchange-pill">Yogurt griego bajo en grasa</span>
+        </div>
+      </div>
+
+      <!-- GRASA -->
+      <div class="exchange-card" style="grid-column: 1 / -1;">
+        <div class="exchange-card-title" style="color:#7C5A1E; border-color:#FEF9EE;">🥑 Grasa</div>
+        <div class="exchange-items">
+          <span class="exchange-pill">Aceite aerosol/spray</span><span class="exchange-pill">Aceite de canola</span><span class="exchange-pill">Aceite tipo gourmet</span><span class="exchange-pill">Aceite de oliva</span><span class="exchange-pill">Aceitunas</span><span class="exchange-pill">Aguacate</span><span class="exchange-pill">Almendras</span><span class="exchange-pill">Maní</span><span class="exchange-pill">Nueces</span><span class="exchange-pill">Pistachos</span><span class="exchange-pill">Marañones</span><span class="exchange-pill">Mantequilla de maní o almendras sin azúcar</span><span class="exchange-pill">Aderezo vinagreta (máx 5 cal)</span>
+        </div>
+        <div class="exchange-note">⚠️ Máximo 1 vez cada 15 días: crema de leche, mayonesa, queso crema, chicharrón inflado.</div>
+      </div>
+
     </div>
   </div>
 </div>
 
-</main>
+<!-- ══════════════ MODAL DE SUSTITUCIÓN ══════════════ -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeSwapOnOverlay(event)">
+  <div class="modal-sheet">
+    <div class="modal-handle"></div>
+    <div class="modal-header" style="position:relative;">
+      <button class="modal-close" onclick="closeSwap()">✕</button>
+      <div class="modal-title" id="modalTitle">Sustituir alimento</div>
+      <div class="modal-sub" id="modalSub">Elige una alternativa del mismo grupo</div>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
 
 <button class="fab" onclick="expandAll()">📋 Ver todo el día</button>
 
 <script>
 function showDay(idx) {
-  document.querySelectorAll('.day-panel').forEach(function(p) { p.classList.remove('active'); });
-  document.querySelectorAll('.day-btn').forEach(function(b) { b.classList.remove('active'); });
-  document.getElementById('day-' + idx).classList.add('active');
-  document.getElementById('btn-' + idx).classList.add('active');
-  var cards = document.getElementById('day-' + idx).querySelectorAll('.meal-card');
-  cards.forEach(function(c, i) { i === 0 ? c.classList.add('open') : c.classList.remove('open'); });
-  document.querySelector('.fab').textContent = '📋 Ver todo el día';
+document.querySelectorAll('.day-panel').forEach(function(p) { p.classList.remove('active'); });
+document.querySelectorAll('.day-btn').forEach(function(b) { b.classList.remove('active'); });
+document.getElementById('day-' + idx).classList.add('active');
+document.getElementById('btn-' + idx).classList.add('active');
+var cards = document.getElementById('day-' + idx).querySelectorAll('.meal-card');
+cards.forEach(function(c, i) { i === 0 ? c.classList.add('open') : c.classList.remove('open'); });
+document.querySelector('.fab').textContent = '📋 Ver todo el día';
 
-  // Scroll descontando header + day-nav para que el desayuno no quede tapado
-  var headerH = document.querySelector('.header').offsetHeight;
-  var navH = document.querySelector('.day-nav').offsetHeight;
-  var mainTop = document.querySelector('.main').getBoundingClientRect().top + window.scrollY;
-  window.scrollTo({ top: mainTop - headerH - navH - 8, behavior: 'smooth' });
+// Scroll descontando header + day-nav para que el desayuno no quede tapado
+var headerH = document.querySelector('.header').offsetHeight;
+var navH = document.querySelector('.day-nav').offsetHeight;
+var mainTop = document.querySelector('.main').getBoundingClientRect().top + window.scrollY;
+window.scrollTo({ top: mainTop - headerH - navH - 8, behavior: 'smooth' });
 }
 
 function toggleMeal(header) {
-  header.parentElement.classList.toggle('open');
+header.parentElement.classList.toggle('open');
 }
 
 function expandAll() {
-  var active = document.querySelector('.day-panel.active');
-  var cards = active.querySelectorAll('.meal-card');
-  var allOpen = Array.from(cards).every(function(c) { return c.classList.contains('open'); });
-  cards.forEach(function(c) { allOpen ? c.classList.remove('open') : c.classList.add('open'); });
-  document.querySelector('.fab').textContent = allOpen ? '📋 Ver todo el día' : '🔼 Colapsar todo';
+var active = document.querySelector('.day-panel.active');
+var cards = active.querySelectorAll('.meal-card');
+var allOpen = Array.from(cards).every(function(c) { return c.classList.contains('open'); });
+cards.forEach(function(c) { allOpen ? c.classList.remove('open') : c.classList.add('open'); });
+document.querySelector('.fab').textContent = allOpen ? '📋 Ver todo el día' : '🔼 Colapsar todo';
 }
-  // Ajuste dinámico del top del day-nav según altura real del header
+// Ajuste dinámico del top del day-nav según altura real del header
 function adjustNavTop() {
-  var headerH = document.querySelector('.header').offsetHeight;
-  document.querySelector('.day-nav').style.top = headerH + 'px';
+var headerH = document.querySelector('.header').offsetHeight;
+document.querySelector('.day-nav').style.top = headerH + 'px';
 }
 adjustNavTop();
 window.addEventListener('resize', adjustNavTop);
-  
+
+/* ════════════ SUSTITUCIONES DE ALIMENTOS ════════════ */
+
+// Base de datos de alternativas por grupo nutricional
+var swapOptions = {
+  'dot-carb': {
+    label: '🌾 Carbohidrato',
+    color: '#E07A5F',
+    groups: [
+      { name: 'Harinas naturales', items: ['Arepa de maíz', 'Arroz blanco', 'Arroz integral', 'Avena', 'Pasta', 'Plátano verde', 'Plátano maduro', 'Papa', 'Papa criolla', 'Yuca', 'Batata', 'Quinua'] },
+      { name: 'Leguminosas', items: ['Arveja', 'Fríjoles', 'Garbanzos', 'Habas', 'Lenteja', 'Soya'] },
+      { name: 'Verduras con carbohidrato', items: ['Zanahoria', 'Ahuyama', 'Habichuela', 'Remolacha', 'Maicitos'] }
+    ]
+  },
+  'dot-prot': {
+    label: '🥩 Proteína',
+    color: '#2D6A4F',
+    groups: [
+      { name: 'Carnes', items: ['Carne de res magra', 'Carne de cerdo magra', 'Pavo sin piel', 'Pollo pechuga', 'Pollo muslo'] },
+      { name: 'Pescados', items: ['Atún en agua', 'Atún en filete', 'Mojarra', 'Róbalo', 'Salmón', 'Sardinas', 'Trucha', 'Corvina', 'Tilapia'] },
+      { name: 'Huevos y embutidos', items: ['Claras de huevo', 'Huevo entero', 'Jamón de pavo/pollo/cerdo bajo en grasa', 'Salchicha de pollo/pavo baja en grasa'] },
+      { name: 'Quesos y lácteos', items: ['Queso campesino', 'Queso blanco fresco', 'Queso costeño', 'Cottage', 'Ricotta', 'Cuajada', 'Mozzarella light', 'Yogurt griego bajo en grasa'] }
+    ]
+  },
+  'dot-grasa': {
+    label: '🥑 Grasa',
+    color: '#F2CC8F',
+    groups: [
+      { name: 'Grasas saludables', items: ['Aguacate', 'Almendras', 'Maní', 'Nueces', 'Pistachos', 'Marañones', 'Aceitunas', 'Mantequilla de maní/almendras sin azúcar', 'Aceite de oliva'] }
+    ]
+  },
+  'dot-veg': {
+    label: '🥬 Vegetal — libre',
+    color: '#52B788',
+    groups: [
+      { name: 'Verduras de libre consumo', items: ['Acelgas', 'Alcachofa', 'Apio', 'Brócoli', 'Calabacín', 'Cebolla', 'Pepino', 'Coles', 'Coliflor', 'Champiñón', 'Espárragos', 'Espinacas', 'Lechuga', 'Palmito', 'Pimentón', 'Repollo', 'Tomate', 'Puerro'] }
+    ]
+  },
+  'dot-beb': {
+    label: '💧 Bebida libre',
+    color: '#3A86C8',
+    groups: [
+      { name: 'Bebidas Zero / libres', items: ['Agua', 'Agua de flor de Jamaica', 'Aromática sin calorías', 'Café negro', 'Clight / Lightya', 'Té sin azúcar', 'Limonada sin azúcar', 'Gelatina dietética', 'Bebida Zero/Light'] }
+    ]
+  }
+};
+
+var currentSwapId = null;
+
+function openSwap(e, id) {
+  e.stopPropagation();
+  currentSwapId = id;
+  var item = document.getElementById('fi-' + id);
+  var group = item.getAttribute('data-group');
+  var original = item.getAttribute('data-original');
+  var originalQty = item.getAttribute('data-original-qty');
+  var data = swapOptions[group];
+
+  if (!data) return;
+
+  document.getElementById('modalTitle').textContent = 'Sustituir: ' + original;
+  document.getElementById('modalSub').textContent = data.label + ' — mismo peso aproximado (' + originalQty + ')';
+
+  var bodyHtml = '';
+  data.groups.forEach(function(g) {
+    bodyHtml += '<div class="swap-group-label">' + g.name + '</div>';
+    g.items.forEach(function(opt) {
+      var isCurrent = opt.toLowerCase() === original.toLowerCase();
+      bodyHtml += '<div class="swap-option' + (isCurrent ? ' current' : '') + '" onclick="' + (isCurrent ? '' : 'selectSwap(\'' + opt.replace(/'/g, "\\'") + '\')') + '">' +
+        '<div class="swap-radio"></div>' +
+        '<div class="swap-opt-text">' + opt + (isCurrent ? ' <span style="font-weight:400;color:var(--gray-500);font-size:11px;">(actual)</span>' : '') + '</div>' +
+        '<div class="swap-opt-qty">' + originalQty + '</div>' +
+      '</div>';
+    });
+  });
+
+  bodyHtml += '<div class="modal-warning"><span>⚠️</span><span>Equivalencia aproximada por porción/peso, no calculada por macronutrientes exactos. Si sustituyes con frecuencia, verifícalo con tu nutricionista.</span></div>';
+
+  document.getElementById('modalBody').innerHTML = bodyHtml;
+  document.getElementById('modalOverlay').classList.add('open');
+}
+
+function selectSwap(newFood) {
+  var item = document.getElementById('fi-' + currentSwapId);
+  var textEl = item.querySelector('.food-text');
+  var originalQty = item.getAttribute('data-original-qty');
+
+  // Save original text if not already swapped
+  if (!item.classList.contains('swapped')) {
+    item.setAttribute('data-saved-original-html', textEl.innerHTML);
+  }
+
+  textEl.textContent = newFood;
+  item.classList.add('swapped');
+  closeSwap();
+}
+
+function undoSwap(e, id) {
+  e.stopPropagation();
+  var item = document.getElementById('fi-' + id);
+  var savedHtml = item.getAttribute('data-saved-original-html');
+  if (savedHtml) {
+    item.querySelector('.food-text').innerHTML = savedHtml;
+  }
+  item.classList.remove('swapped');
+}
+
+function closeSwap() {
+  document.getElementById('modalOverlay').classList.remove('open');
+  currentSwapId = null;
+}
+
+function closeSwapOnOverlay(e) {
+  if (e.target.id === 'modalOverlay') closeSwap();
+}
+
+/* ════════════ TOGGLE LISTA DE INTERCAMBIOS ════════════ */
+function toggleExchange() {
+  document.getElementById('exchangeToggle').classList.toggle('open');
+}
+
+/* ════════════ COACHMARK DE BIENVENIDA (botón cambiar) ════════════ */
+function dismissCoachmark() {
+  var el = document.getElementById('swapCoachmark');
+  if (el) el.style.display = 'none';
+  try { localStorage.setItem('swapCoachmarkSeen', '1'); } catch(e) {}
+}
+(function initCoachmark() {
+  try {
+    if (localStorage.getItem('swapCoachmarkSeen') === '1') {
+      var el = document.getElementById('swapCoachmark');
+      if (el) el.style.display = 'none';
+    }
+  } catch(e) {}
+})();
+
 </script>
 </body>
-</html>
+  </html>
