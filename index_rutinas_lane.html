@@ -7,26 +7,26 @@
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg: #0F1117;
-  --card: #1A1D27;
-  --card2: #21253A;
-  --border: #2E3350;
-  --green: #39D98A;
-  --green-dark: #1A7A4A;
-  --green-glow: rgba(57,217,138,0.15);
-  --coral: #FF6B6B;
-  --coral-light: rgba(255,107,107,0.12);
-  --amber: #FFB830;
-  --amber-light: rgba(255,184,48,0.12);
-  --violet: #A78BFA;
-  --violet-light: rgba(167,139,250,0.12);
-  --sky: #38BDF8;
-  --sky-light: rgba(56,189,248,0.12);
-  --rose: #F472B6;
-  --rose-light: rgba(244,114,182,0.12);
-  --text: #F1F5F9;
-  --text2: #94A3B8;
-  --text3: #64748B;
+--bg: #0F1117;
+--card: #1A1D27;
+--card2: #21253A;
+--border: #2E3350;
+--green: #39D98A;
+--green-dark: #1A7A4A;
+--green-glow: rgba(57,217,138,0.15);
+--coral: #FF6B6B;
+--coral-light: rgba(255,107,107,0.12);
+--amber: #FFB830;
+--amber-light: rgba(255,184,48,0.12);
+--violet: #A78BFA;
+--violet-light: rgba(167,139,250,0.12);
+--sky: #38BDF8;
+--sky-light: rgba(56,189,248,0.12);
+--rose: #F472B6;
+--rose-light: rgba(244,114,182,0.12);
+--text: #F1F5F9;
+--text2: #94A3B8;
+--text3: #64748B;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -35,85 +35,85 @@ body { font-family: 'Nunito', sans-serif; background: var(--bg); color: var(--te
 
 /* ─── HEADER ─── */
 .header {
-  background: linear-gradient(135deg, #0D1F3C 0%, #0F1117 100%);
-  padding: 16px 16px 14px;
-  border-bottom: 1px solid var(--border);
-  position: sticky; top: 0; z-index: 200;
+background: linear-gradient(135deg, #0D1F3C 0%, #0F1117 100%);
+padding: 16px 16px 14px;
+border-bottom: 1px solid var(--border);
+position: sticky; top: 0; z-index: 200;
 }
 .header-row1 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-  gap: 8px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 10px;
+gap: 8px;
 }
 .header-top { display: flex; align-items: center; gap: 10px; }
 .header-icon {
-  width: 38px; height: 38px; border-radius: 12px;
-  background: var(--green-glow); border: 1px solid var(--green);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 18px; flex-shrink: 0;
+width: 38px; height: 38px; border-radius: 12px;
+background: var(--green-glow); border: 1px solid var(--green);
+display: flex; align-items: center; justify-content: center;
+font-size: 18px; flex-shrink: 0;
 }
 .header h1 { font-size: 16px; font-weight: 900; letter-spacing: -0.3px; line-height: 1.2; }
 .header p { font-size: 11px; color: var(--text2); margin-top: 2px; }
 
 /* ─── BACK BTN ─── */
 .btn-back {
-  display: inline-flex; align-items: center; gap: 5px;
-  color: var(--text2); text-decoration: none;
-  font-size: 12px; font-weight: 700;
-  padding: 5px 10px; border-radius: 8px;
-  background: var(--card); border: 1px solid var(--border);
-  transition: all 0.2s; white-space: nowrap; flex-shrink: 0;
-  -webkit-tap-highlight-color: transparent;
+display: inline-flex; align-items: center; gap: 5px;
+color: var(--text2); text-decoration: none;
+font-size: 12px; font-weight: 700;
+padding: 5px 10px; border-radius: 8px;
+background: var(--card); border: 1px solid var(--border);
+transition: all 0.2s; white-space: nowrap; flex-shrink: 0;
+-webkit-tap-highlight-color: transparent;
 }
 .btn-back:hover { color: var(--text); border-color: #3E4560; background: var(--card2); }
 
 /* ─── WEEK PILLS ─── */
 .week-pills { display: flex; gap: 6px; margin-top: 12px; }
 .week-pill {
-  flex: 1; height: 4px; border-radius: 99px;
-  background: var(--border); cursor: pointer; transition: background 0.3s;
+flex: 1; height: 4px; border-radius: 99px;
+background: var(--border); cursor: pointer; transition: background 0.3s;
 }
 .week-pill.active { background: var(--green); box-shadow: 0 0 8px var(--green); }
 
 /* ─── DAY NAV — GRID (all visible, no scroll) ─── */
 .day-nav {
-  background: var(--card);
-  border-bottom: 1px solid var(--border);
-  position: sticky;
-  top: 0; /* JS sets this */
-  z-index: 199;
-  padding: 8px 10px 0;
+background: var(--card);
+border-bottom: 1px solid var(--border);
+position: sticky;
+top: 0; / JS sets this */
+z-index: 199;
+padding: 8px 10px 0;
 }
 .day-grid-nav {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 4px;
-  max-width: 600px;
-  margin: 0 auto;
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+gap: 4px;
+max-width: 600px;
+margin: 0 auto;
 }
 .day-btn {
-  border: none; background: none; cursor: pointer;
-  padding: 8px 4px 10px;
-  display: flex; flex-direction: column; align-items: center; gap: 2px;
-  color: var(--text3);
-  border-bottom: 2px solid transparent;
-  margin-bottom: -1px;
-  transition: all 0.2s;
-  border-radius: 8px 8px 0 0;
-  font-family: 'Nunito', sans-serif;
-  -webkit-tap-highlight-color: transparent;
-  min-width: 0;
+border: none; background: none; cursor: pointer;
+padding: 8px 4px 10px;
+display: flex; flex-direction: column; align-items: center; gap: 2px;
+color: var(--text3);
+border-bottom: 2px solid transparent;
+margin-bottom: -1px;
+transition: all 0.2s;
+border-radius: 8px 8px 0 0;
+font-family: 'Nunito', sans-serif;
+-webkit-tap-highlight-color: transparent;
+min-width: 0;
 }
 .day-btn .dlabel { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; line-height: 1; }
-.day-btn .dnum  { font-size: 18px; font-weight: 900; line-height: 1; }
+.day-btn .dnum { font-size: 18px; font-weight: 900; line-height: 1; }
 .day-btn .dtype {
-  font-size: 8.5px; font-weight: 700;
-  padding: 2px 5px; border-radius: 99px;
-  margin-top: 2px; white-space: nowrap;
-  overflow: hidden; text-overflow: ellipsis;
-  max-width: 100%;
+font-size: 8.5px; font-weight: 700;
+padding: 2px 5px; border-radius: 99px;
+margin-top: 2px; white-space: nowrap;
+overflow: hidden; text-overflow: ellipsis;
+max-width: 100%;
 }
 .day-btn.active { color: var(--text); border-bottom-color: var(--green); background: rgba(57,217,138,0.05); }
 .day-btn:hover:not(.active) { color: var(--text2); }
@@ -126,8 +126,8 @@ body { font-family: 'Nunito', sans-serif; background: var(--bg); color: var(--te
 
 /* ─── HERO BADGE ─── */
 .day-hero {
-  border-radius: 16px; padding: 14px 16px; margin-bottom: 12px;
-  display: flex; align-items: center; gap: 12px; border: 1px solid;
+border-radius: 16px; padding: 14px 16px; margin-bottom: 12px;
+display: flex; align-items: center; gap: 12px; border: 1px solid;
 }
 .day-hero-icon { font-size: 32px; flex-shrink: 0; }
 .day-hero-title { font-size: 16px; font-weight: 900; letter-spacing: -0.2px; }
@@ -143,18 +143,18 @@ body { font-family: 'Nunito', sans-serif; background: var(--bg); color: var(--te
 
 /* ─── SECTION LABEL ─── */
 .sec-label {
-  font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.07em;
-  color: var(--text3); padding: 4px 2px 8px; display: flex; align-items: center; gap: 6px;
+font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.07em;
+color: var(--text3); padding: 4px 2px 8px; display: flex; align-items: center; gap: 6px;
 }
 .sec-label::after { content:''; flex:1; height:1px; background: var(--border); }
 
 /* ─── EXERCISE CARD ─── */
 .ex-card {
-  background: var(--card); border: 1px solid var(--border);
-  border-radius: 14px; margin-bottom: 7px; overflow: hidden;
-  transition: border-color 0.2s, box-shadow 0.2s;
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
+background: var(--card); border: 1px solid var(--border);
+border-radius: 14px; margin-bottom: 7px; overflow: hidden;
+transition: border-color 0.2s, box-shadow 0.2s;
+cursor: pointer;
+-webkit-tap-highlight-color: transparent;
 }
 .ex-card:hover { border-color: #3E4560; box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
 .ex-card.done { border-color: var(--green-dark); background: #111D17; }
@@ -168,9 +168,9 @@ body { font-family: 'Nunito', sans-serif; background: var(--bg); color: var(--te
 .ex-right { display: flex; align-items: center; gap: 7px; flex-shrink: 0; }
 
 .ex-check {
-  width: 24px; height: 24px; border-radius: 7px; border: 2px solid var(--border);
-  display: flex; align-items: center; justify-content: center;
-  transition: all 0.2s; background: var(--card2); flex-shrink: 0;
+width: 24px; height: 24px; border-radius: 7px; border: 2px solid var(--border);
+display: flex; align-items: center; justify-content: center;
+transition: all 0.2s; background: var(--card2); flex-shrink: 0;
 }
 .ex-card.done .ex-check { background: var(--green); border-color: var(--green); }
 .ex-check svg { display: none; }
@@ -178,10 +178,10 @@ body { font-family: 'Nunito', sans-serif; background: var(--bg); color: var(--te
 
 .ex-sets { display: flex; gap: 5px; align-items: center; flex-wrap: wrap; max-width: 80px; justify-content: flex-end; }
 .set-dot {
-  width: 14px; height: 14px; border-radius: 50%;
-  background: var(--border); cursor: pointer;
-  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-  border: 2px solid #3E4560; flex-shrink: 0;
+width: 14px; height: 14px; border-radius: 50%;
+background: var(--border); cursor: pointer;
+transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+border: 2px solid #3E4560; flex-shrink: 0;
 }
 .set-dot:active { transform: scale(0.82); }
 .set-dot.lit { background: var(--green); border-color: var(--green); box-shadow: 0 0 5px rgba(57,217,138,0.5); }
@@ -203,13 +203,40 @@ body { font-family: 'Nunito', sans-serif; background: var(--bg); color: var(--te
 .tri-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
 .tri-text { font-size: 12.5px; color: var(--text2); flex: 1; }
 .tri-reps { font-size: 11px; font-weight: 700; padding: 2px 7px; border-radius: 99px; background: var(--border); color: var(--text2); white-space: nowrap; }
+.tri-sets { display: flex; gap: 4px; align-items: center; margin-left: auto; padding-right: 4px; }
+.tri-check {
+width: 24px; height: 24px; border-radius: 7px; border: 2px solid var(--border);
+display: flex; align-items: center; justify-content: center;
+background: var(--card2); flex-shrink: 0; margin-left: 6px;
+transition: all 0.2s;
+}
+.tri-card.done-tri .tri-check { background: var(--green); border-color: var(--green); }
+.tri-check svg { display: none; }
+.tri-card.done-tri .tri-check svg { display: block; }
+.ab-check {
+width: 24px; height: 24px; border-radius: 7px; border: 2px solid rgba(244,114,182,0.4);
+display: flex; align-items: center; justify-content: center;
+background: rgba(244,114,182,0.05); flex-shrink: 0; margin-left: 6px;
+transition: all 0.2s;
+}
+.ab-card.done-ab .ab-check { background: var(--green); border-color: var(--green); }
+.ab-check svg { display: none; }
+.ab-card.done-ab .ab-check svg { display: block; }
+.tri-card.done-tri { border-color: var(--green-dark); background: #111D17; }
+.tri-card.done-tri .tri-name { color: var(--green); }
+.tri-card.done-tri .tri-badge { background: rgba(57,217,138,0.15); color: var(--green); }
+.ab-sets { display: flex; gap: 4px; align-items: center; margin-left: auto; }
+.ab-card.done-ab .ab-title { color: var(--green); }
+.ab-card.done-ab { border-color: rgba(57,217,138,0.4); background: rgba(57,217,138,0.04); }
+.tri-card.done-tri { border-color: var(--green-dark); background: #111D17; }
+.ab-card.done-ab .ab-title { color: var(--green); }
 
 /* ─── CARDIO ─── */
 .cardio-card {
-  background: linear-gradient(135deg, rgba(56,189,248,0.08), rgba(56,189,248,0.03));
-  border: 1px solid rgba(56,189,248,0.25); border-radius: 14px;
-  padding: 12px 14px; margin-bottom: 7px;
-  display: flex; align-items: center; gap: 11px;
+background: linear-gradient(135deg, rgba(56,189,248,0.08), rgba(56,189,248,0.03));
+border: 1px solid rgba(56,189,248,0.25); border-radius: 14px;
+padding: 12px 14px; margin-bottom: 7px;
+display: flex; align-items: center; gap: 11px;
 }
 .cardio-icon { font-size: 26px; flex-shrink: 0; }
 .cardio-title { font-size: 14px; font-weight: 800; color: var(--sky); }
@@ -220,8 +247,8 @@ body { font-family: 'Nunito', sans-serif; background: var(--bg); color: var(--te
 
 /* ─── ABDOMEN ─── */
 .ab-card {
-  background: linear-gradient(135deg, rgba(244,114,182,0.08), rgba(244,114,182,0.03));
-  border: 1px solid rgba(244,114,182,0.25); border-radius: 14px; margin-bottom: 7px; overflow: hidden;
+background: linear-gradient(135deg, rgba(244,114,182,0.08), rgba(244,114,182,0.03));
+border: 1px solid rgba(244,114,182,0.25); border-radius: 14px; margin-bottom: 7px; overflow: hidden;
 }
 .ab-header { display: flex; align-items: center; gap: 9px; padding: 11px 13px; cursor: pointer; -webkit-tap-highlight-color: transparent; }
 .ab-title { font-size: 14px; font-weight: 800; color: var(--rose); flex: 1; }
@@ -232,10 +259,67 @@ body { font-family: 'Nunito', sans-serif; background: var(--bg); color: var(--te
 .ab-ex { display: flex; align-items: center; gap: 8px; padding: 7px 13px; border-top: 1px solid rgba(244,114,182,0.1); font-size: 12.5px; color: var(--text2); }
 .ab-ex span:first-child { font-size: 15px; flex-shrink: 0; }
 
+/* ─── GIANT SERIES COUNTER ─── */
+.giant-counter {
+background: linear-gradient(135deg, rgba(255,107,107,0.1), rgba(255,107,107,0.04));
+border: 1px solid rgba(255,107,107,0.3);
+border-radius: 16px; padding: 14px 16px; margin-bottom: 9px;
+}
+.giant-counter-title {
+font-size: 11px; font-weight: 800; text-transform: uppercase;
+letter-spacing: 0.07em; color: var(--coral); margin-bottom: 12px;
+display: flex; align-items: center; gap: 6px;
+}
+.giant-series-row {
+display: flex; gap: 8px; align-items: center; justify-content: center;
+}
+.giant-serie-btn {
+flex: 1; min-width: 0;
+display: flex; flex-direction: column; align-items: center; gap: 5px;
+background: var(--card); border: 2px solid var(--border);
+border-radius: 12px; padding: 10px 4px 8px;
+cursor: pointer; transition: all 0.2s;
+-webkit-tap-highlight-color: transparent;
+font-family: "Nunito", sans-serif;
+}
+.giant-serie-btn:active { transform: scale(0.94); }
+.giant-serie-btn.done-serie {
+background: #1A1208; border-color: var(--coral);
+}
+.giant-serie-icon {
+width: 32px; height: 32px; border-radius: 50%;
+background: var(--border); border: 2px solid #3E4560;
+display: flex; align-items: center; justify-content: center;
+font-size: 16px; transition: all 0.2s;
+}
+.giant-serie-btn.done-serie .giant-serie-icon {
+background: var(--coral); border-color: var(--coral);
+box-shadow: 0 0 10px rgba(255,107,107,0.4);
+font-size: 14px;
+}
+.giant-serie-lbl {
+font-size: 10px; font-weight: 800; color: var(--text3);
+text-transform: uppercase; letter-spacing: 0.04em;
+}
+.giant-serie-btn.done-serie .giant-serie-lbl { color: var(--coral); }
+.giant-counter-prog {
+margin-top: 12px; background: rgba(255,107,107,0.1);
+border-radius: 99px; height: 5px; overflow: hidden;
+}
+.giant-counter-fill {
+height: 100%; border-radius: 99px;
+background: linear-gradient(90deg, #FF6B6B, #FF9A9A);
+transition: width 0.35s ease; width: 0%;
+}
+.giant-counter-sub {
+font-size: 11px; color: var(--text3); text-align: center;
+margin-top: 7px; font-weight: 600;
+}
+
 /* ─── GIANT SET ─── */
 .giant-card {
-  background: linear-gradient(135deg, rgba(255,107,107,0.08), rgba(167,139,250,0.05));
-  border: 1px solid rgba(255,107,107,0.3); border-radius: 14px; margin-bottom: 7px; overflow: hidden;
+background: linear-gradient(135deg, rgba(255,107,107,0.08), rgba(167,139,250,0.05));
+border: 1px solid rgba(255,107,107,0.3); border-radius: 14px; margin-bottom: 7px; overflow: hidden;
 }
 .giant-header { display: flex; align-items: center; gap: 9px; padding: 12px 13px; cursor: pointer; -webkit-tap-highlight-color: transparent; }
 .giant-badge { font-size: 9.5px; font-weight: 900; padding: 3px 8px; border-radius: 99px; background: rgba(255,107,107,0.15); color: var(--coral); border: 1px solid rgba(255,107,107,0.3); flex-shrink: 0; }
@@ -261,145 +345,145 @@ body { font-family: 'Nunito', sans-serif; background: var(--bg); color: var(--te
 
 /* ─── FAB ─── */
 .fab {
-  position: fixed; bottom: 22px; right: 14px; z-index: 300;
-  background: linear-gradient(135deg, #39D98A, #1A7A4A);
-  color: white; border: none; border-radius: 99px;
-  padding: 12px 18px; font-family: 'Nunito', sans-serif;
-  font-size: 13px; font-weight: 800; cursor: pointer;
-  box-shadow: 0 6px 24px rgba(57,217,138,0.3);
-  display: flex; align-items: center; gap: 7px;
-  transition: transform 0.15s, box-shadow 0.2s;
-  -webkit-tap-highlight-color: transparent;
+position: fixed; bottom: 22px; right: 14px; z-index: 300;
+background: linear-gradient(135deg, #39D98A, #1A7A4A);
+color: white; border: none; border-radius: 99px;
+padding: 12px 18px; font-family: 'Nunito', sans-serif;
+font-size: 13px; font-weight: 800; cursor: pointer;
+box-shadow: 0 6px 24px rgba(57,217,138,0.3);
+display: flex; align-items: center; gap: 7px;
+transition: transform 0.15s, box-shadow 0.2s;
+-webkit-tap-highlight-color: transparent;
 }
 .fab:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(57,217,138,0.4); }
 .fab:active { transform: scale(0.97); }
 
 /* ─── RESPONSIVE: TABLET (≥560px) ─── */
 @media (min-width: 560px) {
-  .header { padding: 18px 22px 16px; }
-  .header h1 { font-size: 18px; }
-  .header-icon { width: 42px; height: 42px; font-size: 20px; }
-  .day-nav { padding: 10px 16px 0; }
-  .day-grid-nav { gap: 6px; }
-  .day-btn { padding: 10px 6px 12px; }
-  .day-btn .dlabel { font-size: 10px; }
-  .day-btn .dnum { font-size: 20px; }
-  .day-btn .dtype { font-size: 9.5px; }
-  .main { padding: 16px 20px 100px; }
-  .ex-name { font-size: 14px; }
-  .ex-detail { font-size: 12px; }
-  .set-dot { width: 16px; height: 16px; }
-  .ex-sets { max-width: 100px; }
+.header { padding: 18px 22px 16px; }
+.header h1 { font-size: 18px; }
+.header-icon { width: 42px; height: 42px; font-size: 20px; }
+.day-nav { padding: 10px 16px 0; }
+.day-grid-nav { gap: 6px; }
+.day-btn { padding: 10px 6px 12px; }
+.day-btn .dlabel { font-size: 10px; }
+.day-btn .dnum { font-size: 20px; }
+.day-btn .dtype { font-size: 9.5px; }
+.main { padding: 16px 20px 100px; }
+.ex-name { font-size: 14px; }
+.ex-detail { font-size: 12px; }
+.set-dot { width: 16px; height: 16px; }
+.ex-sets { max-width: 100px; }
 }
 
 /* ─── RESPONSIVE: DESKTOP (≥768px) ─── */
 @media (min-width: 768px) {
-  .header { padding: 20px 28px 18px; }
-  .header h1 { font-size: 20px; }
-  .day-nav { padding: 12px 28px 0; }
-  .day-grid-nav { max-width: 600px; gap: 8px; }
-  .day-btn { padding: 11px 8px 13px; border-radius: 10px 10px 0 0; }
-  .day-btn .dlabel { font-size: 11px; }
-  .day-btn .dnum { font-size: 22px; }
-  .day-btn .dtype { font-size: 10px; padding: 2px 7px; }
-  .main { padding: 20px 28px 100px; }
-  .ex-header { padding: 13px 14px; }
-  .ex-name { font-size: 14px; }
-  .ex-sets { max-width: none; gap: 6px; flex-wrap: nowrap; }
-  .set-dot { width: 16px; height: 16px; }
-  .day-hero-title { font-size: 18px; }
-  .day-hero-icon { font-size: 36px; }
+.header { padding: 20px 28px 18px; }
+.header h1 { font-size: 20px; }
+.day-nav { padding: 12px 28px 0; }
+.day-grid-nav { max-width: 600px; gap: 8px; }
+.day-btn { padding: 11px 8px 13px; border-radius: 10px 10px 0 0; }
+.day-btn .dlabel { font-size: 11px; }
+.day-btn .dnum { font-size: 22px; }
+.day-btn .dtype { font-size: 10px; padding: 2px 7px; }
+.main { padding: 20px 28px 100px; }
+.ex-header { padding: 13px 14px; }
+.ex-name { font-size: 14px; }
+.ex-sets { max-width: none; gap: 6px; flex-wrap: nowrap; }
+.set-dot { width: 16px; height: 16px; }
+.day-hero-title { font-size: 18px; }
+.day-hero-icon { font-size: 36px; }
 }
 
 /* ─── VERY SMALL (≤360px) ─── */
 @media (max-width: 360px) {
-  .header h1 { font-size: 14px; }
-  .header p { display: none; }
-  .header-icon { width: 32px; height: 32px; font-size: 16px; border-radius: 10px; }
-  .day-btn .dnum { font-size: 16px; }
-  .day-btn .dtype { display: none; }
-  .day-btn { padding: 7px 2px 8px; }
-  .main { padding: 12px 10px 100px; }
-  .ex-name { font-size: 12.5px; }
-  .ex-detail { font-size: 10.5px; }
-  .ex-sets { max-width: 60px; }
-  .set-dot { width: 12px; height: 12px; }
-  .day-hero-title { font-size: 15px; }
-  .day-hero-icon { font-size: 28px; }
-  .cardio-min { font-size: 22px; }
+.header h1 { font-size: 14px; }
+.header p { display: none; }
+.header-icon { width: 32px; height: 32px; font-size: 16px; border-radius: 10px; }
+.day-btn .dnum { font-size: 16px; }
+.day-btn .dtype { display: none; }
+.day-btn { padding: 7px 2px 8px; }
+.main { padding: 12px 10px 100px; }
+.ex-name { font-size: 12.5px; }
+.ex-detail { font-size: 10.5px; }
+.ex-sets { max-width: 60px; }
+.set-dot { width: 12px; height: 12px; }
+.day-hero-title { font-size: 15px; }
+.day-hero-icon { font-size: 28px; }
+.cardio-min { font-size: 22px; }
 }
 
 /* ─── PRINT ─── */
 @media print {
-  .header, .day-nav, .fab { display: none; }
-  .day-panel { display: block !important; }
-  .main { padding: 16px; }
-  .ex-card { break-inside: avoid; }
+.header, .day-nav, .fab { display: none; }
+.day-panel { display: block !important; }
+.main { padding: 16px; }
+.ex-card { break-inside: avoid; }
 }
 
 /* ─── REDUCED MOTION ─── */
 @media (prefers-reduced-motion: reduce) {
-  .day-panel.active { animation: none; }
-  .ex-card, .set-dot, .fab { transition: none; }
-  .prog-fill { transition: none; }
+.day-panel.active { animation: none; }
+.ex-card, .set-dot, .fab { transition: none; }
+.prog-fill { transition: none; }
 }
 </style>
 </head>
 <body>
 
 <header class="header">
-  <div class="header-row1">
-    <div class="header-top">
-      <div class="header-icon">💪</div>
-      <div>
-        <h1>Rutina de Entrenamiento</h1>
-        <p>Darly Yessenia Vargas Moreno · Plan Camilo Roa</p>
-      </div>
-    </div>
-    <a href="index.html" class="btn-back">
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="19" y1="12" x2="5" y2="12"></line>
-        <polyline points="12 19 5 12 12 5"></polyline>
-      </svg>
-      Volver
-    </a>
-  </div>
-  <div class="week-pills">
-    <div class="week-pill active"></div>
-    <div class="week-pill"></div>
-    <div class="week-pill"></div>
-    <div class="week-pill"></div>
-  </div>
+<div class="header-row1">
+<div class="header-top">
+<div class="header-icon">💪</div>
+<div>
+<h1>Rutina de Entrenamiento</h1>
+<p>Darly Yessenia Vargas Moreno · Plan Camilo Roa</p>
+</div>
+</div>
+<a href="index.html" class="btn-back">
+<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<line x1="19" y1="12" x2="5" y2="12"></line>
+<polyline points="12 19 5 12 12 5"></polyline>
+</svg>
+Volver
+</a>
+</div>
+<div class="week-pills">
+<div class="week-pill active"></div>
+<div class="week-pill"></div>
+<div class="week-pill"></div>
+<div class="week-pill"></div>
+</div>
 </header>
 
 <nav class="day-nav">
-  <div class="day-grid-nav">
-    <button class="day-btn active" onclick="showDay(0)" id="btn-0">
-      <span class="dlabel">Día</span>
-      <span class="dnum">1</span>
-      <span class="dtype" style="background:rgba(57,217,138,0.15);color:#39D98A">Glúteo</span>
-    </button>
-    <button class="day-btn" onclick="showDay(1)" id="btn-1">
-      <span class="dlabel">Día</span>
-      <span class="dnum">2</span>
-      <span class="dtype" style="background:rgba(167,139,250,0.15);color:#A78BFA">Superior</span>
-    </button>
-    <button class="day-btn" onclick="showDay(2)" id="btn-2">
-      <span class="dlabel">Día</span>
-      <span class="dnum">3</span>
-      <span class="dtype" style="background:rgba(255,184,48,0.15);color:#FFB830">Cuádriceps</span>
-    </button>
-    <button class="day-btn" onclick="showDay(3)" id="btn-3">
-      <span class="dlabel">Día</span>
-      <span class="dnum">4</span>
-      <span class="dtype" style="background:rgba(167,139,250,0.15);color:#A78BFA">Superior</span>
-    </button>
-    <button class="day-btn" onclick="showDay(4)" id="btn-4">
-      <span class="dlabel">Día</span>
-      <span class="dnum">5</span>
-      <span class="dtype" style="background:rgba(255,107,107,0.15);color:#FF6B6B">Pierna</span>
-    </button>
-  </div>
+<div class="day-grid-nav">
+<button class="day-btn active" onclick="showDay(0)" id="btn-0">
+<span class="dlabel">Día</span>
+<span class="dnum">1</span>
+<span class="dtype" style="background:rgba(57,217,138,0.15);color:#39D98A">Glúteo</span>
+</button>
+<button class="day-btn" onclick="showDay(1)" id="btn-1">
+<span class="dlabel">Día</span>
+<span class="dnum">2</span>
+<span class="dtype" style="background:rgba(167,139,250,0.15);color:#A78BFA">Superior</span>
+</button>
+<button class="day-btn" onclick="showDay(2)" id="btn-2">
+<span class="dlabel">Día</span>
+<span class="dnum">3</span>
+<span class="dtype" style="background:rgba(255,184,48,0.15);color:#FFB830">Cuádriceps</span>
+</button>
+<button class="day-btn" onclick="showDay(3)" id="btn-3">
+<span class="dlabel">Día</span>
+<span class="dnum">4</span>
+<span class="dtype" style="background:rgba(167,139,250,0.15);color:#A78BFA">Superior</span>
+</button>
+<button class="day-btn" onclick="showDay(4)" id="btn-4">
+<span class="dlabel">Día</span>
+<span class="dnum">5</span>
+<span class="dtype" style="background:rgba(255,107,107,0.15);color:#FF6B6B">Pierna</span>
+</button>
+</div>
 </nav>
 
 <main class="main">
@@ -407,473 +491,511 @@ body { font-family: 'Nunito', sans-serif; background: var(--bg); color: var(--te
 <!-- ══════════ DÍA 1 ══════════ -->
 <div class="day-panel active" id="day-0">
 
-  <div class="day-hero" style="background:linear-gradient(135deg,rgba(57,217,138,0.1),rgba(57,217,138,0.03));border-color:rgba(57,217,138,0.3);">
-    <div class="day-hero-icon">🍑</div>
-    <div>
-      <div class="day-hero-title">Posterior + Glúteo</div>
-      <div class="day-hero-sub" style="color:#39D98A">
-        <span class="badge" style="background:rgba(57,217,138,0.15);color:#39D98A">⚡ Cargas Forzadas</span>
-        <span class="badge" style="background:rgba(255,184,48,0.15);color:#FFB830">⏱ Descanso máx 30 seg</span>
-      </div>
-    </div>
-  </div>
+<div class="day-hero" style="background:linear-gradient(135deg,rgba(57,217,138,0.1),rgba(57,217,138,0.03));border-color:rgba(57,217,138,0.3);">
+<div class="day-hero-icon">🍑</div>
+<div>
+<div class="day-hero-title">Posterior + Glúteo</div>
+<div class="day-hero-sub" style="color:#39D98A">
+<span class="badge" style="background:rgba(57,217,138,0.15);color:#39D98A">⚡ Cargas Forzadas</span>
+<span class="badge" style="background:rgba(255,184,48,0.15);color:#FFB830">⏱ Descanso máx 30 seg</span>
+</div>
+</div>
+</div>
 
-  <div class="rules-grid">
-    <div class="rule-box"><div class="rule-label">Repeticiones</div><div class="rule-val">8 – 12 rep</div><div class="rule-sub">Hasta fallo muscular</div></div>
-    <div class="rule-box"><div class="rule-label">Descanso</div><div class="rule-val">Máx 30 seg</div><div class="rule-sub">Estira mientras descansas</div></div>
-    <div class="rule-box"><div class="rule-label">Peso</div><div class="rule-val">Fallo en rep 8–10</div><div class="rule-sub">Ni más ni menos</div></div>
-    <div class="rule-box"><div class="rule-label">Series hoy</div><div class="rule-val">4 series c/u</div><div class="rule-sub">Excepto donde indica</div></div>
-  </div>
+<div class="rules-grid">
+<div class="rule-box"><div class="rule-label">Repeticiones</div><div class="rule-val">8 – 12 rep</div><div class="rule-sub">Hasta fallo muscular</div></div>
+<div class="rule-box"><div class="rule-label">Descanso</div><div class="rule-val">Máx 30 seg</div><div class="rule-sub">Estira mientras descansas</div></div>
+<div class="rule-box"><div class="rule-label">Peso</div><div class="rule-val">Fallo en rep 8–10</div><div class="rule-sub">Ni más ni menos</div></div>
+<div class="rule-box"><div class="rule-label">Series hoy</div><div class="rule-val">4 series c/u</div><div class="rule-sub">Excepto donde indica</div></div>
+</div>
 
-  <div class="prog-wrap">
-    <div class="prog-top"><span class="prog-title">Progreso del día</span><span class="prog-pct" id="pct-0">0%</span></div>
-    <div class="prog-bar"><div class="prog-fill" id="bar-0"></div></div>
-  </div>
+<div class="prog-wrap">
+<div class="prog-top"><span class="prog-title">Progreso del día</span><span class="prog-pct" id="pct-0">0%</span></div>
+<div class="prog-bar"><div class="prog-fill" id="bar-0"></div></div>
+</div>
 
-  <div class="sec-label">Ejercicios</div>
+<div class="sec-label">Ejercicios</div>
 
-  <div class="ex-card">
-    <div class="ex-header">
-      <div class="ex-num" style="background:rgba(57,217,138,0.15);color:#39D98A">1</div>
-      <div class="ex-info"><div class="ex-name">Desplantes</div><div class="ex-detail">3 series × 30 pasos</div></div>
-      <div class="ex-right">
-        <div class="ex-sets"><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div></div>
-        <div class="ex-check"><svg width="13" height="11" viewBox="0 0 13 11" fill="none"><path d="M1.5 5.5L5 9L11.5 1.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      </div>
-    </div>
-  </div>
+<div class="ex-card">
+<div class="ex-header">
+<div class="ex-num" style="background:rgba(57,217,138,0.15);color:#39D98A">1</div>
+<div class="ex-info"><div class="ex-name">Desplantes</div><div class="ex-detail">3 series × 30 pasos</div></div>
+<div class="ex-right">
+<div class="ex-sets"><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div></div>
+<div class="ex-check"><svg width="13" height="11" viewBox="0 0 13 11" fill="none"><path d="M1.5 5.5L5 9L11.5 1.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+</div>
+</div>
+</div>
 
-  <div class="ex-card">
-    <div class="ex-header">
-      <div class="ex-num" style="background:rgba(57,217,138,0.15);color:#39D98A">2</div>
-      <div class="ex-info"><div class="ex-name">Sentadilla Libre Bajando</div><div class="ex-detail">4 series × 18 rep — banda sobre rodillas</div></div>
-      <div class="ex-right">
-        <div class="ex-sets"><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div></div>
-        <div class="ex-check"><svg width="13" height="11" viewBox="0 0 13 11" fill="none"><path d="M1.5 5.5L5 9L11.5 1.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      </div>
-    </div>
-  </div>
+<div class="ex-card">
+<div class="ex-header">
+<div class="ex-num" style="background:rgba(57,217,138,0.15);color:#39D98A">2</div>
+<div class="ex-info"><div class="ex-name">Sentadilla Libre Bajando</div><div class="ex-detail">4 series × 18 rep — banda sobre rodillas</div></div>
+<div class="ex-right">
+<div class="ex-sets"><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div></div>
+<div class="ex-check"><svg width="13" height="11" viewBox="0 0 13 11" fill="none"><path d="M1.5 5.5L5 9L11.5 1.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+</div>
+</div>
+</div>
 
-  <div class="ex-card">
-    <div class="ex-header">
-      <div class="ex-num" style="background:rgba(57,217,138,0.15);color:#39D98A">3</div>
-      <div class="ex-info"><div class="ex-name">Peso Muerto con Banda</div><div class="ex-detail">4 series × 18 rep — Carga 80%</div></div>
-      <div class="ex-right">
-        <div class="ex-sets"><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div></div>
-        <div class="ex-check"><svg width="13" height="11" viewBox="0 0 13 11" fill="none"><path d="M1.5 5.5L5 9L11.5 1.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      </div>
-    </div>
-  </div>
+<div class="ex-card">
+<div class="ex-header">
+<div class="ex-num" style="background:rgba(57,217,138,0.15);color:#39D98A">3</div>
+<div class="ex-info"><div class="ex-name">Peso Muerto con Banda</div><div class="ex-detail">4 series × 18 rep — Carga 80%</div></div>
+<div class="ex-right">
+<div class="ex-sets"><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div></div>
+<div class="ex-check"><svg width="13" height="11" viewBox="0 0 13 11" fill="none"><path d="M1.5 5.5L5 9L11.5 1.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+</div>
+</div>
+</div>
 
-  <div class="ex-card">
-    <div class="ex-header">
-      <div class="ex-num" style="background:rgba(57,217,138,0.15);color:#39D98A">4</div>
-      <div class="ex-info"><div class="ex-name">Extensión Vertical en Cuadrupedia</div><div class="ex-detail">4 series × 18 rep — pesa tobillera</div></div>
-      <div class="ex-right">
-        <div class="ex-sets"><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div></div>
-        <div class="ex-check"><svg width="13" height="11" viewBox="0 0 13 11" fill="none"><path d="M1.5 5.5L5 9L11.5 1.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      </div>
-    </div>
-  </div>
+<div class="ex-card">
+<div class="ex-header">
+<div class="ex-num" style="background:rgba(57,217,138,0.15);color:#39D98A">4</div>
+<div class="ex-info"><div class="ex-name">Extensión Vertical en Cuadrupedia</div><div class="ex-detail">4 series × 18 rep — pesa tobillera</div></div>
+<div class="ex-right">
+<div class="ex-sets"><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div></div>
+<div class="ex-check"><svg width="13" height="11" viewBox="0 0 13 11" fill="none"><path d="M1.5 5.5L5 9L11.5 1.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+</div>
+</div>
+</div>
 
-  <div class="ex-card">
-    <div class="ex-header">
-      <div class="ex-num" style="background:rgba(57,217,138,0.15);color:#39D98A">5</div>
-      <div class="ex-info"><div class="ex-name">Hiperextensión de Glúteo</div><div class="ex-detail">4 series × 15 rep — contracción en el ascenso</div></div>
-      <div class="ex-right">
-        <div class="ex-sets"><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div></div>
-        <div class="ex-check"><svg width="13" height="11" viewBox="0 0 13 11" fill="none"><path d="M1.5 5.5L5 9L11.5 1.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      </div>
-    </div>
-    <div class="ex-tip">⚡ Entre series: 10 Frog pumps sin carga en colchoneta</div>
-  </div>
+<div class="ex-card">
+<div class="ex-header">
+<div class="ex-num" style="background:rgba(57,217,138,0.15);color:#39D98A">5</div>
+<div class="ex-info"><div class="ex-name">Hiperextensión de Glúteo</div><div class="ex-detail">4 series × 15 rep — contracción en el ascenso</div></div>
+<div class="ex-right">
+<div class="ex-sets"><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div></div>
+<div class="ex-check"><svg width="13" height="11" viewBox="0 0 13 11" fill="none"><path d="M1.5 5.5L5 9L11.5 1.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+</div>
+</div>
+<div class="ex-tip">⚡ Entre series: 10 Frog pumps sin carga en colchoneta</div>
+</div>
 
-  <div class="ex-card">
-    <div class="ex-header">
-      <div class="ex-num" style="background:rgba(57,217,138,0.15);color:#39D98A">6</div>
-      <div class="ex-info"><div class="ex-name">Hip Thrusters</div><div class="ex-detail">4 series × 18 rep</div></div>
-      <div class="ex-right">
-        <div class="ex-sets"><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div></div>
-        <div class="ex-check"><svg width="13" height="11" viewBox="0 0 13 11" fill="none"><path d="M1.5 5.5L5 9L11.5 1.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      </div>
-    </div>
-    <div class="ex-tip">⚡ Entre series: 10 Frog pumps sin carga en colchoneta</div>
-  </div>
+<div class="ex-card">
+<div class="ex-header">
+<div class="ex-num" style="background:rgba(57,217,138,0.15);color:#39D98A">6</div>
+<div class="ex-info"><div class="ex-name">Hip Thrusters</div><div class="ex-detail">4 series × 18 rep</div></div>
+<div class="ex-right">
+<div class="ex-sets"><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div></div>
+<div class="ex-check"><svg width="13" height="11" viewBox="0 0 13 11" fill="none"><path d="M1.5 5.5L5 9L11.5 1.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+</div>
+</div>
+<div class="ex-tip">⚡ Entre series: 10 Frog pumps sin carga en colchoneta</div>
+</div>
 
-  <div class="ex-card">
-    <div class="ex-header">
-      <div class="ex-num" style="background:rgba(57,217,138,0.15);color:#39D98A">7</div>
-      <div class="ex-info"><div class="ex-name">Elevación Lateral Polea</div><div class="ex-detail">4 series × 18 rep — últimas 3 rep forzadas</div></div>
-      <div class="ex-right">
-        <div class="ex-sets"><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div></div>
-        <div class="ex-check"><svg width="13" height="11" viewBox="0 0 13 11" fill="none"><path d="M1.5 5.5L5 9L11.5 1.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      </div>
-    </div>
-  </div>
+<div class="ex-card">
+<div class="ex-header">
+<div class="ex-num" style="background:rgba(57,217,138,0.15);color:#39D98A">7</div>
+<div class="ex-info"><div class="ex-name">Elevación Lateral Polea</div><div class="ex-detail">4 series × 18 rep — últimas 3 rep forzadas</div></div>
+<div class="ex-right">
+<div class="ex-sets"><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div></div>
+<div class="ex-check"><svg width="13" height="11" viewBox="0 0 13 11" fill="none"><path d="M1.5 5.5L5 9L11.5 1.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+</div>
+</div>
+</div>
 
-  <div class="ex-card">
-    <div class="ex-header">
-      <div class="ex-num" style="background:rgba(57,217,138,0.15);color:#39D98A">8</div>
-      <div class="ex-info"><div class="ex-name">Extensión de Pierna</div><div class="ex-detail">4 series × 18 rep — Carga 80%</div></div>
-      <div class="ex-right">
-        <div class="ex-sets"><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div></div>
-        <div class="ex-check"><svg width="13" height="11" viewBox="0 0 13 11" fill="none"><path d="M1.5 5.5L5 9L11.5 1.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      </div>
-    </div>
-  </div>
+<div class="ex-card">
+<div class="ex-header">
+<div class="ex-num" style="background:rgba(57,217,138,0.15);color:#39D98A">8</div>
+<div class="ex-info"><div class="ex-name">Extensión de Pierna</div><div class="ex-detail">4 series × 18 rep — Carga 80%</div></div>
+<div class="ex-right">
+<div class="ex-sets"><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div></div>
+<div class="ex-check"><svg width="13" height="11" viewBox="0 0 13 11" fill="none"><path d="M1.5 5.5L5 9L11.5 1.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+</div>
+</div>
+</div>
 
-  <div class="cardio-card">
-    <div class="cardio-icon">🏃‍♀️</div>
-    <div><div class="cardio-title">Cardio Final</div><div class="cardio-detail">Intensidad moderada · 130–150 PPM<br>Escalas / Banda / Elíptica</div></div>
-    <div class="cardio-timer"><div class="cardio-min">30</div><div class="cardio-lbl">minutos</div></div>
-  </div>
+<div class="cardio-card">
+<div class="cardio-icon">🏃‍♀️</div>
+<div><div class="cardio-title">Cardio Final</div><div class="cardio-detail">Intensidad moderada · 130–150 PPM<br>Escalas / Banda / Elíptica</div></div>
+<div class="cardio-timer"><div class="cardio-min">30</div><div class="cardio-lbl">minutos</div></div>
+</div>
 </div>
 
 <!-- ══════════ DÍA 2 ══════════ -->
 <div class="day-panel" id="day-1">
-  <div class="day-hero" style="background:linear-gradient(135deg,rgba(167,139,250,0.1),rgba(167,139,250,0.03));border-color:rgba(167,139,250,0.3);">
-    <div class="day-hero-icon">💪</div>
-    <div>
-      <div class="day-hero-title">Tren Superior</div>
-      <div class="day-hero-sub" style="color:#A78BFA">
-        <span class="badge" style="background:rgba(167,139,250,0.15);color:#A78BFA">🪶 Cargas Leves</span>
-        <span class="badge" style="background:rgba(255,184,48,0.15);color:#FFB830">⏱ Descanso máx 30 seg</span>
-      </div>
-    </div>
-  </div>
+<div class="day-hero" style="background:linear-gradient(135deg,rgba(167,139,250,0.1),rgba(167,139,250,0.03));border-color:rgba(167,139,250,0.3);">
+<div class="day-hero-icon">💪</div>
+<div>
+<div class="day-hero-title">Tren Superior</div>
+<div class="day-hero-sub" style="color:#A78BFA">
+<span class="badge" style="background:rgba(167,139,250,0.15);color:#A78BFA">🪶 Cargas Leves</span>
+<span class="badge" style="background:rgba(255,184,48,0.15);color:#FFB830">⏱ Descanso máx 30 seg</span>
+</div>
+</div>
+</div>
 
-  <div class="prog-wrap">
-    <div class="prog-top"><span class="prog-title">Progreso del día</span><span class="prog-pct" id="pct-1">0%</span></div>
-    <div class="prog-bar"><div class="prog-fill" id="bar-1"></div></div>
-  </div>
+<div class="prog-wrap">
+<div class="prog-top"><span class="prog-title">Progreso del día</span><span class="prog-pct" id="pct-1">0%</span></div>
+<div class="prog-bar"><div class="prog-fill" id="bar-1"></div></div>
+</div>
 
-  <div class="sec-label">Triseries — Hombro</div>
-  <div class="tri-card open">
-    <div class="tri-header" onclick="toggleTri(this)">
-      <div class="tri-badge" style="background:rgba(167,139,250,0.15);color:#A78BFA">TRISERIE ×3</div>
-      <div class="tri-name">Hombros — 3 ejercicios</div>
-      <div class="tri-arrow">▾</div>
-    </div>
-    <div class="tri-body">
-      <div class="tri-ex"><div class="tri-dot" style="background:#A78BFA"></div><div class="tri-text">Pájaros con mancuerna inclinado</div><div class="tri-reps">×10</div></div>
-      <div class="tri-ex"><div class="tri-dot" style="background:#A78BFA"></div><div class="tri-text">Elevaciones al frente con disco de pie</div><div class="tri-reps">×10</div></div>
-      <div class="tri-ex"><div class="tri-dot" style="background:#A78BFA"></div><div class="tri-text">Elevaciones en supino — polea cruzada</div><div class="tri-reps">×10</div></div>
-    </div>
-  </div>
+<div class="sec-label">Triseries — Hombro</div>
+<div class="tri-card open">
+<div class="tri-header" onclick="toggleTri(this)">
+<div class="tri-badge" style="background:rgba(167,139,250,0.15);color:#A78BFA">TRISERIE ×3</div>
+<div class="tri-name">Hombros — 3 ejercicios</div>
+<div class="tri-sets"><div class="set-dot" onclick="litSet(event,this);checkTri(event)"></div><div class="set-dot" onclick="litSet(event,this);checkTri(event)"></div><div class="set-dot" onclick="litSet(event,this);checkTri(event)"></div></div>
+<div class="tri-check" onclick="toggleTriDone(event,this)"><svg width="13" height="11" viewBox="0 0 13 11" fill="none"><path d="M1.5 5.5L5 9L11.5 1.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="tri-arrow">▾</div>
+</div>
+<div class="tri-body">
+<div class="tri-ex"><div class="tri-dot" style="background:#A78BFA"></div><div class="tri-text">Pájaros con mancuerna inclinado</div><div class="tri-reps">×10</div></div>
+<div class="tri-ex"><div class="tri-dot" style="background:#A78BFA"></div><div class="tri-text">Elevaciones al frente con disco de pie</div><div class="tri-reps">×10</div></div>
+<div class="tri-ex"><div class="tri-dot" style="background:#A78BFA"></div><div class="tri-text">Elevaciones en supino — polea cruzada</div><div class="tri-reps">×10</div></div>
+</div>
+</div>
 
-  <div class="sec-label">Triseries — Bíceps</div>
-  <div class="tri-card">
-    <div class="tri-header" onclick="toggleTri(this)">
-      <div class="tri-badge" style="background:rgba(167,139,250,0.15);color:#A78BFA">TRISERIE ×3</div>
-      <div class="tri-name">Bíceps — 3 ejercicios</div>
-      <div class="tri-arrow">▾</div>
-    </div>
-    <div class="tri-body">
-      <div class="tri-ex"><div class="tri-dot" style="background:#A78BFA"></div><div class="tri-text">Curl Martillo</div><div class="tri-reps">×10</div></div>
-      <div class="tri-ex"><div class="tri-dot" style="background:#A78BFA"></div><div class="tri-text">Curl con mancuernas de pie</div><div class="tri-reps">×10</div></div>
-      <div class="tri-ex"><div class="tri-dot" style="background:#A78BFA"></div><div class="tri-text">Curl con barra Z en banco predicador</div><div class="tri-reps">×10</div></div>
-    </div>
-  </div>
+<div class="sec-label">Triseries — Bíceps</div>
+<div class="tri-card">
+<div class="tri-header" onclick="toggleTri(this)">
+<div class="tri-badge" style="background:rgba(167,139,250,0.15);color:#A78BFA">TRISERIE ×3</div>
+<div class="tri-name">Bíceps — 3 ejercicios</div>
+<div class="tri-sets"><div class="set-dot" onclick="litSet(event,this);checkTri(event)"></div><div class="set-dot" onclick="litSet(event,this);checkTri(event)"></div><div class="set-dot" onclick="litSet(event,this);checkTri(event)"></div></div>
+<div class="tri-check" onclick="toggleTriDone(event,this)"><svg width="13" height="11" viewBox="0 0 13 11" fill="none"><path d="M1.5 5.5L5 9L11.5 1.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="tri-arrow">▾</div>
+</div>
+<div class="tri-body">
+<div class="tri-ex"><div class="tri-dot" style="background:#A78BFA"></div><div class="tri-text">Curl Martillo</div><div class="tri-reps">×10</div></div>
+<div class="tri-ex"><div class="tri-dot" style="background:#A78BFA"></div><div class="tri-text">Curl con mancuernas de pie</div><div class="tri-reps">×10</div></div>
+<div class="tri-ex"><div class="tri-dot" style="background:#A78BFA"></div><div class="tri-text">Curl con barra Z en banco predicador</div><div class="tri-reps">×10</div></div>
+</div>
+</div>
 
-  <div class="sec-label">Triseries — Tríceps</div>
-  <div class="tri-card">
-    <div class="tri-header" onclick="toggleTri(this)">
-      <div class="tri-badge" style="background:rgba(167,139,250,0.15);color:#A78BFA">TRISERIE ×3</div>
-      <div class="tri-name">Tríceps — 3 ejercicios</div>
-      <div class="tri-arrow">▾</div>
-    </div>
-    <div class="tri-body">
-      <div class="tri-ex"><div class="tri-dot" style="background:#A78BFA"></div><div class="tri-text">Copa a dos manos</div><div class="tri-reps">×10</div></div>
-      <div class="tri-ex"><div class="tri-dot" style="background:#A78BFA"></div><div class="tri-text">Jalones en polea con cuerda</div><div class="tri-reps">×10</div></div>
-      <div class="tri-ex"><div class="tri-dot" style="background:#A78BFA"></div><div class="tri-text">Patada de Mula a dos manos</div><div class="tri-reps">×10</div></div>
-    </div>
-  </div>
+<div class="sec-label">Triseries — Tríceps</div>
+<div class="tri-card">
+<div class="tri-header" onclick="toggleTri(this)">
+<div class="tri-badge" style="background:rgba(167,139,250,0.15);color:#A78BFA">TRISERIE ×3</div>
+<div class="tri-name">Tríceps — 3 ejercicios</div>
+<div class="tri-sets"><div class="set-dot" onclick="litSet(event,this);checkTri(event)"></div><div class="set-dot" onclick="litSet(event,this);checkTri(event)"></div><div class="set-dot" onclick="litSet(event,this);checkTri(event)"></div></div>
+<div class="tri-check" onclick="toggleTriDone(event,this)"><svg width="13" height="11" viewBox="0 0 13 11" fill="none"><path d="M1.5 5.5L5 9L11.5 1.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="tri-arrow">▾</div>
+</div>
+<div class="tri-body">
+<div class="tri-ex"><div class="tri-dot" style="background:#A78BFA"></div><div class="tri-text">Copa a dos manos</div><div class="tri-reps">×10</div></div>
+<div class="tri-ex"><div class="tri-dot" style="background:#A78BFA"></div><div class="tri-text">Jalones en polea con cuerda</div><div class="tri-reps">×10</div></div>
+<div class="tri-ex"><div class="tri-dot" style="background:#A78BFA"></div><div class="tri-text">Patada de Mula a dos manos</div><div class="tri-reps">×10</div></div>
+</div>
+</div>
 
-  <div class="sec-label">Abdomen</div>
-  <div class="ab-card">
-    <div class="ab-header" onclick="toggleAb(this)">
-      <span style="font-size:20px">🔥</span>
-      <div class="ab-title">Abdomen</div>
-      <div class="ab-arrow">▾</div>
-    </div>
-    <div class="ab-body">
-      <div class="ab-ex"><span>🧱</span> Planchas con 1 pie elevado — 4 × 2 min</div>
-      <div class="ab-ex"><span>🔄</span> Rodillo — 3 × 15</div>
-      <div class="ab-ex"><span>🏃</span> Climber cruzado — 2 minutos</div>
-      <div class="ab-ex"><span>💪</span> Crunch con pie cruzado sobre rodilla</div>
-      <div class="ab-ex"><span>⬆️</span> Elevación de pelvis — 30 rep</div>
-    </div>
-  </div>
+<div class="sec-label">Abdomen</div>
+<div class="ab-card">
+<div class="ab-header" onclick="toggleAb(this)">
+<span style="font-size:20px">🔥</span>
+<div class="ab-title">Abdomen</div>
+<div class="ab-sets"><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div></div>
+<div class="ab-check" onclick="toggleAbDone(event,this)"><svg width="13" height="11" viewBox="0 0 13 11" fill="none"><path d="M1.5 5.5L5 9L11.5 1.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="ab-arrow">▾</div>
+</div>
+<div class="ab-body">
+<div class="ab-ex"><span>🧱</span> Planchas con 1 pie elevado — 4 × 2 min</div>
+<div class="ab-ex"><span>🔄</span> Rodillo — 3 × 15</div>
+<div class="ab-ex"><span>🏃</span> Climber cruzado — 2 minutos</div>
+<div class="ab-ex"><span>💪</span> Crunch con pie cruzado sobre rodilla</div>
+<div class="ab-ex"><span>⬆️</span> Elevación de pelvis — 30 rep</div>
+</div>
+</div>
 
-  <div class="cardio-card">
-    <div class="cardio-icon">🏃‍♀️</div>
-    <div><div class="cardio-title">Cardio Final</div><div class="cardio-detail">Intensidad moderada · 130–150 PPM<br>Escalas / Banda / Elíptica</div></div>
-    <div class="cardio-timer"><div class="cardio-min">30</div><div class="cardio-lbl">minutos</div></div>
-  </div>
+<div class="cardio-card">
+<div class="cardio-icon">🏃‍♀️</div>
+<div><div class="cardio-title">Cardio Final</div><div class="cardio-detail">Intensidad moderada · 130–150 PPM<br>Escalas / Banda / Elíptica</div></div>
+<div class="cardio-timer"><div class="cardio-min">30</div><div class="cardio-lbl">minutos</div></div>
+</div>
 </div>
 
 <!-- ══════════ DÍA 3 ══════════ -->
 <div class="day-panel" id="day-2">
-  <div class="day-hero" style="background:linear-gradient(135deg,rgba(255,184,48,0.1),rgba(255,184,48,0.03));border-color:rgba(255,184,48,0.3);">
-    <div class="day-hero-icon">🦵</div>
-    <div>
-      <div class="day-hero-title">Cuádriceps</div>
-      <div class="day-hero-sub" style="color:#FFB830">
-        <span class="badge" style="background:rgba(255,184,48,0.15);color:#FFB830">⚡ Cargas Forzadas</span>
-        <span class="badge" style="background:rgba(255,184,48,0.15);color:#FFB830">⏱ Descanso máx 30 seg</span>
-      </div>
-    </div>
-  </div>
+<div class="day-hero" style="background:linear-gradient(135deg,rgba(255,184,48,0.1),rgba(255,184,48,0.03));border-color:rgba(255,184,48,0.3);">
+<div class="day-hero-icon">🦵</div>
+<div>
+<div class="day-hero-title">Cuádriceps</div>
+<div class="day-hero-sub" style="color:#FFB830">
+<span class="badge" style="background:rgba(255,184,48,0.15);color:#FFB830">⚡ Cargas Forzadas</span>
+<span class="badge" style="background:rgba(255,184,48,0.15);color:#FFB830">⏱ Descanso máx 30 seg</span>
+</div>
+</div>
+</div>
 
-  <div class="prog-wrap">
-    <div class="prog-top"><span class="prog-title">Progreso del día</span><span class="prog-pct" id="pct-2">0%</span></div>
-    <div class="prog-bar"><div class="prog-fill" id="bar-2"></div></div>
-  </div>
+<div class="prog-wrap">
+<div class="prog-top"><span class="prog-title">Progreso del día</span><span class="prog-pct" id="pct-2">0%</span></div>
+<div class="prog-bar"><div class="prog-fill" id="bar-2"></div></div>
+</div>
 
-  <div class="sec-label">Ejercicios</div>
+<div class="sec-label">Ejercicios</div>
 
-  <div class="ex-card">
-    <div class="ex-header">
-      <div class="ex-num" style="background:rgba(255,184,48,0.15);color:#FFB830">1</div>
-      <div class="ex-info"><div class="ex-name">Elevación Cuádriceps en Máquina</div><div class="ex-detail">4 series × 18 rep</div></div>
-      <div class="ex-right">
-        <div class="ex-sets"><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div></div>
-        <div class="ex-check"><svg width="13" height="11" viewBox="0 0 13 11" fill="none"><path d="M1.5 5.5L5 9L11.5 1.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      </div>
-    </div>
-  </div>
+<div class="ex-card">
+<div class="ex-header">
+<div class="ex-num" style="background:rgba(255,184,48,0.15);color:#FFB830">1</div>
+<div class="ex-info"><div class="ex-name">Elevación Cuádriceps en Máquina</div><div class="ex-detail">4 series × 18 rep</div></div>
+<div class="ex-right">
+<div class="ex-sets"><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div></div>
+<div class="ex-check"><svg width="13" height="11" viewBox="0 0 13 11" fill="none"><path d="M1.5 5.5L5 9L11.5 1.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+</div>
+</div>
+</div>
 
-  <div class="ex-card">
-    <div class="ex-header">
-      <div class="ex-num" style="background:rgba(255,184,48,0.15);color:#FFB830">2</div>
-      <div class="ex-info"><div class="ex-name">Sumo Bajando</div><div class="ex-detail">4 series × 12F (fallo muscular)</div></div>
-      <div class="ex-right">
-        <div class="ex-sets"><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div></div>
-        <div class="ex-check"><svg width="13" height="11" viewBox="0 0 13 11" fill="none"><path d="M1.5 5.5L5 9L11.5 1.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      </div>
-    </div>
-  </div>
+<div class="ex-card">
+<div class="ex-header">
+<div class="ex-num" style="background:rgba(255,184,48,0.15);color:#FFB830">2</div>
+<div class="ex-info"><div class="ex-name">Sumo Bajando</div><div class="ex-detail">4 series × 12F (fallo muscular)</div></div>
+<div class="ex-right">
+<div class="ex-sets"><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div></div>
+<div class="ex-check"><svg width="13" height="11" viewBox="0 0 13 11" fill="none"><path d="M1.5 5.5L5 9L11.5 1.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+</div>
+</div>
+</div>
 
-  <div class="ex-card">
-    <div class="ex-header">
-      <div class="ex-num" style="background:rgba(255,184,48,0.15);color:#FFB830">3</div>
-      <div class="ex-info"><div class="ex-name">Prensa 4 Series</div><div class="ex-detail">4 × 12 (80%) · Última serie: 50% × 20 rep</div></div>
-      <div class="ex-right">
-        <div class="ex-sets"><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div></div>
-        <div class="ex-check"><svg width="13" height="11" viewBox="0 0 13 11" fill="none"><path d="M1.5 5.5L5 9L11.5 1.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      </div>
-    </div>
-    <div class="ex-tip">⚡ Última serie baja a 50% de carga y completa 20 repeticiones</div>
-  </div>
+<div class="ex-card">
+<div class="ex-header">
+<div class="ex-num" style="background:rgba(255,184,48,0.15);color:#FFB830">3</div>
+<div class="ex-info"><div class="ex-name">Prensa 4 Series</div><div class="ex-detail">4 × 12 (80%) · Última serie: 50% × 20 rep</div></div>
+<div class="ex-right">
+<div class="ex-sets"><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div></div>
+<div class="ex-check"><svg width="13" height="11" viewBox="0 0 13 11" fill="none"><path d="M1.5 5.5L5 9L11.5 1.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+</div>
+</div>
+<div class="ex-tip">⚡ Última serie baja a 50% de carga y completa 20 repeticiones</div>
+</div>
 
-  <div class="ex-card">
-    <div class="ex-header">
-      <div class="ex-num" style="background:rgba(255,184,48,0.15);color:#FFB830">4</div>
-      <div class="ex-info"><div class="ex-name">Máquina Abductor</div><div class="ex-detail">4 series × 20 rep — Carga 50%</div></div>
-      <div class="ex-right">
-        <div class="ex-sets"><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div></div>
-        <div class="ex-check"><svg width="13" height="11" viewBox="0 0 13 11" fill="none"><path d="M1.5 5.5L5 9L11.5 1.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      </div>
-    </div>
-  </div>
+<div class="ex-card">
+<div class="ex-header">
+<div class="ex-num" style="background:rgba(255,184,48,0.15);color:#FFB830">4</div>
+<div class="ex-info"><div class="ex-name">Máquina Abductor</div><div class="ex-detail">4 series × 20 rep — Carga 50%</div></div>
+<div class="ex-right">
+<div class="ex-sets"><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div></div>
+<div class="ex-check"><svg width="13" height="11" viewBox="0 0 13 11" fill="none"><path d="M1.5 5.5L5 9L11.5 1.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+</div>
+</div>
+</div>
 
-  <div class="ex-card">
-    <div class="ex-header">
-      <div class="ex-num" style="background:rgba(255,184,48,0.15);color:#FFB830">5</div>
-      <div class="ex-info"><div class="ex-name">Sentadilla Libre Bajando en 6 seg / Subiendo en 2</div><div class="ex-detail">3 series abiertas + 3 series cerradas · 20 rep</div></div>
-      <div class="ex-right">
-        <div class="ex-sets"><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div></div>
-        <div class="ex-check"><svg width="13" height="11" viewBox="0 0 13 11" fill="none"><path d="M1.5 5.5L5 9L11.5 1.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      </div>
-    </div>
-    <div class="ex-tip">⚡ Baja LENTO en 6 segundos — sube rápido en 2 segundos</div>
-  </div>
+<div class="ex-card">
+<div class="ex-header">
+<div class="ex-num" style="background:rgba(255,184,48,0.15);color:#FFB830">5</div>
+<div class="ex-info"><div class="ex-name">Sentadilla Libre Bajando en 6 seg / Subiendo en 2</div><div class="ex-detail">3 series abiertas + 3 series cerradas · 20 rep</div></div>
+<div class="ex-right">
+<div class="ex-sets"><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div></div>
+<div class="ex-check"><svg width="13" height="11" viewBox="0 0 13 11" fill="none"><path d="M1.5 5.5L5 9L11.5 1.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+</div>
+</div>
+<div class="ex-tip">⚡ Baja LENTO en 6 segundos — sube rápido en 2 segundos</div>
+</div>
 
-  <div class="ex-card">
-    <div class="ex-header">
-      <div class="ex-num" style="background:rgba(255,184,48,0.15);color:#FFB830">6</div>
-      <div class="ex-info"><div class="ex-name">Peso Muerto</div><div class="ex-detail">4 series × 12F (fallo muscular)</div></div>
-      <div class="ex-right">
-        <div class="ex-sets"><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div></div>
-        <div class="ex-check"><svg width="13" height="11" viewBox="0 0 13 11" fill="none"><path d="M1.5 5.5L5 9L11.5 1.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      </div>
-    </div>
-  </div>
+<div class="ex-card">
+<div class="ex-header">
+<div class="ex-num" style="background:rgba(255,184,48,0.15);color:#FFB830">6</div>
+<div class="ex-info"><div class="ex-name">Peso Muerto</div><div class="ex-detail">4 series × 12F (fallo muscular)</div></div>
+<div class="ex-right">
+<div class="ex-sets"><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div></div>
+<div class="ex-check"><svg width="13" height="11" viewBox="0 0 13 11" fill="none"><path d="M1.5 5.5L5 9L11.5 1.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+</div>
+</div>
+</div>
 
-  <div class="cardio-card">
-    <div class="cardio-icon">🏃‍♀️</div>
-    <div><div class="cardio-title">Cardio Final</div><div class="cardio-detail">Intensidad moderada · 130–150 PPM<br>Escalas / Banda / Elíptica</div></div>
-    <div class="cardio-timer"><div class="cardio-min">30</div><div class="cardio-lbl">minutos</div></div>
-  </div>
+<div class="cardio-card">
+<div class="cardio-icon">🏃‍♀️</div>
+<div><div class="cardio-title">Cardio Final</div><div class="cardio-detail">Intensidad moderada · 130–150 PPM<br>Escalas / Banda / Elíptica</div></div>
+<div class="cardio-timer"><div class="cardio-min">30</div><div class="cardio-lbl">minutos</div></div>
+</div>
 </div>
 
 <!-- ══════════ DÍA 4 ══════════ -->
 <div class="day-panel" id="day-3">
-  <div class="day-hero" style="background:linear-gradient(135deg,rgba(167,139,250,0.1),rgba(167,139,250,0.03));border-color:rgba(167,139,250,0.3);">
-    <div class="day-hero-icon">🏋️‍♀️</div>
-    <div>
-      <div class="day-hero-title">Tren Superior</div>
-      <div class="day-hero-sub" style="color:#A78BFA">
-        <span class="badge" style="background:rgba(167,139,250,0.15);color:#A78BFA">🪶 Cargas Leves</span>
-        <span class="badge" style="background:rgba(255,184,48,0.15);color:#FFB830">⏱ Descanso máx 30 seg</span>
-      </div>
-    </div>
-  </div>
+<div class="day-hero" style="background:linear-gradient(135deg,rgba(167,139,250,0.1),rgba(167,139,250,0.03));border-color:rgba(167,139,250,0.3);">
+<div class="day-hero-icon">🏋️‍♀️</div>
+<div>
+<div class="day-hero-title">Tren Superior</div>
+<div class="day-hero-sub" style="color:#A78BFA">
+<span class="badge" style="background:rgba(167,139,250,0.15);color:#A78BFA">🪶 Cargas Leves</span>
+<span class="badge" style="background:rgba(255,184,48,0.15);color:#FFB830">⏱ Descanso máx 30 seg</span>
+</div>
+</div>
+</div>
 
-  <div class="prog-wrap">
-    <div class="prog-top"><span class="prog-title">Progreso del día</span><span class="prog-pct" id="pct-3">0%</span></div>
-    <div class="prog-bar"><div class="prog-fill" id="bar-3"></div></div>
-  </div>
+<div class="prog-wrap">
+<div class="prog-top"><span class="prog-title">Progreso del día</span><span class="prog-pct" id="pct-3">0%</span></div>
+<div class="prog-bar"><div class="prog-fill" id="bar-3"></div></div>
+</div>
 
-  <div class="sec-label">Espalda y Pecho</div>
+<div class="sec-label">Espalda y Pecho</div>
 
-  <div class="ex-card">
-    <div class="ex-header">
-      <div class="ex-num" style="background:rgba(167,139,250,0.15);color:#A78BFA">1</div>
-      <div class="ex-info"><div class="ex-name">Jalón Remo Sentada + Jalón por Delante Polea Alta</div><div class="ex-detail">3 series × 20 rep · Agarre abierto</div></div>
-      <div class="ex-right">
-        <div class="ex-sets"><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div></div>
-        <div class="ex-check"><svg width="13" height="11" viewBox="0 0 13 11" fill="none"><path d="M1.5 5.5L5 9L11.5 1.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      </div>
-    </div>
-  </div>
+<div class="ex-card">
+<div class="ex-header">
+<div class="ex-num" style="background:rgba(167,139,250,0.15);color:#A78BFA">1</div>
+<div class="ex-info"><div class="ex-name">Jalón Remo Sentada + Jalón por Delante Polea Alta</div><div class="ex-detail">3 series × 20 rep · Agarre abierto</div></div>
+<div class="ex-right">
+<div class="ex-sets"><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div></div>
+<div class="ex-check"><svg width="13" height="11" viewBox="0 0 13 11" fill="none"><path d="M1.5 5.5L5 9L11.5 1.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+</div>
+</div>
+</div>
 
-  <div class="ex-card">
-    <div class="ex-header">
-      <div class="ex-num" style="background:rgba(167,139,250,0.15);color:#A78BFA">2</div>
-      <div class="ex-info"><div class="ex-name">Cable Cruzado en Polea</div><div class="ex-detail">3 series × 20 rep</div></div>
-      <div class="ex-right">
-        <div class="ex-sets"><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div></div>
-        <div class="ex-check"><svg width="13" height="11" viewBox="0 0 13 11" fill="none"><path d="M1.5 5.5L5 9L11.5 1.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      </div>
-    </div>
-  </div>
+<div class="ex-card">
+<div class="ex-header">
+<div class="ex-num" style="background:rgba(167,139,250,0.15);color:#A78BFA">2</div>
+<div class="ex-info"><div class="ex-name">Cable Cruzado en Polea</div><div class="ex-detail">3 series × 20 rep</div></div>
+<div class="ex-right">
+<div class="ex-sets"><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div></div>
+<div class="ex-check"><svg width="13" height="11" viewBox="0 0 13 11" fill="none"><path d="M1.5 5.5L5 9L11.5 1.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+</div>
+</div>
+</div>
 
-  <div class="ex-card">
-    <div class="ex-header">
-      <div class="ex-num" style="background:rgba(167,139,250,0.15);color:#A78BFA">3</div>
-      <div class="ex-info"><div class="ex-name">Elevaciones Frontales Hombro con Mancuerna</div><div class="ex-detail">4 series × 10 rep</div></div>
-      <div class="ex-right">
-        <div class="ex-sets"><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div></div>
-        <div class="ex-check"><svg width="13" height="11" viewBox="0 0 13 11" fill="none"><path d="M1.5 5.5L5 9L11.5 1.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      </div>
-    </div>
-  </div>
+<div class="ex-card">
+<div class="ex-header">
+<div class="ex-num" style="background:rgba(167,139,250,0.15);color:#A78BFA">3</div>
+<div class="ex-info"><div class="ex-name">Elevaciones Frontales Hombro con Mancuerna</div><div class="ex-detail">4 series × 10 rep</div></div>
+<div class="ex-right">
+<div class="ex-sets"><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div></div>
+<div class="ex-check"><svg width="13" height="11" viewBox="0 0 13 11" fill="none"><path d="M1.5 5.5L5 9L11.5 1.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+</div>
+</div>
+</div>
 
-  <div class="ex-card">
-    <div class="ex-header">
-      <div class="ex-num" style="background:rgba(167,139,250,0.15);color:#A78BFA">4</div>
-      <div class="ex-info"><div class="ex-name">Press Francés + Patada de Mula</div><div class="ex-detail">4 series × 12 rep</div></div>
-      <div class="ex-right">
-        <div class="ex-sets"><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div></div>
-        <div class="ex-check"><svg width="13" height="11" viewBox="0 0 13 11" fill="none"><path d="M1.5 5.5L5 9L11.5 1.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      </div>
-    </div>
-  </div>
+<div class="ex-card">
+<div class="ex-header">
+<div class="ex-num" style="background:rgba(167,139,250,0.15);color:#A78BFA">4</div>
+<div class="ex-info"><div class="ex-name">Press Francés + Patada de Mula</div><div class="ex-detail">4 series × 12 rep</div></div>
+<div class="ex-right">
+<div class="ex-sets"><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div></div>
+<div class="ex-check"><svg width="13" height="11" viewBox="0 0 13 11" fill="none"><path d="M1.5 5.5L5 9L11.5 1.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+</div>
+</div>
+</div>
 
-  <div class="ex-card">
-    <div class="ex-header">
-      <div class="ex-num" style="background:rgba(167,139,250,0.15);color:#A78BFA">5</div>
-      <div class="ex-info"><div class="ex-name">21s con Barra Z — Bíceps</div><div class="ex-detail">3 series × 21 rep (7+7+7)</div></div>
-      <div class="ex-right">
-        <div class="ex-sets"><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div></div>
-        <div class="ex-check"><svg width="13" height="11" viewBox="0 0 13 11" fill="none"><path d="M1.5 5.5L5 9L11.5 1.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      </div>
-    </div>
-    <div class="ex-tip">⚡ 7 rep rango bajo · 7 rep rango alto · 7 rep rango completo</div>
-  </div>
+<div class="ex-card">
+<div class="ex-header">
+<div class="ex-num" style="background:rgba(167,139,250,0.15);color:#A78BFA">5</div>
+<div class="ex-info"><div class="ex-name">21s con Barra Z — Bíceps</div><div class="ex-detail">3 series × 21 rep (7+7+7)</div></div>
+<div class="ex-right">
+<div class="ex-sets"><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div></div>
+<div class="ex-check"><svg width="13" height="11" viewBox="0 0 13 11" fill="none"><path d="M1.5 5.5L5 9L11.5 1.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+</div>
+</div>
+<div class="ex-tip">⚡ 7 rep rango bajo · 7 rep rango alto · 7 rep rango completo</div>
+</div>
 
-  <div class="ex-card">
-    <div class="ex-header">
-      <div class="ex-num" style="background:rgba(167,139,250,0.15);color:#A78BFA">6</div>
-      <div class="ex-info"><div class="ex-name">Extensión Mancuerna Individual — Bíceps</div><div class="ex-detail">4 series × 10 rep</div></div>
-      <div class="ex-right">
-        <div class="ex-sets"><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div></div>
-        <div class="ex-check"><svg width="13" height="11" viewBox="0 0 13 11" fill="none"><path d="M1.5 5.5L5 9L11.5 1.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      </div>
-    </div>
-  </div>
+<div class="ex-card">
+<div class="ex-header">
+<div class="ex-num" style="background:rgba(167,139,250,0.15);color:#A78BFA">6</div>
+<div class="ex-info"><div class="ex-name">Extensión Mancuerna Individual — Bíceps</div><div class="ex-detail">4 series × 10 rep</div></div>
+<div class="ex-right">
+<div class="ex-sets"><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div></div>
+<div class="ex-check"><svg width="13" height="11" viewBox="0 0 13 11" fill="none"><path d="M1.5 5.5L5 9L11.5 1.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+</div>
+</div>
+</div>
 
-  <div class="sec-label">Abdomen</div>
-  <div class="ab-card">
-    <div class="ab-header" onclick="toggleAb(this)">
-      <span style="font-size:20px">🔥</span>
-      <div class="ab-title">Abdomen</div>
-      <div class="ab-arrow">▾</div>
-    </div>
-    <div class="ab-body">
-      <div class="ab-ex"><span>🧱</span> Planchas con 1 pie elevado — 4 × 2 min</div>
-      <div class="ab-ex"><span>🔄</span> Rodillo — 3 × 15</div>
-      <div class="ab-ex"><span>🏃</span> Climber cruzado — 2 minutos</div>
-      <div class="ab-ex"><span>💪</span> Crunch con pie cruzado sobre rodilla</div>
-      <div class="ab-ex"><span>⬆️</span> Elevación de pelvis — 30 rep</div>
-    </div>
-  </div>
+<div class="sec-label">Abdomen</div>
+<div class="ab-card">
+<div class="ab-header" onclick="toggleAb(this)">
+<span style="font-size:20px">🔥</span>
+<div class="ab-title">Abdomen</div>
+<div class="ab-sets"><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div><div class="set-dot" onclick="litSet(event,this)"></div></div>
+<div class="ab-check" onclick="toggleAbDone(event,this)"><svg width="13" height="11" viewBox="0 0 13 11" fill="none"><path d="M1.5 5.5L5 9L11.5 1.5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="ab-arrow">▾</div>
+</div>
+<div class="ab-body">
+<div class="ab-ex"><span>🧱</span> Planchas con 1 pie elevado — 4 × 2 min</div>
+<div class="ab-ex"><span>🔄</span> Rodillo — 3 × 15</div>
+<div class="ab-ex"><span>🏃</span> Climber cruzado — 2 minutos</div>
+<div class="ab-ex"><span>💪</span> Crunch con pie cruzado sobre rodilla</div>
+<div class="ab-ex"><span>⬆️</span> Elevación de pelvis — 30 rep</div>
+</div>
+</div>
 
-  <div class="cardio-card">
-    <div class="cardio-icon">🏃‍♀️</div>
-    <div><div class="cardio-title">Cardio Final</div><div class="cardio-detail">Intensidad moderada · 130–150 PPM<br>Escalas / Banda / Elíptica</div></div>
-    <div class="cardio-timer"><div class="cardio-min">30</div><div class="cardio-lbl">minutos</div></div>
-  </div>
+<div class="cardio-card">
+<div class="cardio-icon">🏃‍♀️</div>
+<div><div class="cardio-title">Cardio Final</div><div class="cardio-detail">Intensidad moderada · 130–150 PPM<br>Escalas / Banda / Elíptica</div></div>
+<div class="cardio-timer"><div class="cardio-min">30</div><div class="cardio-lbl">minutos</div></div>
+</div>
 </div>
 
 <!-- ══════════ DÍA 5 ══════════ -->
 <div class="day-panel" id="day-4">
-  <div class="day-hero" style="background:linear-gradient(135deg,rgba(255,107,107,0.1),rgba(255,107,107,0.03));border-color:rgba(255,107,107,0.3);">
-    <div class="day-hero-icon">🔥</div>
-    <div>
-      <div class="day-hero-title">Pierna + Glúteo</div>
-      <div class="day-hero-sub" style="color:#FF6B6B">
-        <span class="badge" style="background:rgba(255,107,107,0.15);color:#FF6B6B">⚡ Cargas Forzadas</span>
-        <span class="badge" style="background:rgba(255,107,107,0.2);color:#FF6B6B">💀 5 Series GIGANTES</span>
-        <span class="badge" style="background:rgba(255,184,48,0.15);color:#FFB830">⏱ Descanso 5 min</span>
-      </div>
-    </div>
-  </div>
+<div class="day-hero" style="background:linear-gradient(135deg,rgba(255,107,107,0.1),rgba(255,107,107,0.03));border-color:rgba(255,107,107,0.3);">
+<div class="day-hero-icon">🔥</div>
+<div>
+<div class="day-hero-title">Pierna + Glúteo</div>
+<div class="day-hero-sub" style="color:#FF6B6B">
+<span class="badge" style="background:rgba(255,107,107,0.15);color:#FF6B6B">⚡ Cargas Forzadas</span>
+<span class="badge" style="background:rgba(255,107,107,0.2);color:#FF6B6B">💀 5 Series GIGANTES</span>
+<span class="badge" style="background:rgba(255,184,48,0.15);color:#FFB830">⏱ Descanso 5 min</span>
+</div>
+</div>
+</div>
 
-  <div class="rules-grid">
-    <div class="rule-box" style="border-color:rgba(255,107,107,0.3)"><div class="rule-label">Formato</div><div class="rule-val" style="color:#FF6B6B">Series Gigantes</div><div class="rule-sub">Todos los ejercicios seguidos</div></div>
-    <div class="rule-box" style="border-color:rgba(255,107,107,0.3)"><div class="rule-label">Descanso</div><div class="rule-val" style="color:#FF6B6B">5 minutos</div><div class="rule-sub">Entre cada serie gigante</div></div>
-  </div>
+<div class="rules-grid">
+<div class="rule-box" style="border-color:rgba(255,107,107,0.3)"><div class="rule-label">Formato</div><div class="rule-val" style="color:#FF6B6B">Series Gigantes</div><div class="rule-sub">Todos los ejercicios seguidos</div></div>
+<div class="rule-box" style="border-color:rgba(255,107,107,0.3)"><div class="rule-label">Descanso</div><div class="rule-val" style="color:#FF6B6B">5 minutos</div><div class="rule-sub">Entre cada serie gigante</div></div>
+</div>
 
-  <div class="prog-wrap">
-    <div class="prog-top"><span class="prog-title">Progreso del día</span><span class="prog-pct" id="pct-4">0%</span></div>
-    <div class="prog-bar"><div class="prog-fill" id="bar-4"></div></div>
-  </div>
+<div class="prog-wrap">
+<div class="prog-top"><span class="prog-title">Progreso del día</span><span class="prog-pct" id="pct-4">0%</span></div>
+<div class="prog-bar"><div class="prog-fill" id="bar-4"></div></div>
+</div>
 
-  <div class="sec-label">5 Series Gigantes — sin descanso entre ejercicios</div>
+<div class="sec-label">5 Series Gigantes — sin descanso entre ejercicios</div>
 
-  <div class="giant-card open">
-    <div class="giant-header" onclick="toggleGiant(this)">
-      <div class="giant-badge">SERIE GIGANTE × 5</div>
-      <div>
-        <div class="giant-title">8 Ejercicios · Sin Parar</div>
-        <div class="giant-note">Descansa 5 minutos entre cada ronda completa</div>
-      </div>
-      <div class="giant-arrow">▾</div>
-    </div>
-    <div class="giant-body">
-      <div class="giant-ex"><div class="giant-ex-num">1</div><div class="giant-ex-text">Avanzadas bajando — 2 veces 10 pasos</div><div class="giant-ex-reps">2×10p</div></div>
-      <div class="giant-ex"><div class="giant-ex-num">2</div><div class="giant-ex-text">Puntas en Press de Piernas — talones hacia dentro</div><div class="giant-ex-reps">4×18</div></div>
-      <div class="giant-ex"><div class="giant-ex-num">3</div><div class="giant-ex-text">Press de Piernas Aperturas para Glúteos — baja en 5 segundos</div><div class="giant-ex-reps">4×12</div></div>
-      <div class="giant-ex"><div class="giant-ex-num">4</div><div class="giant-ex-text">Hip Thrusters con Barra para Glúteo en banco con peso</div><div class="giant-ex-reps">4×18</div></div>
-      <div class="giant-ex"><div class="giant-ex-num">5</div><div class="giant-ex-text">Hiperextensión de Glúteo</div><div class="giant-ex-reps">4×15</div></div>
-      <div class="giant-ex"><div class="giant-ex-num">6</div><div class="giant-ex-text">Peso Muerto Rumano para Femoral con Barra</div><div class="giant-ex-reps">4×12</div></div>
-      <div class="giant-ex"><div class="giant-ex-num">7</div><div class="giant-ex-text">Extensiones de Pierna Sentada</div><div class="giant-ex-reps">4×18</div></div>
-      <div class="giant-ex"><div class="giant-ex-num">8</div><div class="giant-ex-text">Sentadilla Profunda en Smith — pies juntos</div><div class="giant-ex-reps">4×18</div></div>
-    </div>
-  </div>
+<div class="giant-card open">
+<div class="giant-header" onclick="toggleGiant(this)">
+<div class="giant-badge">SERIE GIGANTE × 5</div>
+<div>
+<div class="giant-title">8 Ejercicios · Sin Parar</div>
+<div class="giant-note">Descansa 5 minutos entre cada ronda completa</div>
+</div>
+<div class="giant-arrow">▾</div>
+</div>
+<div class="giant-body">
+<div class="giant-ex"><div class="giant-ex-num">1</div><div class="giant-ex-text">Avanzadas bajando — 2 veces 10 pasos</div><div class="giant-ex-reps">2×10p</div></div>
+<div class="giant-ex"><div class="giant-ex-num">2</div><div class="giant-ex-text">Puntas en Press de Piernas — talones hacia dentro</div><div class="giant-ex-reps">4×18</div></div>
+<div class="giant-ex"><div class="giant-ex-num">3</div><div class="giant-ex-text">Press de Piernas Aperturas para Glúteos — baja en 5 segundos</div><div class="giant-ex-reps">4×12</div></div>
+<div class="giant-ex"><div class="giant-ex-num">4</div><div class="giant-ex-text">Hip Thrusters con Barra para Glúteo en banco con peso</div><div class="giant-ex-reps">4×18</div></div>
+<div class="giant-ex"><div class="giant-ex-num">5</div><div class="giant-ex-text">Hiperextensión de Glúteo</div><div class="giant-ex-reps">4×15</div></div>
+<div class="giant-ex"><div class="giant-ex-num">6</div><div class="giant-ex-text">Peso Muerto Rumano para Femoral con Barra</div><div class="giant-ex-reps">4×12</div></div>
+<div class="giant-ex"><div class="giant-ex-num">7</div><div class="giant-ex-text">Extensiones de Pierna Sentada</div><div class="giant-ex-reps">4×18</div></div>
+<div class="giant-ex"><div class="giant-ex-num">8</div><div class="giant-ex-text">Sentadilla Profunda en Smith — pies juntos</div><div class="giant-ex-reps">4×18</div></div>
+</div>
+</div>
 
-  <div style="background:rgba(255,107,107,0.06);border:1px solid rgba(255,107,107,0.2);border-radius:12px;padding:11px 13px;margin-bottom:9px;font-size:12px;color:#FF6B6B;display:flex;gap:8px;line-height:1.5;">
-    <span style="font-size:18px;flex-shrink:0">🔥</span>
-    <span><strong>Recuerda:</strong> En series gigantes el descanso entre ejercicios es cero. Descansas 5 minutos solo al terminar la ronda completa de los 8 ejercicios. Exígete al máximo.</span>
-  </div>
+<div class="giant-counter" id="giantCounter">
+<div class="giant-counter-title">💥 Rondas completadas — toca cada una al terminar</div>
+<div class="giant-series-row">
+<button class="giant-serie-btn" onclick="markSerie(this,4)" id="gs-0">
+<div class="giant-serie-icon">1</div>
+<div class="giant-serie-lbl">Ronda 1</div>
+</button>
+<button class="giant-serie-btn" onclick="markSerie(this,4)" id="gs-1">
+<div class="giant-serie-icon">2</div>
+<div class="giant-serie-lbl">Ronda 2</div>
+</button>
+<button class="giant-serie-btn" onclick="markSerie(this,4)" id="gs-2">
+<div class="giant-serie-icon">3</div>
+<div class="giant-serie-lbl">Ronda 3</div>
+</button>
+<button class="giant-serie-btn" onclick="markSerie(this,4)" id="gs-3">
+<div class="giant-serie-icon">4</div>
+<div class="giant-serie-lbl">Ronda 4</div>
+</button>
+<button class="giant-serie-btn" onclick="markSerie(this,4)" id="gs-4">
+<div class="giant-serie-icon">5</div>
+<div class="giant-serie-lbl">Ronda 5</div>
+</button>
+</div>
+<div class="giant-counter-prog"><div class="giant-counter-fill" id="gcFill"></div></div>
+<div class="giant-counter-sub" id="gcSub">0 de 5 rondas completadas</div>
+</div>
 
-  <div class="cardio-card">
-    <div class="cardio-icon">🏃‍♀️</div>
-    <div><div class="cardio-title">Cardio Final</div><div class="cardio-detail">Intensidad moderada · 130–150 PPM<br>Escalas / Banda / Elíptica</div></div>
-    <div class="cardio-timer"><div class="cardio-min">30</div><div class="cardio-lbl">minutos</div></div>
-  </div>
+<div style="background:rgba(255,107,107,0.06);border:1px solid rgba(255,107,107,0.2);border-radius:12px;padding:11px 13px;margin-bottom:9px;font-size:12px;color:#FF6B6B;display:flex;gap:8px;line-height:1.5;">
+<span style="font-size:18px;flex-shrink:0">🔥</span>
+<span><strong>Recuerda:</strong> En series gigantes el descanso entre ejercicios es cero. Descansas 5 minutos solo al terminar la ronda completa de los 8 ejercicios. Exígete al máximo.</span>
+</div>
+
+<div class="cardio-card">
+<div class="cardio-icon">🏃‍♀️</div>
+<div><div class="cardio-title">Cardio Final</div><div class="cardio-detail">Intensidad moderada · 130–150 PPM<br>Escalas / Banda / Elíptica</div></div>
+<div class="cardio-timer"><div class="cardio-min">30</div><div class="cardio-lbl">minutos</div></div>
+</div>
 </div>
 
 </main>
@@ -883,115 +1005,206 @@ body { font-family: 'Nunito', sans-serif; background: var(--bg); color: var(--te
 <script>
 // Fix sticky nav top dynamically
 function fixStickyNav() {
-  var h = document.querySelector('.header').offsetHeight;
-  document.querySelector('.day-nav').style.top = h + 'px';
+var h = document.querySelector('.header').offsetHeight;
+document.querySelector('.day-nav').style.top = h + 'px';
 }
 fixStickyNav();
 window.addEventListener('resize', fixStickyNav);
 
 function showDay(idx) {
-  document.querySelectorAll('.day-panel').forEach(function(p){ p.classList.remove('active'); });
-  document.querySelectorAll('.day-btn').forEach(function(b){ b.classList.remove('active'); });
-  document.querySelectorAll('.week-pill').forEach(function(p,i){ i===idx ? p.classList.add('active') : p.classList.remove('active'); });
-  document.getElementById('day-'+idx).classList.add('active');
-  document.getElementById('btn-'+idx).classList.add('active');
+document.querySelectorAll('.day-panel').forEach(function(p){ p.classList.remove('active'); });
+document.querySelectorAll('.day-btn').forEach(function(b){ b.classList.remove('active'); });
+document.querySelectorAll('.week-pill').forEach(function(p,i){ i===idx ? p.classList.add('active') : p.classList.remove('active'); });
+document.getElementById('day-'+idx).classList.add('active');
+document.getElementById('btn-'+idx).classList.add('active');
 
-  // Scroll descontando header + day-nav
-  var headerH = document.querySelector('.header').offsetHeight;
-  var navH = document.querySelector('.day-nav').offsetHeight;
-  var mainTop = document.querySelector('.main').getBoundingClientRect().top + window.scrollY;
-  window.scrollTo({ top: mainTop - headerH - navH - 8, behavior: 'smooth' });
+// Scroll descontando header + day-nav
+var headerH = document.querySelector('.header').offsetHeight;
+var navH = document.querySelector('.day-nav').offsetHeight;
+var mainTop = document.querySelector('.main').getBoundingClientRect().top + window.scrollY;
+window.scrollTo({ top: mainTop - headerH - navH - 8, behavior: 'smooth' });
 
-  updateFab(idx);
+updateFab(idx);
 }
 
 // Attach click to each ex-card
 document.querySelectorAll('.ex-card').forEach(function(card) {
-  card.addEventListener('click', function(ev) {
-    if (ev.target.closest('.set-dot') || ev.target.closest('.ex-check')) return;
-    toggleCard(card);
-  });
-  var chk = card.querySelector('.ex-check');
-  if (chk) {
-    chk.addEventListener('click', function(ev) {
-      ev.stopPropagation();
-      toggleCard(card);
-    });
-  }
+card.addEventListener('click', function(ev) {
+if (ev.target.closest('.set-dot') || ev.target.closest('.ex-check')) return;
+toggleCard(card);
+});
+var chk = card.querySelector('.ex-check');
+if (chk) {
+chk.addEventListener('click', function(ev) {
+ev.stopPropagation();
+toggleCard(card);
+});
+}
 });
 
 function toggleCard(card) {
-  var wasDone = card.classList.contains('done');
-  card.classList.toggle('done');
-  var dots = Array.from(card.querySelectorAll('.set-dot'));
-  if (!wasDone) {
-    dots.forEach(function(d) { d.classList.add('lit'); });
-  } else {
-    dots.forEach(function(d) { d.classList.remove('lit'); });
-  }
-  var panel = card.closest('.day-panel');
-  var idx = Array.from(document.querySelectorAll('.day-panel')).indexOf(panel);
-  updateProgress(idx);
+var wasDone = card.classList.contains('done');
+card.classList.toggle('done');
+var dots = Array.from(card.querySelectorAll('.set-dot'));
+if (!wasDone) {
+dots.forEach(function(d) { d.classList.add('lit'); });
+} else {
+dots.forEach(function(d) { d.classList.remove('lit'); });
+}
+var panel = card.closest('.day-panel');
+var idx = Array.from(document.querySelectorAll('.day-panel')).indexOf(panel);
+updateProgress(idx);
 }
 
 function litSet(e, dot) {
-  e.stopPropagation();
-  var container = dot.parentElement;
-  var dots = Array.from(container.children);
-  var idx = dots.indexOf(dot);
-  var litCount = dots.filter(function(d){ return d.classList.contains('lit'); }).length;
-  if (dot.classList.contains('lit') && litCount === idx + 1) {
-    dot.classList.remove('lit');
-  } else {
-    dots.forEach(function(d, i){ i <= idx ? d.classList.add('lit') : d.classList.remove('lit'); });
-  }
-  var card = dot.closest('.ex-card');
-  if (card) {
-    var allLit = dots.every(function(d){ return d.classList.contains('lit'); });
-    if (allLit && !card.classList.contains('done')) {
-      card.classList.add('done');
-      var panel = card.closest('.day-panel');
-      var dayIdx = Array.from(document.querySelectorAll('.day-panel')).indexOf(panel);
-      updateProgress(dayIdx);
-    }
-  }
+e.stopPropagation();
+var container = dot.parentElement;
+var dots = Array.from(container.children);
+var idx = dots.indexOf(dot);
+var litCount = dots.filter(function(d){ return d.classList.contains('lit'); }).length;
+if (dot.classList.contains('lit') && litCount === idx + 1) {
+dot.classList.remove('lit');
+} else {
+dots.forEach(function(d, i){ i <= idx ? d.classList.add('lit') : d.classList.remove('lit'); });
+}
+var allLit = dots.every(function(d){ return d.classList.contains('lit'); });
+var panel = null;
+var dayIdx = -1;
+// ex-card
+var card = dot.closest('.ex-card');
+if (card) {
+if (allLit && !card.classList.contains('done')) { card.classList.add('done'); }
+else if (!allLit) { card.classList.remove('done'); }
+panel = card.closest('.day-panel');
+dayIdx = Array.from(document.querySelectorAll('.day-panel')).indexOf(panel);
+updateProgress(dayIdx);
+return;
+}
+// tri-card
+var tri = dot.closest('.tri-card');
+if (tri) {
+tri.classList.toggle('done-tri', allLit);
+panel = tri.closest('.day-panel');
+dayIdx = Array.from(document.querySelectorAll('.day-panel')).indexOf(panel);
+updateProgress(dayIdx);
+return;
+}
+// ab-card
+var ab = dot.closest('.ab-card');
+if (ab) {
+ab.classList.toggle('done-ab', allLit);
+panel = ab.closest('.day-panel');
+dayIdx = Array.from(document.querySelectorAll('.day-panel')).indexOf(panel);
+updateProgress(dayIdx);
+return;
+}
 }
 
 function updateProgress(dayIdx) {
-  var panel = document.getElementById('day-'+dayIdx);
-  if (!panel) return;
-  var total = panel.querySelectorAll('.ex-card').length;
-  if (total === 0) total = 1;
-  var done = panel.querySelectorAll('.ex-card.done').length;
-  var pct = total > 0 ? Math.round((done/total)*100) : 0;
-  var bar = document.getElementById('bar-'+dayIdx);
-  var pctEl = document.getElementById('pct-'+dayIdx);
-  if (bar) bar.style.width = pct+'%';
-  if (pctEl) pctEl.textContent = pct+'%';
+var panel = document.getElementById('day-'+dayIdx);
+if (!panel) return;
+var exTotal = panel.querySelectorAll('.ex-card').length;
+var triTotal = panel.querySelectorAll('.tri-card').length;
+var abTotal = panel.querySelectorAll('.ab-card').length;
+// Day 5: giant counter counts as 5 units
+var giantTotal = (dayIdx === 4) ? 5 : 0;
+var total = exTotal + triTotal + abTotal + giantTotal;
+if (total === 0) total = 1;
+var exDone = panel.querySelectorAll('.ex-card.done').length;
+var triDone = panel.querySelectorAll('.tri-card.done-tri').length;
+var abDone = panel.querySelectorAll('.ab-card.done-ab').length;
+var giantDone = (dayIdx === 4) ? document.querySelectorAll('.giant-serie-btn.done-serie').length : 0;
+var done = exDone + triDone + abDone + giantDone;
+var pct = Math.round((done/total)*100);
+var bar = document.getElementById('bar-'+dayIdx);
+var pctEl = document.getElementById('pct-'+dayIdx);
+if (bar) bar.style.width = pct+'%';
+if (pctEl) pctEl.textContent = pct+'%';
 }
 
 function toggleTri(header) { header.closest('.tri-card').classList.toggle('open'); }
-function toggleAb(header)  { header.closest('.ab-card').classList.toggle('open'); }
+
+function toggleTriDone(e, btn) {
+e.stopPropagation();
+var card = btn.closest('.tri-card');
+var isDone = card.classList.contains('done-tri');
+var dots = Array.from(card.querySelectorAll('.set-dot'));
+if (!isDone) {
+  card.classList.add('done-tri');
+  dots.forEach(function(d){ d.classList.add('lit'); });
+} else {
+  card.classList.remove('done-tri');
+  dots.forEach(function(d){ d.classList.remove('lit'); });
+}
+var panel = card.closest('.day-panel');
+var idx = Array.from(document.querySelectorAll('.day-panel')).indexOf(panel);
+updateProgress(idx);
+}
+
+function toggleAbDone(e, btn) {
+e.stopPropagation();
+var card = btn.closest('.ab-card');
+var isDone = card.classList.contains('done-ab');
+var dots = Array.from(card.querySelectorAll('.set-dot'));
+if (!isDone) {
+  card.classList.add('done-ab');
+  dots.forEach(function(d){ d.classList.add('lit'); });
+} else {
+  card.classList.remove('done-ab');
+  dots.forEach(function(d){ d.classList.remove('lit'); });
+}
+var panel = card.closest('.day-panel');
+var idx = Array.from(document.querySelectorAll('.day-panel')).indexOf(panel);
+updateProgress(idx);
+}
+function checkTri(e) {
+e.stopPropagation();
+var card = e.target.closest('.tri-card');
+if (!card) return;
+var dots = card.querySelectorAll('.set-dot');
+var allLit = Array.from(dots).every(function(d){ return d.classList.contains('lit'); });
+card.classList.toggle('done-tri', allLit);
+var panel = card.closest('.day-panel');
+var idx = Array.from(document.querySelectorAll('.day-panel')).indexOf(panel);
+updateProgress(idx);
+}
+function toggleAb(header) { header.closest('.ab-card').classList.toggle('open'); }
 function toggleGiant(header) { header.closest('.giant-card').classList.toggle('open'); }
 
+function markSerie(btn, dayIdx) {
+var isDone = btn.classList.contains('done-serie');
+if (!isDone) {
+  btn.classList.add('done-serie');
+  btn.querySelector('.giant-serie-icon').textContent = '✓';
+} else {
+  btn.classList.remove('done-serie');
+  var num = parseInt(btn.id.replace('gs-',''));
+  btn.querySelector('.giant-serie-icon').textContent = num + 1;
+}
+var done = document.querySelectorAll('.giant-serie-btn.done-serie').length;
+document.getElementById('gcFill').style.width = Math.round((done/5)*100)+'%';
+document.getElementById('gcSub').textContent = done + ' de 5 rondas completadas';
+updateProgress(dayIdx);
+}
+
 function fabAction() {
-  var active = document.querySelector('.day-panel.active');
-  var cards = active.querySelectorAll('.ex-card:not(.done)');
-  if (cards.length > 0) {
-    var card = cards[0];
-    card.classList.add('done');
-    card.querySelectorAll('.set-dot').forEach(function(d){ d.classList.add('lit'); });
-    var idx = Array.from(document.querySelectorAll('.day-panel')).indexOf(active);
-    updateProgress(idx);
-    card.scrollIntoView({behavior:'smooth', block:'center'});
-  }
+var active = document.querySelector('.day-panel.active');
+var cards = active.querySelectorAll('.ex-card:not(.done)');
+if (cards.length > 0) {
+var card = cards[0];
+card.classList.add('done');
+card.querySelectorAll('.set-dot').forEach(function(d){ d.classList.add('lit'); });
+var idx = Array.from(document.querySelectorAll('.day-panel')).indexOf(active);
+updateProgress(idx);
+card.scrollIntoView({behavior:'smooth', block:'center'});
+}
 }
 
 function updateFab(idx) {
-  var panel = document.getElementById('day-'+idx);
-  document.getElementById('fabBtn').style.display =
-    (panel && panel.querySelectorAll('.ex-card').length === 0) ? 'none' : 'flex';
+var panel = document.getElementById('day-'+idx);
+document.getElementById('fabBtn').style.display =
+(panel && panel.querySelectorAll('.ex-card').length === 0) ? 'none' : 'flex';
 }
 </script>
 </body>
-</html>
+                                                                                    </html>
