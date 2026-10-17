@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recetas de Vegetales — Darly Vargas</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:          #FEFBF0;
+  --card:        #FFFFFF;
+  --border:      #EDE4BF;
+  --border2:     #F5ECC8;
+  --gold:        #C49A00;
+  --gold-mid:    #E8B800;
+  --gold-pale:   #FFFCE8;
+  --sage:        #5A8A6A;
+  --sage-light:  #D4EAD8;
+  --sage-pale:   #F0F8F2;
+  --rose:        #D4607A;
+  --rose-pale:   #FDEEF2;
+  --sky:         #4A8FA8;
+  --sky-pale:    #E8F4F8;
+  --peach:       #D4825A;
+  --peach-pale:  #FDF0E8;
+  --violet:      #7A6AB8;
+  --violet-pale: #F0EEFF;
+  --amber:       #7C5A1E;
+  --amber-light: #FEF3D6;
+  --text:        #2C2410;
+  --text2:       #6B5A30;
+  --text3:       #A0906A;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body { font-family: 'Nunito', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; padding-bottom: 40px; }
+
+/* ── HEADER ── */
+.app-header {
+  background: linear-gradient(135deg, #C49A00 0%, #A07800 100%);
+  padding: 20px 18px 18px;
+  box-shadow: 0 4px 20px rgba(196,154,0,0.25);
+  position: sticky; top: 0; z-index: 100;
+}
+.header-top {
+  display: flex; justify-content: space-between;
+  align-items: flex-start; gap: 12px;
+  max-width: 720px; margin: 0 auto;
+}
+.app-header h1 { font-size: 20px; font-weight: 800; color: white; line-height: 1.2; }
+.app-header p  { font-size: 12px; color: rgba(255,255,255,0.8); margin-top: 3px; }
+.btn-back {
+  display: inline-flex; align-items: center; gap: 5px;
+  color: rgba(255,255,255,0.92); text-decoration: none;
+  font-size: 12px; font-weight: 700;
+  padding: 6px 12px; border-radius: 10px;
+  background: rgba(255,255,255,0.18);
+  border: 1.5px solid rgba(255,255,255,0.3);
+  transition: background 0.2s; white-space: nowrap; flex-shrink: 0;
+}
+.btn-back:hover { background: rgba(255,255,255,0.28); }
+
+/* ── FILTER CHIPS ── */
+.filter-bar {
+  background: var(--card); border-bottom: 1.5px solid var(--border);
+  padding: 12px 16px; position: sticky; top: 72px; z-index: 99;
+}
+.chips-wrap { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; max-width: 720px; margin: 0 auto; }
+.chips-wrap::-webkit-scrollbar { display: none; }
+.chip {
+  flex-shrink: 0; border: 1.5px solid var(--border);
+  background: white; color: var(--text2);
+  font-family: 'Nunito', sans-serif;
+  font-size: 13px; font-weight: 700;
+  padding: 7px 16px; border-radius: 99px;
+  cursor: pointer; transition: all 0.15s;
+}
+.chip:hover { border-color: var(--gold-mid); color: var(--gold); background: var(--gold-pale); }
+.chip.active { background: var(--gold-mid); border-color: var(--gold-mid); color: white; }
+
+/* ── WRAP ── */
+.wrap { max-width: 720px; margin: 0 auto; padding: 16px 14px 0; }
+
+/* ── RULE BOX ── */
+.rule-box {
+  background: var(--sage-pale); border: 1.5px solid var(--sage-light);
+  border-radius: 16px; padding: 13px 15px;
+  font-size: 13px; color: var(--sage); line-height: 1.6;
+  display: flex; gap: 10px; margin-bottom: 16px;
+}
+.rule-box strong { font-weight: 800; }
+
+/* ── RECIPE CARD ── */
+.rec {
+  background: var(--card); border: 1.5px solid var(--border2);
+  border-radius: 18px; margin-bottom: 10px; overflow: hidden;
+  box-shadow: 0 2px 8px rgba(196,154,0,0.05);
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+.rec.open { border-color: var(--gold-mid); box-shadow: 0 6px 22px rgba(196,154,0,0.13); }
+
+.rec-head {
+  width: 100%; display: flex; align-items: center; gap: 12px;
+  padding: 14px 14px; background: none; border: none;
+  text-align: left; font-family: 'Nunito', sans-serif;
+  cursor: pointer; color: inherit;
+}
+.rec-icon {
+  width: 48px; height: 48px; border-radius: 14px;
+  background: var(--gold-pale); border: 1.5px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 24px; flex-shrink: 0;
+}
+.rec-meta { flex: 1; min-width: 0; }
+.rec-name { font-size: 15px; font-weight: 800; color: var(--text); line-height: 1.2; }
+.rec-tag {
+  display: inline-block; margin-top: 4px;
+  font-size: 10.5px; font-weight: 800;
+  padding: 2px 9px; border-radius: 99px;
+}
+.tag-bebida { background: var(--sage-pale); color: var(--sage); }
+.tag-plato  { background: var(--gold-pale); color: var(--gold); }
+.tag-acomp  { background: var(--peach-pale); color: var(--peach); }
+
+.rec-arrow { font-size: 18px; color: var(--text3); transition: transform 0.25s; }
+.rec.open .rec-arrow { transform: rotate(180deg); color: var(--gold-mid); }
+
+.rec-body { max-height: 0; overflow: hidden; transition: max-height 0.38s ease; }
+.rec.open .rec-body { max-height: 1000px; }
+.rec-inner { padding: 0 16px 18px; }
+
+.rec-lead { font-size: 13px; color: var(--text3); margin-bottom: 12px; line-height: 1.5; }
+
+/* ── INGREDIENTS & STEPS ── */
+.sub {
+  font-size: 10.5px; font-weight: 800;
+  color: var(--gold); letter-spacing: 0.06em;
+  text-transform: uppercase; margin: 12px 0 7px;
+}
+.ing { list-style: none; }
+.ing li {
+  font-size: 13.5px; padding: 6px 0 6px 22px;
+  position: relative; border-bottom: 1px dashed var(--border2);
+  color: var(--text2);
+}
+.ing li:last-child { border-bottom: none; }
+.ing li::before {
+  content: '';  position: absolute; left: 4px; top: 14px;
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--gold-mid);
+}
+.steps { list-style: none; counter-reset: s; }
+.steps li {
+  counter-increment: s; font-size: 13.5px; color: var(--text2);
+  padding: 7px 0 7px 36px; position: relative; line-height: 1.5;
+}
+.steps li::before {
+  content: counter(s); position: absolute; left: 0; top: 7px;
+  width: 24px; height: 24px; border-radius: 50%;
+  background: var(--gold-mid); color: white;
+  font-size: 11px; font-weight: 800;
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* ── TIP ── */
+.tip {
+  margin-top: 12px; background: var(--amber-light);
+  border: 1px solid #F0DDB0; border-radius: 12px;
+  padding: 10px 12px; font-size: 12.5px; color: var(--amber);
+  display: flex; gap: 8px; line-height: 1.5;
+}
+
+/* ── VEGETALES ZERO SECTION ── */
+.libres {
+  margin-top: 20px; background: var(--card);
+  border: 1.5px solid var(--border2); border-radius: 18px; padding: 16px;
+  box-shadow: 0 2px 8px rgba(196,154,0,0.05);
+}
+.libres h2 { font-size: 15px; font-weight: 800; color: var(--sage); margin-bottom: 3px; }
+.libres p  { font-size: 12.5px; color: var(--text3); margin-bottom: 10px; line-height: 1.5; }
+.pills { display: flex; flex-wrap: wrap; gap: 6px; }
+.pill {
+  background: var(--sage-pale); color: var(--sage);
+  font-size: 12px; font-weight: 700;
+  padding: 4px 11px; border-radius: 99px;
+  border: 1px solid var(--sage-light);
+}
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+@media print { .btn-back, .filter-bar { display: none; } }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="app-header">
+  <div class="header-top">
+    <div>
+      <h1>🥗 Recetas de Vegetales</h1>
+      <p>Darly Yessenia Vargas Moreno · Plan Camilo Roa</p>
+    </div>
+    <a href="index.html" class="btn-back">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="19" y1="12" x2="5" y2="12"></line>
+        <polyline points="12 19 5 12 12 5"></polyline>
+      </svg>
+      Volver
+    </a>
+  </div>
+</header>
+
+<!-- FILTER CHIPS -->
+<div class="filter-bar">
+  <div class="chips-wrap" role="tablist" aria-label="Filtrar recetas">
+    <button class="chip active" data-f="todas"  onclick="filtrar('todas',this)">Todas</button>
+    <button class="chip"        data-f="bebida" onclick="filtrar('bebida',this)">🥤 Bebidas</button>
+    <button class="chip"        data-f="plato"  onclick="filtrar('plato',this)">🍽️ Platos</button>
+    <button class="chip"        data-f="acomp"  onclick="filtrar('acomp',this)">🥗 Acompañantes</button>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <!-- RULE BOX -->
+  <div class="rule-box">
+    <span style="font-size:18px;flex-shrink:0">💡</span>
+    <span>Los vegetales del grupo <strong>"Zero"</strong> son de libre consumo: dan saciedad, vitaminas y fibra. Úsalos <strong>dentro de tus comidas</strong>, no fuera de ellas. La proteína de cada receta es la que ya tienes en el menú, en la misma cantidad.</span>
+  </div>
+
+  <!-- RECIPE LIST (rendered by JS) -->
+  <div id="lista"></div>
+
+  <!-- VEGETALES ZERO -->
+  <section class="libres">
+    <h2>🥬 Vegetales de libre consumo — Zero</h2>
+    <p>Todos los puedes usar en tus recetas sin pesarlos.</p>
+    <div class="pills">
+      <span class="pill">Acelgas</span>
+      <span class="pill">Alcachofa</span>
+      <span class="pill">Apio</span>
+      <span class="pill">Brócoli</span>
+      <span class="pill">Calabacín</span>
+      <span class="pill">Cebolla cabezona</span>
+      <span class="pill">Cebolla larga</span>
+      <span class="pill">Pepino cohombro</span>
+      <span class="pill">Coles</span>
+      <span class="pill">Coliflor</span>
+      <span class="pill">Champiñones</span>
+      <span class="pill">Chiles</span>
+      <span class="pill">Encurtidos</span>
+      <span class="pill">Espárragos</span>
+      <span class="pill">Espinacas</span>
+      <span class="pill">Lechuga</span>
+      <span class="pill">Palmito</span>
+      <span class="pill">Pepino relleno</span>
+      <span class="pill">Pimentón</span>
+      <span class="pill">Raíces chinas</span>
+      <span class="pill">Repollo</span>
+      <span class="pill">Tomate</span>
+      <span class="pill">Puerro</span>
+    </div>
+  </section>
+
+</main>
+
+<script>
+var RECETAS = [
+  {
+    n: 'Jugo Verde', i: '🥒', t: 'bebida',
+    lead: 'Va en tus comidas como bebida libre. Jamás con fruta.',
+    ing: [
+      'Pepino sin semillas ni cáscara',
+      'Apio y espinaca (opcionales)',
+      'Hielo',
+      'Clight, Lightya o solo limón al gusto'
+    ],
+    pasos: [
+      'Licúa los vegetales con hielo y el sabor que elijas. <strong>No lo cueles</strong> — la fibra genera saciedad.',
+      '<strong>Variante clásica:</strong> Apio + pepino + espinaca con Clight de limonada o solo limón.',
+      '<strong>Variante tropical:</strong> Apio + pepino con Lightya de granadilla.',
+      '<strong>Variante simple:</strong> Solo pepino + hielo + Clight de piña, limonada, manzana verde o frutas tropicales.'
+    ],
+    tip: 'Si en una comida quieres más saciedad, este jugo es tu mejor aliado. Nunca le agregues fruta.'
+  },
+  {
+    n: 'Cremas o Sopas', i: '🍅', t: 'plato',
+    lead: 'Crema de tomate — y también de espinacas, brócoli, cebolla, champiñones o calabacín.',
+    ing: [
+      '5 – 6 tomates maduros',
+      'Un poquito de cebolla',
+      'Sal y orégano al gusto',
+      '1 cdita de mantequilla en spray Taeq',
+      '1 cda de salsa de tomate Konfyt'
+    ],
+    pasos: [
+      'Pon a hervir los tomates maduros hasta que estén blandos.',
+      'Licúalos con la cebolla, la sal y el orégano.',
+      'Agrega la mantequilla en spray y la salsa Konfyt. Ajusta sal al gusto.'
+    ],
+    tip: 'Puedes asar tu proteína del menú (pollo o carne) y ponerla dentro de la crema si no la quieres comer aparte.'
+  },
+  {
+    n: 'Salteados Wok', i: '🍳', t: 'plato',
+    lead: 'Un plato rápido con muchos vegetales y tu proteína del menú.',
+    ing: [
+      'Pimentones de varios colores',
+      'Cebolla',
+      'Espinaca o tomate',
+      'Tu proteína ya cocinada en la cantidad del menú: pollo desmechado o carne en tiras',
+      'Especias al gusto · mantequilla spray Taeq'
+    ],
+    pasos: [
+      'Saltea los pimentones con la cebolla y la espinaca o tomate en sartén con mantequilla spray.',
+      'Agrega la proteína previamente cocinada y mezcla bien a fuego alto 2–3 minutos.',
+      'Sirve caliente con las especias que prefieras.'
+    ],
+    tip: null
+  },
+  {
+    n: 'Ceviche — Pico de Gallo', i: '🍋', t: 'plato',
+    lead: 'Fresco y con mucho sabor, ideal para el almuerzo o la comida.',
+    ing: [
+      'Tomate, cebolla, limón y cilantro (pico de gallo)',
+      'Tilapia, atún o camarones — en la cantidad del menú',
+      'Salsa de tomate Konfyt',
+      'Sal al gusto'
+    ],
+    pasos: [
+      'Pica finamente el tomate, la cebolla y el cilantro. Mezcla con limón y sal.',
+      'Agrega la proteína cocida (tilapia desmenuzada, atún escurrido o camarones cocidos).',
+      'Mezcla con la salsa Konfyt y sirve frío.'
+    ],
+    tip: null
+  },
+  {
+    n: 'Burritos sin Carbohidratos', i: '🌯', t: 'plato',
+    lead: 'Un burrito liviano usando hojas de arroz — sin carbohidrato del plan.',
+    ing: [
+      'Hojas o papel de arroz (Vita Integral)',
+      'Mezcla de vegetales salteados (como el wok)',
+      'Tu proteína del menú en la cantidad indicada'
+    ],
+    pasos: [
+      'Ablanda la hoja de arroz en agua tibia por unos 30 segundos hasta que sea flexible.',
+      'Coloca la mezcla de vegetales y proteína encima.',
+      'Enrolla como burrito y sirve. Puedes acompañar con salsa Konfyt o limón.'
+    ],
+    tip: 'La hoja de arroz no cuenta como el carbohidrato de tu menú — es vegetal y puedes usarla libremente.'
+  },
+  {
+    n: 'Pepinos Agridulces', i: '🥒', t: 'acomp',
+    lead: 'Un acompañante que se prepara con un día de anticipación.',
+    ing: [
+      'Pepinos cortados en rodajas',
+      '1 taza de vinagre blanco',
+      '1 taza de agua',
+      'Canela al gusto',
+      'Endulzante al gusto (Stevia, Incauca Zero, sucralosa)'
+    ],
+    pasos: [
+      'Pon a hervir el agua con el vinagre, la canela y el endulzante.',
+      'Apenas hierva, agrega los pepinos cortados y <strong>apaga el fogón</strong>.',
+      'Deja reposar de un día para otro en la nevera para que tomen el sabor.'
+    ],
+    tip: 'Prepáralos la noche anterior — al día siguiente están en su punto y listos para acompañar cualquier comida.'
+  },
+  {
+    n: 'Cebollas Caramelizadas', i: '🧅', t: 'acomp',
+    lead: 'Dulces sin azúcar, perfectas para acompañar tu proteína.',
+    ing: [
+      '2 cebollas de huevo',
+      '2 cditas de Incauca Zero, sucralosa o stevia por cada cebolla',
+      'Papel aluminio'
+    ],
+    pasos: [
+      'Hazle una cruz con el cuchillo a la parte superior de cada cebolla.',
+      'Agrega 2 cditas del endulzante dentro de cada una por la cruz.',
+      'Envuelve cada cebolla en papel aluminio y hornea a temperatura baja por 15 minutos.'
+    ],
+    tip: null
+  },
+  {
+    n: 'Arroz de Coliflor', i: '🥦', t: 'acomp',
+    lead: 'Una guarnición con textura de arroz — sin contar como carbohidrato del menú.',
+    ing: [
+      '1 coliflor grande sin tallo',
+      '1 cda de mantequilla en spray Taeq o sin calorías',
+      'Sal, pimienta y hierbas o especias al gusto'
+    ],
+    pasos: [
+      'Corta la coliflor en floretes quitando todo el tallo.',
+      'Tritúrala en procesador de alimentos hasta que tenga consistencia de arroz. Si no tienes procesador, rállala a mano.',
+      'Cocina en sartén con mantequilla spray a fuego medio durante 2 min, revolviendo.',
+      'Baja el fuego, tapa y cocina 8 minutos más.',
+      'Sazona con sal, pimienta y tus hierbas favoritas. Sirve de inmediato.'
+    ],
+    tip: 'Este no cuenta como el carbohidrato del menú — es vegetal zero y lo puedes usar libremente sin afectar tus porciones de arroz o papa.'
+  },
+  {
+    n: 'Tomates Rellenos con Champiñones', i: '🍄', t: 'plato',
+    lead: 'Se hornean en 10 minutos y quedan espectaculares.',
+    ing: [
+      '2 – 3 tomates riñón',
+      'Champiñones frescos',
+      'Pimentones (opcional)',
+      'Mantequilla Taeq en spray',
+      'Orégano, laurel o tomillo',
+      'Sal y pimienta al gusto'
+    ],
+    pasos: [
+      'Quita la "tapa" superior de los tomates y saca el contenido interior con una cuchara.',
+      'Saltea ese contenido en sartén con mantequilla spray junto con champiñones y pimentones (si quieres). Sazona con las especias, sal y pimienta.',
+      'Rellena los tomates con la mezcla.',
+      'Hornea a temperatura media por 10 minutos.'
+    ],
+    tip: 'Puedes agregar la proteína del menú directamente en el relleno — queda delicioso y es todo en uno.'
+  }
+];
+
+var TAGS = {
+  bebida: ['🥤 Bebida',       'tag-bebida'],
+  plato:  ['🍽️ Plato',       'tag-plato'],
+  acomp:  ['🥗 Acompañante', 'tag-acomp']
+};
+
+function render() {
+  var out = '';
+  RECETAS.forEach(function (r, k) {
+    out +=
+      '<div class="rec" data-t="' + r.t + '">' +
+        '<button class="rec-head" aria-expanded="false" onclick="abrir(this)">' +
+          '<div class="rec-icon">' + r.i + '</div>' +
+          '<div class="rec-meta">' +
+            '<div class="rec-name">' + r.n + '</div>' +
+            '<span class="rec-tag ' + TAGS[r.t][1] + '">' + TAGS[r.t][0] + '</span>' +
+          '</div>' +
+          '<div class="rec-arrow">▾</div>' +
+        '</button>' +
+        '<div class="rec-body"><div class="rec-inner">' +
+          '<p class="rec-lead">' + r.lead + '</p>' +
+          '<div class="sub">Ingredientes</div>' +
+          '<ul class="ing">' + r.ing.map(function (x) { return '<li>' + x + '</li>'; }).join('') + '</ul>' +
+          '<div class="sub">Preparación</div>' +
+          '<ol class="steps">' + r.pasos.map(function (x) { return '<li>' + x + '</li>'; }).join('') + '</ol>' +
+          (r.tip ? '<div class="tip"><span>💡</span><span>' + r.tip + '</span></div>' : '') +
+        '</div></div>' +
+      '</div>';
+  });
+  document.getElementById('lista').innerHTML = out;
+  // Open first card by default
+  var first = document.querySelector('.rec-head');
+  if (first) abrir(first);
+}
+
+function abrir(btn) {
+  var card = btn.parentNode;
+  var isOpen = card.classList.toggle('open');
+  btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+}
+
+function filtrar(f, chip) {
+  document.querySelectorAll('.chip').forEach(function (c) { c.classList.remove('active'); });
+  chip.classList.add('active');
+  document.querySelectorAll('.rec').forEach(function (card) {
+    card.style.display = (f === 'todas' || card.getAttribute('data-t') === f) ? '' : 'none';
+  });
+}
+
+render();
+</script>
+</body>
+</html>
